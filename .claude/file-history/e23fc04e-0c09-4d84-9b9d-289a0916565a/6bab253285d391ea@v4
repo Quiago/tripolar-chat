@@ -101,24 +101,21 @@ def _stream_response(api: APIClient, model: str, messages: list) -> str:
 
     Raises _SessionExpired if the server returns 403.
     """
-    import time as _time
-
     console.print()
+    label = Text(f"[{model}] ", style="bold green")
+    console.print(label, end="")
 
     full = ""
     first = True
-    start = _time.monotonic()
 
     with console.status(
-        f"[dim]⏳ {model} – thinking…[/dim]",
+        f"[dim]Loading {model}… (first load may take a few minutes)[/dim]",
         spinner="dots",
     ) as status:
         try:
             for chunk in api.chat_stream(model=model, messages=messages):
                 if first:
                     status.stop()
-                    label = Text(f"[{model}] ", style="bold green")
-                    console.print(label, end="")
                     first = False
                 console.print(chunk, end="", highlight=False, markup=False)
                 full += chunk
@@ -135,8 +132,7 @@ def _stream_response(api: APIClient, model: str, messages: list) -> str:
             console.print("\n[yellow]Interrupted.[/yellow]")
             return full
 
-    elapsed = _time.monotonic() - start
-    console.print(f"\n[dim]({elapsed:.1f}s)[/dim]")
+    console.print()
     return full
 
 

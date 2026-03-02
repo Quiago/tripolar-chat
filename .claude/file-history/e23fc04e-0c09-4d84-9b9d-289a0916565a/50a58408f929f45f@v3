@@ -2,7 +2,6 @@
 
 import logging
 import os
-import re
 import subprocess
 import time
 from dataclasses import dataclass
@@ -36,30 +35,6 @@ def _read_hf_token() -> Optional[str]:
     return None
 
 
-def _extract_error(stderr_text: str) -> str:
-    """Return a single-line error summary from vLLM's stderr.
-
-    Looks for the last line that starts with a known exception class (e.g.
-    ``OSError:``, ``RepositoryNotFoundError:``), which is the actual root
-    cause.  Falls back to the last non-empty, non-help-text line.
-    """
-    _worker_prefix = re.compile(r"^\s*\([A-Za-z]+ pid=\d+\)\s*")
-    _exc_re = re.compile(r"^[A-Za-z][A-Za-z0-9_]*(?:Error|Exception|Warning):")
-
-    candidates: list[str] = []
-    for raw in stderr_text.splitlines():
-        line = _worker_prefix.sub("", raw).strip()
-        if line and not line.startswith("File ") and not line.startswith("During handling"):
-            candidates.append(line)
-
-    # Prefer the last line that looks like an exception class
-    for line in reversed(candidates):
-        if _exc_re.match(line):
-            return line[:200]
-
-    return (candidates[-1][:200] if candidates else "unknown error – see server logs")
-
-
 @dataclass
 class ModelConfig:
     repo: str
@@ -80,7 +55,7 @@ MODEL_CATALOG: Dict[str, ModelConfig] = {
         description="Meta Llama 3.1 8B – general purpose",
     ),
     "llama-3.1-8b-awq": ModelConfig(
-        repo="hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+        repo="casperhansen/llama-3.1-8b-instruct-awq",
         quantization="awq",
         tensor_parallel=1,
         gpu_memory_util=0.90,
@@ -212,8 +187,13 @@ class VLLMModelManager:
                 return
             if self.process.poll() is not None:
                 _, stderr = self.process.communicate()
+                # Extract the last meaningful error line (skip empty lines and
+                # "During handling of..." chained-exception boilerplate so the
+                # message stays short when forwarded to HTTP clients).
+                lines = [l.strip() for l in stderr.decode().splitlines() if l.strip()]
+                last_error = lines[-1] if lines else "unknown error"
                 log.error("vLLM exited. Full stderr:\n%s", stderr.decode())
-                raise RuntimeError(f"vLLM exited: {_extract_error(stderr.decode())}")
+                raise RuntimeError(f"vLLM exited: {last_error}")
             time.sleep(2)
 
         self.stop()

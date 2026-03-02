@@ -4,7 +4,8 @@
       "Bash(python:*)",
       "Bash(source:*)",
       "Bash(pip install:*)",
-      "Bash(SECRET_KEY=\"test-secret-key-32-chars-minimum!!\" python:*)"
+      "Bash(SECRET_KEY=\"test-secret-key-32-chars-minimum!!\" python:*)",
+      "WebSearch"
     ]
   }
 }

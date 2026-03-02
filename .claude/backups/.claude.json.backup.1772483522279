@@ -15,9 +15,11 @@
     "install-slack-app": 1,
     "double-esc-code-restore": 1,
     "continue": 1,
-    "shift-tab": 1
+    "shift-tab": 1,
+    "image-paste": 1,
+    "web-app": 1,
+    "mobile-app": 1
   },
-  "showExpandedTodos": true,
   "cachedGrowthBookFeatures": {
     "tengu_event_sampling_config": {},
     "tengu_log_segment_events": false,

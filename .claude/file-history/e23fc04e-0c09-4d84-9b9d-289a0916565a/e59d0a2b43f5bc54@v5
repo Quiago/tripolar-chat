@@ -20,7 +20,6 @@ from textual.widgets import (
     Label,
     ListItem,
     ListView,
-    LoadingIndicator,
     RichLog,
     Static,
 )
@@ -128,12 +127,6 @@ class ChatScreen(Screen):
         overflow-y: auto;
         padding: 0 1;
     }
-    #thinking-bar {
-        height: 1;
-        display: none;
-        color: $accent;
-        padding: 0 1;
-    }
     #input-row {
         height: 3;
         layout: horizontal;
@@ -159,7 +152,6 @@ class ChatScreen(Screen):
     def compose(self) -> ComposeResult:
         yield Header(show_clock=True)
         yield RichLog(id="messages", highlight=True, markup=True, wrap=True)
-        yield LoadingIndicator(id="thinking-bar")
         with Horizontal(id="input-row"):
             yield Label(f"[{self._model}]", id="model-label")
             yield Input(placeholder="Type a message… (Esc = back)", id="chat-input")
@@ -194,30 +186,19 @@ class ChatScreen(Screen):
 
     @work(exclusive=False)
     async def _stream_response(self, messages: list[dict]) -> None:
-        import time as _time
-
         log = self.query_one(RichLog)
-        indicator = self.query_one("#thinking-bar")
-        indicator.display = True
-        self.query_one(Input).disabled = True
+        log.write(f"\n[bold green][{self._model}][/bold green] ")
 
-        start = _time.monotonic()
         full_text = ""
-        first_token = True
         try:
             async for chunk in self._api.async_chat_stream(
                 model=self._model,
                 messages=messages,
                 chat_id=self._chat_id,
             ):
-                if first_token:
-                    indicator.display = False
-                    log.write(f"\n[bold green][{self._model}][/bold green] ")
-                    first_token = False
                 log.write(chunk, expand=False)
                 full_text += chunk
         except APIError as exc:
-            indicator.display = False
             self._history.pop()  # remove the user message that failed
             if exc.status_code == 403:
                 log.write(
@@ -232,22 +213,17 @@ class ChatScreen(Screen):
                     timeout=0,
                 )
                 self.query_one(Input).disabled = True
-                return
             else:
                 log.write(f"\n[red]Error {exc.status_code}:[/red] {exc.detail}\n")
+            return
         except Exception as exc:
-            indicator.display = False
             log.write(f"\n[red]Unexpected error:[/red] {exc}\n")
             self._history.pop()
-        else:
-            elapsed = _time.monotonic() - start
-            log.write(f"\n[dim]({elapsed:.1f}s)[/dim]\n")
-            if full_text:
-                self._history.append({"role": "assistant", "content": full_text})
-        finally:
-            indicator.display = False
-            self.query_one(Input).disabled = False
-            self.query_one(Input).focus()
+            return
+
+        log.write("\n")
+        if full_text:
+            self._history.append({"role": "assistant", "content": full_text})
 
 
 # ── Main Menu Screen ───────────────────────────────────────────────────────────
