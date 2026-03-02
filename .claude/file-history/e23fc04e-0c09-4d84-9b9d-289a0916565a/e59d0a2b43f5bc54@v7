@@ -1,0 +1,494 @@
+"""Textual-based interactive TUI for FactoryMind AI.
+
+Launch with: fmind tui  (or just: fmind  when already logged in)
+"""
+
+from __future__ import annotations
+
+from typing import ClassVar, Optional
+
+from textual import on, work
+from textual.app import App, ComposeResult
+from textual.binding import Binding
+from textual.containers import Container, Horizontal, Vertical
+from textual.screen import Screen
+from textual.widgets import (
+    DataTable,
+    Footer,
+    Header,
+    Input,
+    Label,
+    ListItem,
+    ListView,
+    LoadingIndicator,
+    RichLog,
+    Static,
+)
+
+from client import config as cfg
+from client.api import APIClient, APIError, get_client
+
+
+# ── Helpers ────────────────────────────────────────────────────────────────────
+
+def _make_client() -> Optional[APIClient]:
+    try:
+        return get_client()
+    except APIError:
+        return None
+
+
+# ── Model Select Screen ────────────────────────────────────────────────────────
+
+class ModelSelectScreen(Screen):
+    """Pick a default model from the server catalog."""
+
+    BINDINGS: ClassVar[list[Binding]] = [
+        Binding("escape", "app.pop_screen", "Back"),
+    ]
+
+    CSS = """
+    ModelSelectScreen {
+        align: center middle;
+    }
+    #model-table {
+        width: 80;
+        height: auto;
+        border: solid $primary;
+    }
+    #model-hint {
+        color: $text-muted;
+        text-align: center;
+        margin-top: 1;
+    }
+    """
+
+    def __init__(self, api: APIClient) -> None:
+        super().__init__()
+        self._api = api
+
+    def compose(self) -> ComposeResult:
+        yield Header(show_clock=False)
+        with Vertical():
+            yield DataTable(id="model-table", cursor_type="row")
+            yield Static("Enter to select · Esc to go back", id="model-hint")
+        yield Footer()
+
+    def on_mount(self) -> None:
+        table = self.query_one(DataTable)
+        table.add_columns("Model", "Description", "Cached", "Loaded")
+        self._load_models()
+
+    @work(thread=True)
+    def _load_models(self) -> None:
+        try:
+            models = self._api.list_models()
+        except APIError:
+            models = []
+        self.app.call_from_thread(self._populate_table, models)
+
+    def _populate_table(self, models: list[dict]) -> None:
+        table = self.query_one(DataTable)
+        table.clear()
+        for m in models:
+            table.add_row(
+                m["id"],
+                m.get("description", ""),
+                "✓" if m.get("cached") else "–",
+                "● loaded" if m.get("loaded") else "○",
+                key=m["id"],
+            )
+
+    @on(DataTable.RowSelected)
+    def row_selected(self, event: DataTable.RowSelected) -> None:
+        model_id = str(event.row_key.value)
+        cfg.save_default_model(model_id)
+        self.app.pop_screen()
+        self.app.notify(f"Default model set to {model_id}", title="Model selected")
+
+
+# ── Chat Screen ────────────────────────────────────────────────────────────────
+
+class ChatScreen(Screen):
+    """Full interactive chat with streaming responses."""
+
+    BINDINGS: ClassVar[list[Binding]] = [
+        Binding("ctrl+c", "app.pop_screen", "Back", show=False),
+        Binding("escape", "app.pop_screen", "Back"),
+        Binding("ctrl+l", "clear_history", "Clear"),
+    ]
+
+    CSS = """
+    ChatScreen {
+        layout: vertical;
+    }
+    #messages {
+        height: 1fr;
+        border: solid $primary;
+        overflow-y: auto;
+        padding: 0 1;
+    }
+    #streaming-response {
+        height: auto;
+        display: none;
+        padding: 0 1;
+        border-top: dashed $primary-darken-2;
+    }
+    #thinking-bar {
+        height: 1;
+        display: none;
+        color: $accent;
+        padding: 0 1;
+    }
+    #input-row {
+        height: 3;
+        layout: horizontal;
+    }
+    #chat-input {
+        width: 1fr;
+    }
+    #model-label {
+        color: $success;
+        padding: 0 1;
+        content-align: center middle;
+        height: 3;
+    }
+    """
+
+    def __init__(self, api: APIClient, model: str) -> None:
+        super().__init__()
+        self._api = api
+        self._model = model
+        self._history: list[dict] = []
+        self._chat_id: Optional[str] = None
+
+    def compose(self) -> ComposeResult:
+        yield Header(show_clock=True)
+        yield RichLog(id="messages", highlight=True, markup=True, wrap=True)
+        # Live streaming area: updated in-place via Static.update() so that
+        # each chunk does NOT create a new row (unlike RichLog.write()).
+        yield Static("", id="streaming-response", markup=True)
+        yield LoadingIndicator(id="thinking-bar")
+        with Horizontal(id="input-row"):
+            yield Label(f"[{self._model}]", id="model-label")
+            yield Input(placeholder="Type a message… (Esc = back)", id="chat-input")
+        yield Footer()
+
+    def on_mount(self) -> None:
+        log = self.query_one(RichLog)
+        log.write(
+            f"[dim]Chat started with [bold]{self._model}[/bold]. "
+            "Type a message and press Enter.[/dim]\n"
+        )
+        self.query_one(Input).focus()
+
+    @on(Input.Submitted)
+    def on_input_submitted(self, event: Input.Submitted) -> None:
+        text = event.value.strip()
+        if not text:
+            return
+        event.input.clear()
+
+        log = self.query_one(RichLog)
+        log.write(f"\n[bold blue]You:[/bold blue] {text}\n")
+
+        self._history.append({"role": "user", "content": text})
+        self._stream_response(list(self._history))
+
+    def action_clear_history(self) -> None:
+        self._history.clear()
+        self._chat_id = None
+        self.query_one(RichLog).clear()
+        self.query_one(RichLog).write("[dim]History cleared.[/dim]\n")
+
+    @work(exclusive=False)
+    async def _stream_response(self, messages: list[dict]) -> None:
+        import time as _time
+
+        log = self.query_one(RichLog)
+        streaming = self.query_one("#streaming-response", Static)
+        indicator = self.query_one("#thinking-bar")
+
+        indicator.display = True
+        self.query_one(Input).disabled = True
+
+        start = _time.monotonic()
+        accumulated = ""
+        header = f"[bold green][{self._model}][/bold green]"
+
+        try:
+            async for chunk in self._api.async_chat_stream(
+                model=self._model,
+                messages=messages,
+                chat_id=self._chat_id,
+            ):
+                if not accumulated:
+                    # First token: hide spinner, show streaming area
+                    indicator.display = False
+                    streaming.display = True
+                accumulated += chunk
+                # Escape Rich markup in model output so angle-bracket text
+                # renders as literal characters, not broken markup.
+                escaped = accumulated.replace("[", "\\[")
+                streaming.update(f"{header} {escaped}")
+
+        except APIError as exc:
+            self._history.pop()
+            if exc.status_code == 403:
+                log.write(
+                    "\n[bold yellow]⚠ Session expired[/bold yellow] – "
+                    "the server rejected your API key.\n"
+                    "Exit the TUI and run [bold]fmind login[/bold] to authenticate again.\n"
+                )
+                self.app.notify(
+                    "Your API key was rejected (403). Exit and run 'fmind login'.",
+                    title="Session Expired",
+                    severity="error",
+                    timeout=0,
+                )
+                self.query_one(Input).disabled = True
+                return
+            else:
+                log.write(f"\n[red]Error {exc.status_code}:[/red] {exc.detail}\n")
+
+        except Exception as exc:
+            log.write(f"\n[red]Unexpected error:[/red] {exc}\n")
+            self._history.pop()
+
+        else:
+            # Flush completed response to RichLog in ONE write call (correct wrapping)
+            elapsed = _time.monotonic() - start
+            escaped = accumulated.replace("[", "\\[")
+            log.write(f"\n{header} {escaped}\n[dim]({elapsed:.1f}s)[/dim]\n")
+            if accumulated:
+                self._history.append({"role": "assistant", "content": accumulated})
+
+        finally:
+            streaming.update("")
+            streaming.display = False
+            indicator.display = False
+            self.query_one(Input).disabled = False
+            self.query_one(Input).focus()
+
+
+# ── Main Menu Screen ───────────────────────────────────────────────────────────
+
+class MainMenuScreen(Screen):
+    """Arrow-key navigation main menu."""
+
+    BINDINGS: ClassVar[list[Binding]] = [
+        Binding("q", "app.quit", "Quit"),
+    ]
+
+    CSS = """
+    MainMenuScreen {
+        align: center middle;
+    }
+    #menu-container {
+        width: 52;
+        height: auto;
+        border: double $primary;
+        padding: 1 2;
+    }
+    #welcome {
+        text-align: center;
+        color: $primary;
+        text-style: bold;
+        margin-bottom: 1;
+    }
+    #server-info {
+        text-align: center;
+        color: $text-muted;
+        margin-bottom: 1;
+    }
+    ListView {
+        height: auto;
+        border: none;
+    }
+    ListItem {
+        padding: 0 1;
+    }
+    ListItem:hover {
+        background: $primary 20%;
+    }
+    ListItem.--highlight {
+        background: $primary 30%;
+    }
+    """
+
+    MENU: ClassVar[list[tuple[str, str]]] = [
+        ("💬  Chat with AI", "chat"),
+        ("🤖  Select Model", "models"),
+        ("📜  Chat History", "history"),
+        ("👤  Account", "account"),
+        ("🔐  Logout", "logout"),
+        ("❌  Exit", "exit"),
+    ]
+
+    def __init__(self, api: APIClient, username: str) -> None:
+        super().__init__()
+        self._api = api
+        self._username = username
+
+    def compose(self) -> ComposeResult:
+        server = cfg.get_server_url() or ""
+        model = cfg.get_default_model() or "–"
+        with Container(id="menu-container"):
+            yield Static("FactoryMind AI", id="welcome")
+            yield Static(
+                f"[dim]{self._username} @ {server}\nModel: {model}[/dim]",
+                id="server-info",
+            )
+            yield ListView(
+                *[ListItem(Label(label), id=action) for label, action in self.MENU]
+            )
+        yield Footer()
+
+    def on_mount(self) -> None:
+        self.query_one(ListView).focus()
+
+    @on(ListView.Selected)
+    def menu_selected(self, event: ListView.Selected) -> None:
+        action = event.item.id
+        if action == "exit":
+            self.app.exit()
+        elif action == "logout":
+            cfg.clear_credentials()
+            self.app.exit()
+            from rich.console import Console
+            Console().print("[yellow]Logged out.[/yellow]")
+        elif action == "chat":
+            model = cfg.get_default_model() or "llama-3.1-8b-awq"
+            self.app.push_screen(ChatScreen(self._api, model))
+        elif action == "models":
+            self.app.push_screen(ModelSelectScreen(self._api))
+        elif action == "history":
+            self.app.push_screen(HistoryListScreen(self._api))
+        elif action == "account":
+            self._show_account()
+
+    def _show_account(self) -> None:
+        try:
+            user = self._api.whoami()
+            self.app.notify(
+                f"User: {user['username']}\nEmail: {user['email']}\n"
+                f"Key: {user['api_key'][:12]}…",
+                title="Account",
+                timeout=8,
+            )
+        except APIError as exc:
+            self.app.notify(str(exc), title="Error", severity="error")
+
+
+# ── History List Screen ────────────────────────────────────────────────────────
+
+class HistoryListScreen(Screen):
+    """Browse recent chat sessions."""
+
+    BINDINGS: ClassVar[list[Binding]] = [
+        Binding("escape", "app.pop_screen", "Back"),
+    ]
+
+    CSS = """
+    HistoryListScreen {
+        align: center middle;
+    }
+    #hist-table {
+        width: 90;
+        height: 30;
+        border: solid $primary;
+    }
+    #hist-hint {
+        color: $text-muted;
+        text-align: center;
+        margin-top: 1;
+    }
+    """
+
+    def __init__(self, api: APIClient) -> None:
+        super().__init__()
+        self._api = api
+
+    def compose(self) -> ComposeResult:
+        yield Header(show_clock=False)
+        with Vertical():
+            yield DataTable(id="hist-table", cursor_type="row")
+            yield Static("Esc to go back", id="hist-hint")
+        yield Footer()
+
+    def on_mount(self) -> None:
+        table = self.query_one(DataTable)
+        table.add_columns("ID", "Title", "Model", "Updated")
+        self._load_history()
+
+    @work(thread=True)
+    def _load_history(self) -> None:
+        try:
+            sessions = self._api.list_history(limit=30)
+        except APIError:
+            sessions = []
+        self.app.call_from_thread(self._populate, sessions)
+
+    def _populate(self, sessions: list[dict]) -> None:
+        table = self.query_one(DataTable)
+        table.clear()
+        for s in sessions:
+            updated = s["updated_at"][:16].replace("T", " ")
+            table.add_row(
+                s["id"][:8] + "…",
+                s["title"],
+                s["model_used"],
+                updated,
+                key=s["id"],
+            )
+
+
+# ── App ────────────────────────────────────────────────────────────────────────
+
+class FactoryMindTUI(App):
+    """Root Textual application."""
+
+    TITLE = "FactoryMind AI"
+    CSS = """
+    Screen {
+        background: $surface;
+    }
+    """
+
+    def __init__(self, api: APIClient, username: str) -> None:
+        super().__init__()
+        self._api = api
+        self._username = username
+
+    def on_mount(self) -> None:
+        self.push_screen(MainMenuScreen(self._api, self._username))
+
+
+def launch_tui() -> None:
+    """Entry point – build API client then start the TUI."""
+    api = _make_client()
+    if api is None:
+        from rich.console import Console
+        Console().print(
+            "[red]Not logged in.[/red] Run [bold]fmind login[/bold] first."
+        )
+        return
+
+    from rich.console import Console as _Console
+    _con = _Console()
+
+    try:
+        user = api.whoami()
+    except APIError as exc:
+        if exc.status_code == 403:
+            _con.print(
+                "[bold yellow]⚠  Session expired[/bold yellow] – "
+                "the server rejected your stored API key.\n"
+                "Run [bold]fmind login[/bold] to authenticate again."
+            )
+        else:
+            _con.print(f"[red]Cannot reach server:[/red] {exc}")
+        return
+
+    username = user.get("username", "unknown")
+    FactoryMindTUI(api, username).run()

@@ -9031,3 +9031,1124 @@ data: {"jsonrpc":"2.0","id":0,"error":{"code":-32600,"message":"Anthropic Proxy:
 2026-03-02T21:46:37.370Z [DEBUG] Getting matching hook commands for Notification with query: idle_prompt
 2026-03-02T21:46:37.370Z [DEBUG] Found 0 hook matchers in settings
 2026-03-02T21:46:37.371Z [DEBUG] Matched 0 unique hooks for query "idle_prompt" (0 before deduplication)
+2026-03-02T22:00:16.724Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:00:16.724Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:00:16.724Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:00:16.724Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:00:16.724Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:00:16.931Z [DEBUG] High write ratio: blit=441, write=68148 (99.4% writes), screen=1672x63
+2026-03-02T22:00:16.940Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-02T22:00:16.941Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 217ms
+2026-03-02T22:00:16.944Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-02T22:00:16.944Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:00:16.944Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T22:00:16.944Z [DEBUG] FileHistory: Making snapshot for message fd4ee712-7a72-4ddc-866d-7076d5cb0112
+2026-03-02T22:00:16.949Z [DEBUG] FileHistory: Added snapshot for fd4ee712-7a72-4ddc-866d-7076d5cb0112, tracking 38 files
+2026-03-02T22:00:16.951Z [DEBUG] Stored paste 1b24c4ca53270cf8 to /teamspace/studios/this_studio/.claude/paste-cache/1b24c4ca53270cf8.txt
+2026-03-02T22:00:16.961Z [DEBUG] [useDeferredValue] Messages deferred by 2 (261→263)
+2026-03-02T22:00:17.112Z [DEBUG] High write ratio: blit=0, write=63866 (100.0% writes), screen=1596x63
+2026-03-02T22:00:17.113Z [DEBUG] Full reset (scrollback changes): scrollbackRows=1646, firstChangeY=1590
+  prev: "❯ Actualmente, nuestra plataforma FactoryMind AI tiene un      "
+  next: "✽ Sock-hopping…                                                "
+2026-03-02T22:00:17.631Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2026-03-02T22:00:17.637Z [DEBUG] autocompact: tokens=138693 threshold=167000 effectiveWindow=180000
+2026-03-02T22:00:17.639Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:00:17.650Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:00:17.651Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:00:17.651Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:00:17.651Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:00:17.659Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 28ms
+2026-03-02T22:00:17.685Z [DEBUG] [useDeferredValue] Messages deferred by 2 (261→263)
+2026-03-02T22:00:17.711Z [DEBUG] Checking for native installer update to version 2.1.63
+2026-03-02T22:00:17.909Z [DEBUG] High write ratio: blit=441, write=68252 (99.4% writes), screen=1675x63
+2026-03-02T22:00:17.938Z [DEBUG] Found 2.1.63 at /teamspace/studios/this_studio/.local/bin/claude, skipping install
+2026-03-02T22:00:22.508Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:00:24.532Z [DEBUG] [useDeferredValue] Messages deferred by 1 (263→264)
+2026-03-02T22:00:24.718Z [DEBUG] High write ratio: blit=441, write=68277 (99.4% writes), screen=1676x63
+2026-03-02T22:00:24.730Z [DEBUG] [useDeferredValue] Messages deferred by 1 (263→264)
+2026-03-02T22:00:24.926Z [DEBUG] High write ratio: blit=441, write=68283 (99.4% writes), screen=1676x63
+2026-03-02T22:00:25.263Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T22:00:25.264Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T22:00:25.264Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:00:25.264Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T22:00:25.269Z [DEBUG] [useDeferredValue] Messages deferred by 1 (264→265)
+2026-03-02T22:00:25.449Z [DEBUG] High write ratio: blit=0, write=68426 (100.0% writes), screen=1676x63
+2026-03-02T22:00:25.462Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T22:00:25.463Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T22:00:25.463Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:00:25.463Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T22:00:25.469Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T22:00:25.469Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:00:25.469Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T22:00:25.471Z [DEBUG] [useDeferredValue] Messages deferred by 5 (264→269)
+2026-03-02T22:00:25.636Z [DEBUG] High write ratio: blit=0, write=68391 (100.0% writes), screen=1674x63
+2026-03-02T22:00:25.663Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T22:00:25.663Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:00:25.663Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T22:00:25.664Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:00:25.664Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:00:25.664Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:00:25.665Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:00:25.665Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:00:25.667Z [DEBUG] [useDeferredValue] Messages deferred by 8 (264→272)
+2026-03-02T22:00:25.835Z [DEBUG] High write ratio: blit=441, write=68248 (99.4% writes), screen=1674x63
+2026-03-02T22:00:25.838Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 174ms
+2026-03-02T22:00:25.839Z [DEBUG] autocompact: tokens=140349 threshold=167000 effectiveWindow=180000
+2026-03-02T22:00:25.840Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:00:25.846Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:00:25.846Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:00:25.846Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:00:25.847Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:00:25.863Z [DEBUG] [useDeferredValue] Messages deferred by 8 (264→272)
+2026-03-02T22:00:26.052Z [DEBUG] High write ratio: blit=441, write=68303 (99.4% writes), screen=1677x63
+2026-03-02T22:00:28.133Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:00:28.316Z [DEBUG] High write ratio: blit=441, write=68303 (99.4% writes), screen=1677x63
+2026-03-02T22:00:28.768Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T22:00:28.769Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T22:00:28.769Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:00:28.769Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T22:00:28.773Z [DEBUG] [useDeferredValue] Messages deferred by 1 (272→273)
+2026-03-02T22:00:28.945Z [DEBUG] High write ratio: blit=441, write=68303 (99.4% writes), screen=1677x63
+2026-03-02T22:00:28.958Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T22:00:28.958Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:00:28.958Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T22:00:28.959Z [DEBUG] [useDeferredValue] Messages deferred by 1 (272→273)
+2026-03-02T22:00:29.151Z [DEBUG] High write ratio: blit=441, write=68301 (99.4% writes), screen=1677x63
+2026-03-02T22:00:29.248Z [DEBUG] [useDeferredValue] Messages deferred by 3 (273→276)
+2026-03-02T22:00:29.410Z [DEBUG] High write ratio: blit=441, write=68301 (99.4% writes), screen=1677x63
+2026-03-02T22:00:29.414Z [DEBUG] [useDeferredValue] Messages deferred by 3 (273→276)
+2026-03-02T22:00:29.597Z [DEBUG] High write ratio: blit=441, write=68301 (99.4% writes), screen=1677x63
+2026-03-02T22:00:29.611Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T22:00:29.611Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T22:00:29.611Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:00:29.611Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T22:00:29.616Z [DEBUG] [useDeferredValue] Messages deferred by 1 (276→277)
+2026-03-02T22:00:29.781Z [DEBUG] High write ratio: blit=441, write=68301 (99.4% writes), screen=1677x63
+2026-03-02T22:00:29.786Z [DEBUG] [useDeferredValue] Messages deferred by 1 (276→277)
+2026-03-02T22:00:29.814Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T22:00:29.814Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:00:29.814Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T22:00:29.815Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:00:29.816Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:00:29.816Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:00:29.816Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:00:29.816Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:00:29.819Z [DEBUG] [useDeferredValue] Messages deferred by 4 (276→280)
+2026-03-02T22:00:29.980Z [DEBUG] High write ratio: blit=441, write=68301 (99.4% writes), screen=1677x63
+2026-03-02T22:00:29.982Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 167ms
+2026-03-02T22:00:29.983Z [DEBUG] autocompact: tokens=142562 threshold=167000 effectiveWindow=180000
+2026-03-02T22:00:29.984Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:00:29.989Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:00:29.990Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:00:29.990Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:00:29.990Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:00:30.008Z [DEBUG] [useDeferredValue] Messages deferred by 4 (276→280)
+2026-03-02T22:00:30.194Z [DEBUG] High write ratio: blit=441, write=68320 (99.4% writes), screen=1677x63
+2026-03-02T22:00:31.429Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:02:18.651Z [DEBUG] [useDeferredValue] Messages deferred by 1 (280→281)
+2026-03-02T22:02:18.661Z [DEBUG] [useDeferredValue] Messages deferred by 1 (280→281)
+2026-03-02T22:02:18.885Z [DEBUG] High write ratio: blit=441, write=68345 (99.4% writes), screen=1677x63
+2026-03-02T22:02:19.096Z [DEBUG] [useDeferredValue] Messages deferred by 1 (281→282)
+2026-03-02T22:02:19.114Z [DEBUG] [useDeferredValue] Messages deferred by 1 (281→282)
+2026-03-02T22:02:19.293Z [DEBUG] High write ratio: blit=441, write=68345 (99.4% writes), screen=1677x63
+2026-03-02T22:02:19.484Z [DEBUG] High write ratio: blit=441, write=68431 (99.4% writes), screen=1681x63
+2026-03-02T22:02:19.962Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T22:02:19.963Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T22:02:19.963Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:02:19.963Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T22:02:19.969Z [DEBUG] [useDeferredValue] Messages deferred by 1 (282→283)
+2026-03-02T22:02:20.156Z [DEBUG] High write ratio: blit=0, write=68539 (100.0% writes), screen=1679x63
+2026-03-02T22:02:20.172Z [DEBUG] [useDeferredValue] Messages deferred by 1 (282→283)
+2026-03-02T22:02:20.335Z [DEBUG] High write ratio: blit=441, write=68396 (99.4% writes), screen=1679x63
+2026-03-02T22:02:20.351Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T22:02:20.351Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:02:20.351Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T22:02:20.354Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:02:20.354Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:02:20.354Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:02:20.355Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:02:20.355Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:02:20.357Z [DEBUG] [useDeferredValue] Messages deferred by 4 (282→286)
+2026-03-02T22:02:20.521Z [DEBUG] High write ratio: blit=441, write=68432 (99.4% writes), screen=1680x63
+2026-03-02T22:02:20.524Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 170ms
+2026-03-02T22:02:20.525Z [DEBUG] autocompact: tokens=150455 threshold=167000 effectiveWindow=180000
+2026-03-02T22:02:20.526Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:02:20.533Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:02:20.534Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:02:20.534Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:02:20.535Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:02:20.552Z [DEBUG] [useDeferredValue] Messages deferred by 4 (282→286)
+2026-03-02T22:02:20.736Z [DEBUG] High write ratio: blit=441, write=68503 (99.4% writes), screen=1683x63
+2026-03-02T22:02:22.697Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:02:23.395Z [DEBUG] [useDeferredValue] Messages deferred by 1 (286→287)
+2026-03-02T22:02:23.403Z [DEBUG] [useDeferredValue] Messages deferred by 1 (286→287)
+2026-03-02T22:02:23.586Z [DEBUG] High write ratio: blit=441, write=68503 (99.4% writes), screen=1683x63
+2026-03-02T22:02:23.598Z [DEBUG] [useDeferredValue] Messages deferred by 1 (286→287)
+2026-03-02T22:02:23.804Z [DEBUG] High write ratio: blit=441, write=68536 (99.4% writes), screen=1685x63
+2026-03-02T22:02:25.520Z [DEBUG] executePreToolHooks called for tool: TaskCreate
+2026-03-02T22:02:25.521Z [DEBUG] Getting matching hook commands for PreToolUse with query: TaskCreate
+2026-03-02T22:02:25.521Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:02:25.521Z [DEBUG] Matched 0 unique hooks for query "TaskCreate" (0 before deduplication)
+2026-03-02T22:02:25.523Z [DEBUG] [useDeferredValue] Messages deferred by 1 (287→288)
+2026-03-02T22:02:25.708Z [DEBUG] High write ratio: blit=0, write=68679 (100.0% writes), screen=1685x63
+2026-03-02T22:02:25.720Z [DEBUG] [useDeferredValue] Messages deferred by 1 (287→288)
+2026-03-02T22:02:25.882Z [DEBUG] High write ratio: blit=441, write=68536 (99.4% writes), screen=1685x63
+2026-03-02T22:02:26.072Z [DEBUG] High write ratio: blit=441, write=68536 (99.4% writes), screen=1685x63
+2026-03-02T22:02:26.083Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/.claude.json.tmp.20973.1772488946083
+2026-03-02T22:02:26.083Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:02:26.084Z [DEBUG] Temp file written successfully, size: 5193 bytes
+2026-03-02T22:02:26.085Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:02:26.085Z [DEBUG] Renaming /teamspace/studios/this_studio/.claude.json.tmp.20973.1772488946083 to /teamspace/studios/this_studio/.claude.json
+2026-03-02T22:02:26.085Z [DEBUG] File /teamspace/studios/this_studio/.claude.json written atomically
+2026-03-02T22:02:26.087Z [DEBUG] Getting matching hook commands for PostToolUse with query: TaskCreate
+2026-03-02T22:02:26.087Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:02:26.087Z [DEBUG] Matched 0 unique hooks for query "TaskCreate" (0 before deduplication)
+2026-03-02T22:02:26.090Z [DEBUG] [useDeferredValue] Messages deferred by 1 (288→289)
+2026-03-02T22:02:26.263Z [DEBUG] High write ratio: blit=441, write=68536 (99.4% writes), screen=1685x63
+2026-03-02T22:02:26.277Z [DEBUG] [useDeferredValue] Messages deferred by 1 (288→289)
+2026-03-02T22:02:26.467Z [DEBUG] High write ratio: blit=441, write=68591 (99.4% writes), screen=1686x63
+2026-03-02T22:02:27.822Z [DEBUG] executePreToolHooks called for tool: TaskCreate
+2026-03-02T22:02:27.823Z [DEBUG] Getting matching hook commands for PreToolUse with query: TaskCreate
+2026-03-02T22:02:27.823Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:02:27.823Z [DEBUG] Matched 0 unique hooks for query "TaskCreate" (0 before deduplication)
+2026-03-02T22:02:27.825Z [DEBUG] [useDeferredValue] Messages deferred by 1 (289→290)
+2026-03-02T22:02:27.997Z [DEBUG] High write ratio: blit=0, write=68735 (100.0% writes), screen=1686x63
+2026-03-02T22:02:28.012Z [DEBUG] [useDeferredValue] Messages deferred by 1 (289→290)
+2026-03-02T22:02:28.175Z [DEBUG] High write ratio: blit=441, write=68592 (99.4% writes), screen=1686x63
+2026-03-02T22:02:28.215Z [DEBUG] Getting matching hook commands for PostToolUse with query: TaskCreate
+2026-03-02T22:02:28.215Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:02:28.215Z [DEBUG] Matched 0 unique hooks for query "TaskCreate" (0 before deduplication)
+2026-03-02T22:02:28.215Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:02:28.216Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:02:28.216Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:02:28.216Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:02:28.216Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:02:28.217Z [DEBUG] [useDeferredValue] Messages deferred by 2 (289→291)
+2026-03-02T22:02:28.398Z [DEBUG] High write ratio: blit=441, write=68592 (99.4% writes), screen=1686x63
+2026-03-02T22:02:28.401Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 186ms
+2026-03-02T22:02:28.402Z [DEBUG] autocompact: tokens=150744 threshold=167000 effectiveWindow=180000
+2026-03-02T22:02:28.403Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:02:28.409Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:02:28.409Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:02:28.409Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:02:28.409Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:02:28.427Z [DEBUG] [useDeferredValue] Messages deferred by 2 (289→291)
+2026-03-02T22:02:28.449Z [DEBUG] [useDeferredValue] Messages deferred by 2 (289→291)
+2026-03-02T22:02:28.639Z [DEBUG] High write ratio: blit=441, write=68642 (99.4% writes), screen=1687x63
+2026-03-02T22:02:30.077Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:02:30.261Z [DEBUG] High write ratio: blit=441, write=68642 (99.4% writes), screen=1687x63
+2026-03-02T22:02:30.529Z [DEBUG] executePreToolHooks called for tool: TaskUpdate
+2026-03-02T22:02:30.529Z [DEBUG] Getting matching hook commands for PreToolUse with query: TaskUpdate
+2026-03-02T22:02:30.529Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:02:30.529Z [DEBUG] Matched 0 unique hooks for query "TaskUpdate" (0 before deduplication)
+2026-03-02T22:02:30.532Z [DEBUG] [useDeferredValue] Messages deferred by 1 (291→292)
+2026-03-02T22:02:30.699Z [DEBUG] High write ratio: blit=0, write=68785 (100.0% writes), screen=1687x63
+2026-03-02T22:02:30.713Z [DEBUG] [useDeferredValue] Messages deferred by 1 (291→292)
+2026-03-02T22:02:30.877Z [DEBUG] High write ratio: blit=441, write=68642 (99.4% writes), screen=1687x63
+2026-03-02T22:02:30.889Z [DEBUG] Getting matching hook commands for PostToolUse with query: TaskUpdate
+2026-03-02T22:02:30.889Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:02:30.890Z [DEBUG] Matched 0 unique hooks for query "TaskUpdate" (0 before deduplication)
+2026-03-02T22:02:30.890Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:02:30.891Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:02:30.891Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:02:30.891Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:02:30.891Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:02:30.893Z [DEBUG] [useDeferredValue] Messages deferred by 2 (291→293)
+2026-03-02T22:02:31.054Z [DEBUG] High write ratio: blit=441, write=68642 (99.4% writes), screen=1687x63
+2026-03-02T22:02:31.057Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 167ms
+2026-03-02T22:02:31.058Z [DEBUG] autocompact: tokens=150885 threshold=167000 effectiveWindow=180000
+2026-03-02T22:02:31.058Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:02:31.063Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:02:31.064Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:02:31.064Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:02:31.064Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:02:31.081Z [DEBUG] [useDeferredValue] Messages deferred by 2 (291→293)
+2026-03-02T22:02:31.098Z [DEBUG] [useDeferredValue] Messages deferred by 2 (291→293)
+2026-03-02T22:02:31.279Z [DEBUG] High write ratio: blit=441, write=68636 (99.4% writes), screen=1687x63
+2026-03-02T22:02:32.968Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:02:33.135Z [DEBUG] High write ratio: blit=441, write=68636 (99.4% writes), screen=1687x63
+2026-03-02T22:02:57.710Z [DEBUG] [useDeferredValue] Messages deferred by 1 (293→294)
+2026-03-02T22:02:57.903Z [DEBUG] High write ratio: blit=0, write=68779 (100.0% writes), screen=1687x63
+2026-03-02T22:02:57.920Z [DEBUG] executePreToolHooks called for tool: Write
+2026-03-02T22:02:57.922Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2026-03-02T22:02:57.922Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:02:57.922Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2026-03-02T22:02:57.930Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:02:57.932Z [DEBUG] [useDeferredValue] Messages deferred by 1 (293→294)
+2026-03-02T22:02:58.105Z [DEBUG] High write ratio: blit=441, write=68636 (99.4% writes), screen=1687x63
+2026-03-02T22:02:58.108Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 178ms
+2026-03-02T22:02:58.109Z [DEBUG] FileHistory: Tracked file modification for /teamspace/studios/this_studio/tests/test_startup.py
+2026-03-02T22:02:58.129Z [DEBUG] [useDeferredValue] Messages deferred by 1 (293→294)
+2026-03-02T22:02:58.143Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T22:02:58.151Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T22:02:58.151Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T22:02:58.341Z [DEBUG] High write ratio: blit=441, write=68665 (99.4% writes), screen=1689x63
+2026-03-02T22:02:58.345Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/zeus/.local/share/claude/versions/2.1.63)
+2026-03-02T22:02:58.348Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/tests/test_startup.py.tmp.20973.1772488978348
+2026-03-02T22:02:58.349Z [DEBUG] Temp file written successfully, size: 6700 bytes
+2026-03-02T22:02:58.349Z [DEBUG] Renaming /teamspace/studios/this_studio/tests/test_startup.py.tmp.20973.1772488978348 to /teamspace/studios/this_studio/tests/test_startup.py
+2026-03-02T22:02:58.350Z [DEBUG] File /teamspace/studios/this_studio/tests/test_startup.py written atomically
+2026-03-02T22:02:58.353Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2026-03-02T22:02:58.353Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:02:58.353Z [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+2026-03-02T22:02:58.356Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:02:58.356Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:02:58.356Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:02:58.356Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:02:58.356Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:02:58.367Z [DEBUG] [useDeferredValue] Messages deferred by 3 (294→297)
+2026-03-02T22:02:58.536Z [DEBUG] High write ratio: blit=441, write=68664 (99.4% writes), screen=1689x63
+2026-03-02T22:02:58.540Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 184ms
+2026-03-02T22:02:58.541Z [DEBUG] autocompact: tokens=153025 threshold=167000 effectiveWindow=180000
+2026-03-02T22:02:58.543Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:02:58.552Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:02:58.552Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:02:58.552Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:02:58.553Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:02:58.570Z [DEBUG] [useDeferredValue] Messages deferred by 3 (294→297)
+2026-03-02T22:02:58.779Z [DEBUG] High write ratio: blit=441, write=69367 (99.4% writes), screen=1709x63
+2026-03-02T22:03:00.238Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:03:00.406Z [DEBUG] High write ratio: blit=441, write=69367 (99.4% writes), screen=1709x63
+2026-03-02T22:03:01.003Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-02T22:03:01.003Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-02T22:03:01.003Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:03:01.003Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:03:01.015Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-02T22:03:01.016Z [DEBUG] [useDeferredValue] Messages deferred by 1 (297→298)
+2026-03-02T22:03:01.187Z [DEBUG] High write ratio: blit=0, write=69510 (100.0% writes), screen=1709x63
+2026-03-02T22:03:01.393Z [DEBUG] High write ratio: blit=441, write=69455 (99.4% writes), screen=1713x63
+2026-03-02T22:03:03.430Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-02T22:03:03.430Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:03:03.430Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:03:03.430Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:03.431Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:03:03.431Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:03:03.431Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:03:03.431Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:03:03.432Z [DEBUG] [useDeferredValue] Messages deferred by 1 (298→299)
+2026-03-02T22:03:03.606Z [DEBUG] High write ratio: blit=441, write=69455 (99.4% writes), screen=1713x63
+2026-03-02T22:03:03.609Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 179ms
+2026-03-02T22:03:03.610Z [DEBUG] autocompact: tokens=153882 threshold=167000 effectiveWindow=180000
+2026-03-02T22:03:03.611Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:03:03.616Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:03:03.617Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:03:03.617Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:03:03.617Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:03:03.635Z [DEBUG] [useDeferredValue] Messages deferred by 1 (298→299)
+2026-03-02T22:03:03.829Z [DEBUG] High write ratio: blit=441, write=69608 (99.4% writes), screen=1716x63
+2026-03-02T22:03:04.801Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:03:07.817Z [DEBUG] [useDeferredValue] Messages deferred by 1 (299→300)
+2026-03-02T22:03:07.834Z [DEBUG] [useDeferredValue] Messages deferred by 1 (299→300)
+2026-03-02T22:03:08.037Z [DEBUG] High write ratio: blit=441, write=69606 (99.4% writes), screen=1716x63
+2026-03-02T22:03:08.189Z [DEBUG] [useDeferredValue] Messages deferred by 1 (300→301)
+2026-03-02T22:03:08.355Z [DEBUG] High write ratio: blit=441, write=69606 (99.4% writes), screen=1716x63
+2026-03-02T22:03:08.560Z [DEBUG] High write ratio: blit=441, write=69680 (99.4% writes), screen=1719x63
+2026-03-02T22:03:08.679Z [DEBUG] executePreToolHooks called for tool: TaskUpdate
+2026-03-02T22:03:08.680Z [DEBUG] Getting matching hook commands for PreToolUse with query: TaskUpdate
+2026-03-02T22:03:08.680Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:03:08.680Z [DEBUG] Matched 0 unique hooks for query "TaskUpdate" (0 before deduplication)
+2026-03-02T22:03:08.683Z [DEBUG] [useDeferredValue] Messages deferred by 1 (301→302)
+2026-03-02T22:03:08.850Z [DEBUG] High write ratio: blit=0, write=69823 (100.0% writes), screen=1719x63
+2026-03-02T22:03:08.862Z [DEBUG] Getting matching hook commands for TaskCompleted with query: undefined
+2026-03-02T22:03:08.862Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:03:08.862Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T22:03:08.863Z [DEBUG] [useDeferredValue] Messages deferred by 1 (301→302)
+2026-03-02T22:03:08.882Z [DEBUG] Getting matching hook commands for PostToolUse with query: TaskUpdate
+2026-03-02T22:03:08.882Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:03:08.882Z [DEBUG] Matched 0 unique hooks for query "TaskUpdate" (0 before deduplication)
+2026-03-02T22:03:08.883Z [DEBUG] [useDeferredValue] Messages deferred by 1 (301→302)
+2026-03-02T22:03:09.072Z [DEBUG] High write ratio: blit=441, write=69680 (99.4% writes), screen=1719x63
+2026-03-02T22:03:09.083Z [DEBUG] executePreToolHooks called for tool: TaskUpdate
+2026-03-02T22:03:09.084Z [DEBUG] Getting matching hook commands for PreToolUse with query: TaskUpdate
+2026-03-02T22:03:09.084Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:03:09.084Z [DEBUG] Matched 0 unique hooks for query "TaskUpdate" (0 before deduplication)
+2026-03-02T22:03:09.089Z [DEBUG] [useDeferredValue] Messages deferred by 2 (302→304)
+2026-03-02T22:03:09.254Z [DEBUG] High write ratio: blit=0, write=69829 (100.0% writes), screen=1719x63
+2026-03-02T22:03:09.268Z [DEBUG] Getting matching hook commands for PostToolUse with query: TaskUpdate
+2026-03-02T22:03:09.268Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:03:09.268Z [DEBUG] Matched 0 unique hooks for query "TaskUpdate" (0 before deduplication)
+2026-03-02T22:03:09.269Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:09.269Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:03:09.269Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:03:09.269Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:03:09.269Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:03:09.272Z [DEBUG] [useDeferredValue] Messages deferred by 3 (302→305)
+2026-03-02T22:03:09.441Z [DEBUG] High write ratio: blit=441, write=69686 (99.4% writes), screen=1719x63
+2026-03-02T22:03:09.443Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 174ms
+2026-03-02T22:03:09.444Z [DEBUG] autocompact: tokens=154412 threshold=167000 effectiveWindow=180000
+2026-03-02T22:03:09.446Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:03:09.452Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:03:09.452Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:03:09.452Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:03:09.453Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:03:09.470Z [DEBUG] [useDeferredValue] Messages deferred by 3 (302→305)
+2026-03-02T22:03:09.489Z [DEBUG] [useDeferredValue] Messages deferred by 3 (302→305)
+2026-03-02T22:03:09.682Z [DEBUG] High write ratio: blit=441, write=69690 (99.4% writes), screen=1719x63
+2026-03-02T22:03:10.704Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:03:11.520Z [DEBUG] [useDeferredValue] Messages deferred by 1 (305→306)
+2026-03-02T22:03:11.688Z [DEBUG] High write ratio: blit=441, write=69690 (99.4% writes), screen=1719x63
+2026-03-02T22:03:11.892Z [DEBUG] High write ratio: blit=441, write=69715 (99.4% writes), screen=1721x63
+2026-03-02T22:03:17.932Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:03:17.934Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:03:17.934Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:03:17.934Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:03:17.937Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:17.940Z [DEBUG] [useDeferredValue] Messages deferred by 1 (306→307)
+2026-03-02T22:03:18.131Z [DEBUG] High write ratio: blit=0, write=69857 (100.0% writes), screen=1721x63
+2026-03-02T22:03:18.135Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 198ms
+2026-03-02T22:03:18.137Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/config.py.tmp.20973.1772488998137
+2026-03-02T22:03:18.137Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:03:18.138Z [DEBUG] Temp file written successfully, size: 1169 bytes
+2026-03-02T22:03:18.138Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:03:18.138Z [DEBUG] Renaming /teamspace/studios/this_studio/server/config.py.tmp.20973.1772488998137 to /teamspace/studios/this_studio/server/config.py
+2026-03-02T22:03:18.139Z [DEBUG] File /teamspace/studios/this_studio/server/config.py written atomically
+2026-03-02T22:03:18.141Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:03:18.141Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:03:18.141Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:03:18.144Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:18.144Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:03:18.144Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:03:18.145Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:03:18.145Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:03:18.160Z [DEBUG] [useDeferredValue] Messages deferred by 4 (306→310)
+2026-03-02T22:03:18.330Z [DEBUG] High write ratio: blit=441, write=69714 (99.4% writes), screen=1721x63
+2026-03-02T22:03:18.334Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 190ms
+2026-03-02T22:03:18.335Z [DEBUG] autocompact: tokens=155007 threshold=167000 effectiveWindow=180000
+2026-03-02T22:03:18.337Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:03:18.345Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:03:18.346Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:03:18.346Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:03:18.347Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:03:18.368Z [DEBUG] [useDeferredValue] Messages deferred by 4 (306→310)
+2026-03-02T22:03:18.587Z [DEBUG] High write ratio: blit=441, write=70622 (99.4% writes), screen=1744x63
+2026-03-02T22:03:19.698Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:03:20.270Z [DEBUG] [useDeferredValue] Messages deferred by 1 (310→311)
+2026-03-02T22:03:20.286Z [DEBUG] [useDeferredValue] Messages deferred by 1 (310→311)
+2026-03-02T22:03:20.475Z [DEBUG] High write ratio: blit=441, write=70622 (99.4% writes), screen=1744x63
+2026-03-02T22:03:20.680Z [DEBUG] High write ratio: blit=441, write=70708 (99.4% writes), screen=1747x63
+2026-03-02T22:03:22.436Z [DEBUG] [useDeferredValue] Messages deferred by 1 (311→312)
+2026-03-02T22:03:22.626Z [DEBUG] High write ratio: blit=0, write=70851 (100.0% writes), screen=1747x63
+2026-03-02T22:03:22.643Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:03:22.644Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:03:22.644Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:03:22.644Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:03:22.651Z [DEBUG] [useDeferredValue] Messages deferred by 1 (311→312)
+2026-03-02T22:03:22.852Z [DEBUG] High write ratio: blit=441, write=70708 (99.4% writes), screen=1747x63
+2026-03-02T22:03:22.856Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:22.865Z [DEBUG] [useDeferredValue] Messages deferred by 1 (311→312)
+2026-03-02T22:03:22.874Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 18ms
+2026-03-02T22:03:22.876Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772489002876
+2026-03-02T22:03:22.876Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:03:22.878Z [DEBUG] Temp file written successfully, size: 9824 bytes
+2026-03-02T22:03:22.878Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:03:22.878Z [DEBUG] Renaming /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772489002876 to /teamspace/studios/this_studio/server/services/vllm_manager.py
+2026-03-02T22:03:22.878Z [DEBUG] File /teamspace/studios/this_studio/server/services/vllm_manager.py written atomically
+2026-03-02T22:03:22.880Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:03:22.880Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:03:22.880Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:03:22.882Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:22.882Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:03:22.882Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:03:22.882Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:03:22.882Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:03:22.891Z [DEBUG] [useDeferredValue] Messages deferred by 4 (311→315)
+2026-03-02T22:03:23.069Z [DEBUG] High write ratio: blit=441, write=70708 (99.4% writes), screen=1747x63
+2026-03-02T22:03:23.072Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 190ms
+2026-03-02T22:03:23.073Z [DEBUG] autocompact: tokens=155313 threshold=167000 effectiveWindow=180000
+2026-03-02T22:03:23.074Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:03:23.079Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:03:23.080Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:03:23.080Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:03:23.080Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:03:23.097Z [DEBUG] [useDeferredValue] Messages deferred by 4 (311→315)
+2026-03-02T22:03:23.317Z [DEBUG] High write ratio: blit=441, write=71140 (99.4% writes), screen=1766x63
+2026-03-02T22:03:24.069Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:03:24.674Z [DEBUG] [useDeferredValue] Messages deferred by 1 (315→316)
+2026-03-02T22:03:24.876Z [DEBUG] High write ratio: blit=441, write=71195 (99.4% writes), screen=1769x63
+2026-03-02T22:03:24.889Z [DEBUG] [useDeferredValue] Messages deferred by 1 (315→316)
+2026-03-02T22:03:25.080Z [DEBUG] High write ratio: blit=441, write=71287 (99.4% writes), screen=1772x63
+2026-03-02T22:03:25.450Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T22:03:25.450Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T22:03:25.450Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:03:25.450Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T22:03:25.453Z [DEBUG] [useDeferredValue] Messages deferred by 1 (316→317)
+2026-03-02T22:03:25.644Z [DEBUG] High write ratio: blit=0, write=71395 (100.0% writes), screen=1770x63
+2026-03-02T22:03:25.660Z [DEBUG] [useDeferredValue] Messages deferred by 1 (316→317)
+2026-03-02T22:03:25.834Z [DEBUG] High write ratio: blit=441, write=71252 (99.4% writes), screen=1770x63
+2026-03-02T22:03:25.851Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T22:03:25.851Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:03:25.851Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T22:03:25.853Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:25.853Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:03:25.853Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:03:25.853Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:03:25.853Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:03:25.856Z [DEBUG] [useDeferredValue] Messages deferred by 4 (316→320)
+2026-03-02T22:03:26.037Z [DEBUG] High write ratio: blit=441, write=71252 (99.4% writes), screen=1770x63
+2026-03-02T22:03:26.040Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 186ms
+2026-03-02T22:03:26.040Z [DEBUG] autocompact: tokens=155680 threshold=167000 effectiveWindow=180000
+2026-03-02T22:03:26.041Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:03:26.046Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:03:26.047Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:03:26.047Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:03:26.047Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:03:26.065Z [DEBUG] [useDeferredValue] Messages deferred by 4 (316→320)
+2026-03-02T22:03:26.263Z [DEBUG] High write ratio: blit=441, write=71323 (99.4% writes), screen=1773x63
+2026-03-02T22:03:27.104Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:03:27.277Z [DEBUG] High write ratio: blit=441, write=71324 (99.4% writes), screen=1773x63
+2026-03-02T22:03:36.749Z [DEBUG] [useDeferredValue] Messages deferred by 1 (320→321)
+2026-03-02T22:03:36.941Z [DEBUG] High write ratio: blit=0, write=71467 (100.0% writes), screen=1773x63
+2026-03-02T22:03:36.953Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:03:36.953Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:03:36.953Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:03:36.954Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:03:36.960Z [DEBUG] [useDeferredValue] Messages deferred by 1 (320→321)
+2026-03-02T22:03:37.130Z [DEBUG] High write ratio: blit=441, write=71324 (99.4% writes), screen=1773x63
+2026-03-02T22:03:37.134Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:37.150Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 16ms
+2026-03-02T22:03:37.152Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772489017152
+2026-03-02T22:03:37.153Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:03:37.154Z [DEBUG] Temp file written successfully, size: 11734 bytes
+2026-03-02T22:03:37.154Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:03:37.154Z [DEBUG] Renaming /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772489017152 to /teamspace/studios/this_studio/server/services/vllm_manager.py
+2026-03-02T22:03:37.154Z [DEBUG] File /teamspace/studios/this_studio/server/services/vllm_manager.py written atomically
+2026-03-02T22:03:37.157Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:03:37.157Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:03:37.157Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:03:37.159Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:37.159Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:03:37.159Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:03:37.160Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:03:37.160Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:03:37.169Z [DEBUG] [useDeferredValue] Messages deferred by 4 (320→324)
+2026-03-02T22:03:37.341Z [DEBUG] High write ratio: blit=441, write=71324 (99.4% writes), screen=1773x63
+2026-03-02T22:03:37.344Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 184ms
+2026-03-02T22:03:37.344Z [DEBUG] autocompact: tokens=156490 threshold=167000 effectiveWindow=180000
+2026-03-02T22:03:37.346Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:03:37.351Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:03:37.352Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:03:37.352Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:03:37.352Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:03:37.370Z [DEBUG] [useDeferredValue] Messages deferred by 4 (320→324)
+2026-03-02T22:03:37.635Z [DEBUG] High write ratio: blit=441, write=74872 (99.4% writes), screen=1848x63
+2026-03-02T22:03:38.770Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:03:39.769Z [DEBUG] [useDeferredValue] Messages deferred by 1 (324→325)
+2026-03-02T22:03:39.787Z [DEBUG] [useDeferredValue] Messages deferred by 1 (324→325)
+2026-03-02T22:03:39.991Z [DEBUG] High write ratio: blit=441, write=74872 (99.4% writes), screen=1848x63
+2026-03-02T22:03:40.003Z [DEBUG] [useDeferredValue] Messages deferred by 1 (324→325)
+2026-03-02T22:03:40.017Z [DEBUG] [useDeferredValue] Messages deferred by 1 (324→325)
+2026-03-02T22:03:40.215Z [DEBUG] High write ratio: blit=441, write=74939 (99.4% writes), screen=1851x63
+2026-03-02T22:03:54.179Z [DEBUG] [useDeferredValue] Messages deferred by 1 (325→326)
+2026-03-02T22:03:54.388Z [DEBUG] High write ratio: blit=0, write=75082 (100.0% writes), screen=1851x63
+2026-03-02T22:03:54.400Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:03:54.401Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:03:54.401Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:03:54.401Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:03:54.408Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:54.410Z [DEBUG] [useDeferredValue] Messages deferred by 1 (325→326)
+2026-03-02T22:03:54.592Z [DEBUG] High write ratio: blit=441, write=74939 (99.4% writes), screen=1851x63
+2026-03-02T22:03:54.595Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 187ms
+2026-03-02T22:03:54.598Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/main.py.tmp.20973.1772489034598
+2026-03-02T22:03:54.598Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:03:54.599Z [DEBUG] Temp file written successfully, size: 4232 bytes
+2026-03-02T22:03:54.599Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:03:54.599Z [DEBUG] Renaming /teamspace/studios/this_studio/server/main.py.tmp.20973.1772489034598 to /teamspace/studios/this_studio/server/main.py
+2026-03-02T22:03:54.600Z [DEBUG] File /teamspace/studios/this_studio/server/main.py written atomically
+2026-03-02T22:03:54.603Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:03:54.603Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:03:54.603Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:03:54.605Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:03:54.605Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:03:54.605Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:03:54.605Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:03:54.605Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:03:54.618Z [DEBUG] [useDeferredValue] Messages deferred by 4 (325→329)
+2026-03-02T22:03:54.798Z [DEBUG] High write ratio: blit=441, write=74939 (99.4% writes), screen=1851x63
+2026-03-02T22:03:54.802Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 197ms
+2026-03-02T22:03:54.802Z [DEBUG] autocompact: tokens=157822 threshold=167000 effectiveWindow=180000
+2026-03-02T22:03:54.803Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:03:54.811Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:03:54.812Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:03:54.812Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:03:54.812Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:03:54.829Z [DEBUG] [useDeferredValue] Messages deferred by 4 (325→329)
+2026-03-02T22:03:55.122Z [DEBUG] High write ratio: blit=441, write=80227 (99.5% writes), screen=1974x63
+2026-03-02T22:03:55.882Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:03:56.301Z [DEBUG] [useDeferredValue] Messages deferred by 1 (329→330)
+2026-03-02T22:03:56.534Z [DEBUG] High write ratio: blit=441, write=80227 (99.5% writes), screen=1974x63
+2026-03-02T22:03:56.883Z [DEBUG] High write ratio: blit=441, write=80248 (99.5% writes), screen=1976x63
+2026-03-02T22:04:00.799Z [DEBUG] [useDeferredValue] Messages deferred by 1 (330→331)
+2026-03-02T22:04:01.015Z [DEBUG] High write ratio: blit=0, write=80391 (100.0% writes), screen=1976x63
+2026-03-02T22:04:01.026Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:04:01.027Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:04:01.027Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:04:01.027Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:04:01.030Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:01.034Z [DEBUG] [useDeferredValue] Messages deferred by 1 (330→331)
+2026-03-02T22:04:01.229Z [DEBUG] High write ratio: blit=441, write=80248 (99.5% writes), screen=1976x63
+2026-03-02T22:04:01.232Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 202ms
+2026-03-02T22:04:01.233Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/.env.example.tmp.20973.1772489041233
+2026-03-02T22:04:01.233Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:04:01.234Z [DEBUG] Temp file written successfully, size: 1194 bytes
+2026-03-02T22:04:01.234Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:04:01.234Z [DEBUG] Renaming /teamspace/studios/this_studio/.env.example.tmp.20973.1772489041233 to /teamspace/studios/this_studio/.env.example
+2026-03-02T22:04:01.235Z [DEBUG] File /teamspace/studios/this_studio/.env.example written atomically
+2026-03-02T22:04:01.237Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:04:01.237Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:04:01.237Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:04:01.239Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:01.240Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:04:01.240Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:04:01.240Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:04:01.240Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:04:01.256Z [DEBUG] [useDeferredValue] Messages deferred by 4 (330→334)
+2026-03-02T22:04:01.452Z [DEBUG] High write ratio: blit=441, write=80248 (99.5% writes), screen=1976x63
+2026-03-02T22:04:01.455Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 216ms
+2026-03-02T22:04:01.465Z [DEBUG] autocompact: tokens=158370 threshold=167000 effectiveWindow=180000
+2026-03-02T22:04:01.466Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:04:01.472Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:04:01.472Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:04:01.472Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:04:01.473Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:04:01.480Z [DEBUG] [useDeferredValue] Messages deferred by 5 (330→335)
+2026-03-02T22:04:01.790Z [DEBUG] High write ratio: blit=441, write=81145 (99.5% writes), screen=1997x63
+2026-03-02T22:04:02.506Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:04:02.919Z [DEBUG] [useDeferredValue] Messages deferred by 1 (335→336)
+2026-03-02T22:04:03.121Z [DEBUG] High write ratio: blit=441, write=81145 (99.5% writes), screen=1997x63
+2026-03-02T22:04:03.135Z [DEBUG] [useDeferredValue] Messages deferred by 1 (335→336)
+2026-03-02T22:04:03.381Z [DEBUG] High write ratio: blit=441, write=81174 (99.5% writes), screen=1999x63
+2026-03-02T22:04:03.498Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-02T22:04:03.498Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-02T22:04:03.498Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:04:03.498Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:04:03.510Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-02T22:04:03.511Z [DEBUG] [useDeferredValue] Messages deferred by 1 (336→337)
+2026-03-02T22:04:03.711Z [DEBUG] High write ratio: blit=0, write=81317 (100.0% writes), screen=1999x63
+2026-03-02T22:04:03.957Z [DEBUG] High write ratio: blit=441, write=81247 (99.5% writes), screen=2002x63
+2026-03-02T22:04:04.909Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-02T22:04:04.909Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:04:04.909Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:04:04.909Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:04.910Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:04:04.910Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:04:04.910Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:04:04.910Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:04:04.912Z [DEBUG] [useDeferredValue] Messages deferred by 1 (337→338)
+2026-03-02T22:04:05.120Z [DEBUG] High write ratio: blit=441, write=81247 (99.5% writes), screen=2002x63
+2026-03-02T22:04:05.122Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 213ms
+2026-03-02T22:04:05.123Z [DEBUG] autocompact: tokens=158640 threshold=167000 effectiveWindow=180000
+2026-03-02T22:04:05.124Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:04:05.130Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:04:05.130Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:04:05.130Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:04:05.131Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:04:05.149Z [DEBUG] [useDeferredValue] Messages deferred by 1 (337→338)
+2026-03-02T22:04:05.381Z [DEBUG] High write ratio: blit=441, write=81400 (99.5% writes), screen=2005x63
+2026-03-02T22:04:06.566Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:04:13.146Z [DEBUG] [useDeferredValue] Messages deferred by 1 (338→339)
+2026-03-02T22:04:13.165Z [DEBUG] [useDeferredValue] Messages deferred by 1 (338→339)
+2026-03-02T22:04:13.398Z [DEBUG] High write ratio: blit=441, write=81400 (99.5% writes), screen=2005x63
+2026-03-02T22:04:14.094Z [DEBUG] [useDeferredValue] Messages deferred by 1 (339→340)
+2026-03-02T22:04:14.366Z [DEBUG] High write ratio: blit=441, write=81400 (99.5% writes), screen=2005x63
+2026-03-02T22:04:14.382Z [DEBUG] [useDeferredValue] Messages deferred by 1 (339→340)
+2026-03-02T22:04:14.629Z [DEBUG] High write ratio: blit=441, write=81618 (99.5% writes), screen=2010x63
+2026-03-02T22:04:15.158Z [DEBUG] [useDeferredValue] Messages deferred by 1 (340→341)
+2026-03-02T22:04:15.375Z [DEBUG] High write ratio: blit=0, write=81761 (100.0% writes), screen=2010x63
+2026-03-02T22:04:15.387Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:04:15.388Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:04:15.388Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:04:15.388Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:04:15.397Z [DEBUG] [useDeferredValue] Messages deferred by 1 (340→341)
+2026-03-02T22:04:15.598Z [DEBUG] High write ratio: blit=441, write=81618 (99.5% writes), screen=2010x63
+2026-03-02T22:04:15.617Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:15.631Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 14ms
+2026-03-02T22:04:15.634Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772489055634
+2026-03-02T22:04:15.634Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:04:15.635Z [DEBUG] Temp file written successfully, size: 11688 bytes
+2026-03-02T22:04:15.636Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:04:15.636Z [DEBUG] Renaming /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772489055634 to /teamspace/studios/this_studio/server/services/vllm_manager.py
+2026-03-02T22:04:15.636Z [DEBUG] File /teamspace/studios/this_studio/server/services/vllm_manager.py written atomically
+2026-03-02T22:04:15.639Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:04:15.639Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:04:15.640Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:04:15.643Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:15.644Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:04:15.644Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:04:15.644Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:04:15.644Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:04:15.653Z [DEBUG] [useDeferredValue] Messages deferred by 4 (340→344)
+2026-03-02T22:04:15.859Z [DEBUG] High write ratio: blit=441, write=81618 (99.5% writes), screen=2010x63
+2026-03-02T22:04:15.862Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 219ms
+2026-03-02T22:04:15.863Z [DEBUG] autocompact: tokens=159228 threshold=167000 effectiveWindow=180000
+2026-03-02T22:04:15.865Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:04:15.872Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:04:15.873Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:04:15.873Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:04:15.874Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:04:15.892Z [DEBUG] [useDeferredValue] Messages deferred by 4 (340→344)
+2026-03-02T22:04:15.909Z [DEBUG] [useDeferredValue] Messages deferred by 4 (340→344)
+2026-03-02T22:04:16.155Z [DEBUG] High write ratio: blit=441, write=81862 (99.5% writes), screen=2021x63
+2026-03-02T22:04:18.366Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:04:18.604Z [DEBUG] High write ratio: blit=441, write=81861 (99.5% writes), screen=2021x63
+2026-03-02T22:04:26.859Z [DEBUG] [useDeferredValue] Messages deferred by 1 (344→345)
+2026-03-02T22:04:27.094Z [DEBUG] High write ratio: blit=0, write=82005 (100.0% writes), screen=2021x63
+2026-03-02T22:04:27.106Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:04:27.106Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:04:27.106Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:04:27.106Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:04:27.113Z [DEBUG] [useDeferredValue] Messages deferred by 1 (344→345)
+2026-03-02T22:04:27.313Z [DEBUG] High write ratio: blit=441, write=81862 (99.5% writes), screen=2021x63
+2026-03-02T22:04:27.317Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:27.334Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 17ms
+2026-03-02T22:04:27.336Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772489067336
+2026-03-02T22:04:27.336Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:04:27.337Z [DEBUG] Temp file written successfully, size: 11972 bytes
+2026-03-02T22:04:27.337Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:04:27.337Z [DEBUG] Renaming /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772489067336 to /teamspace/studios/this_studio/server/services/vllm_manager.py
+2026-03-02T22:04:27.337Z [DEBUG] File /teamspace/studios/this_studio/server/services/vllm_manager.py written atomically
+2026-03-02T22:04:27.340Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:04:27.340Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:04:27.340Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:04:27.343Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:27.343Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:04:27.343Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:04:27.343Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:04:27.343Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:04:27.351Z [DEBUG] [useDeferredValue] Messages deferred by 4 (344→348)
+2026-03-02T22:04:27.551Z [DEBUG] High write ratio: blit=441, write=81862 (99.5% writes), screen=2021x63
+2026-03-02T22:04:27.554Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 211ms
+2026-03-02T22:04:27.555Z [DEBUG] autocompact: tokens=159797 threshold=167000 effectiveWindow=180000
+2026-03-02T22:04:27.556Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:04:27.563Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:04:27.564Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:04:27.564Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:04:27.564Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:04:27.581Z [DEBUG] [useDeferredValue] Messages deferred by 4 (344→348)
+2026-03-02T22:04:27.873Z [DEBUG] High write ratio: blit=441, write=82802 (99.5% writes), screen=2044x63
+2026-03-02T22:04:29.088Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:04:29.549Z [DEBUG] [useDeferredValue] Messages deferred by 1 (348→349)
+2026-03-02T22:04:29.560Z [DEBUG] [useDeferredValue] Messages deferred by 1 (348→349)
+2026-03-02T22:04:29.807Z [DEBUG] High write ratio: blit=441, write=82802 (99.5% writes), screen=2044x63
+2026-03-02T22:04:29.819Z [DEBUG] [useDeferredValue] Messages deferred by 1 (348→349)
+2026-03-02T22:04:30.043Z [DEBUG] High write ratio: blit=441, write=82870 (99.5% writes), screen=2047x63
+2026-03-02T22:04:36.808Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:04:36.809Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:04:36.809Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:04:36.809Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:04:36.812Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:36.814Z [DEBUG] [useDeferredValue] Messages deferred by 1 (349→350)
+2026-03-02T22:04:37.042Z [DEBUG] High write ratio: blit=0, write=83013 (100.0% writes), screen=2047x63
+2026-03-02T22:04:37.046Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 234ms
+2026-03-02T22:04:37.049Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/tests/test_startup.py.tmp.20973.1772489077049
+2026-03-02T22:04:37.049Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:04:37.050Z [DEBUG] Temp file written successfully, size: 6925 bytes
+2026-03-02T22:04:37.050Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:04:37.050Z [DEBUG] Renaming /teamspace/studios/this_studio/tests/test_startup.py.tmp.20973.1772489077049 to /teamspace/studios/this_studio/tests/test_startup.py
+2026-03-02T22:04:37.050Z [DEBUG] File /teamspace/studios/this_studio/tests/test_startup.py written atomically
+2026-03-02T22:04:37.053Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:04:37.053Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:04:37.053Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:04:37.056Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:37.056Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:04:37.056Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:04:37.056Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:04:37.056Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:04:37.071Z [DEBUG] [useDeferredValue] Messages deferred by 4 (349→353)
+2026-03-02T22:04:37.274Z [DEBUG] High write ratio: blit=441, write=82870 (99.5% writes), screen=2047x63
+2026-03-02T22:04:37.278Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 222ms
+2026-03-02T22:04:37.279Z [DEBUG] autocompact: tokens=160550 threshold=167000 effectiveWindow=180000
+2026-03-02T22:04:37.280Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:04:37.289Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:04:37.291Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:04:37.291Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:04:37.291Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:04:37.317Z [DEBUG] [useDeferredValue] Messages deferred by 4 (349→353)
+2026-03-02T22:04:37.582Z [DEBUG] High write ratio: blit=441, write=83795 (99.5% writes), screen=2070x63
+2026-03-02T22:04:38.459Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:04:38.690Z [DEBUG] High write ratio: blit=441, write=83795 (99.5% writes), screen=2070x63
+2026-03-02T22:04:39.422Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-02T22:04:39.423Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-02T22:04:39.423Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:04:39.423Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:04:39.434Z [DEBUG] [useDeferredValue] Messages deferred by 1 (353→354)
+2026-03-02T22:04:39.665Z [DEBUG] High write ratio: blit=0, write=83938 (100.0% writes), screen=2070x63
+2026-03-02T22:04:39.681Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-02T22:04:39.689Z [DEBUG] [useDeferredValue] Messages deferred by 1 (353→354)
+2026-03-02T22:04:39.905Z [DEBUG] High write ratio: blit=441, write=83795 (99.5% writes), screen=2070x63
+2026-03-02T22:04:40.178Z [DEBUG] High write ratio: blit=441, write=83895 (99.5% writes), screen=2074x63
+2026-03-02T22:04:42.691Z [DEBUG] [useDeferredValue] Messages deferred by 1 (354→355)
+2026-03-02T22:04:43.006Z [DEBUG] High write ratio: blit=441, write=83922 (99.5% writes), screen=2075x63
+2026-03-02T22:04:43.274Z [DEBUG] High write ratio: blit=441, write=83940 (99.5% writes), screen=2075x63
+2026-03-02T22:04:43.689Z [DEBUG] [useDeferredValue] Messages deferred by 1 (355→356)
+2026-03-02T22:04:43.904Z [DEBUG] High write ratio: blit=441, write=83940 (99.5% writes), screen=2075x63
+2026-03-02T22:04:44.162Z [DEBUG] High write ratio: blit=441, write=83940 (99.5% writes), screen=2075x63
+2026-03-02T22:04:44.691Z [DEBUG] [useDeferredValue] Messages deferred by 1 (356→357)
+2026-03-02T22:04:44.905Z [DEBUG] High write ratio: blit=441, write=83940 (99.5% writes), screen=2075x63
+2026-03-02T22:04:44.937Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-02T22:04:44.937Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:04:44.937Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:04:44.938Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:04:44.938Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:04:44.938Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:04:44.939Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:04:44.939Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:04:44.941Z [DEBUG] [useDeferredValue] Messages deferred by 2 (356→358)
+2026-03-02T22:04:45.148Z [DEBUG] High write ratio: blit=0, write=84038 (100.0% writes), screen=2074x63
+2026-03-02T22:04:45.154Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 216ms
+2026-03-02T22:04:45.154Z [DEBUG] autocompact: tokens=161874 threshold=167000 effectiveWindow=180000
+2026-03-02T22:04:45.155Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:04:45.161Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:04:45.162Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:04:45.162Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:04:45.162Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:04:45.172Z [DEBUG] [useDeferredValue] Messages deferred by 2 (356→358)
+2026-03-02T22:04:45.420Z [DEBUG] High write ratio: blit=441, write=84067 (99.5% writes), screen=2078x63
+2026-03-02T22:04:46.724Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:05:10.084Z [DEBUG] [useDeferredValue] Messages deferred by 1 (358→359)
+2026-03-02T22:05:10.359Z [DEBUG] High write ratio: blit=441, write=84059 (99.5% writes), screen=2078x63
+2026-03-02T22:05:11.107Z [DEBUG] [useDeferredValue] Messages deferred by 1 (359→360)
+2026-03-02T22:05:11.125Z [DEBUG] [useDeferredValue] Messages deferred by 1 (359→360)
+2026-03-02T22:05:11.345Z [DEBUG] High write ratio: blit=441, write=84094 (99.5% writes), screen=2080x63
+2026-03-02T22:05:11.357Z [DEBUG] [useDeferredValue] Messages deferred by 1 (359→360)
+2026-03-02T22:05:11.589Z [DEBUG] High write ratio: blit=441, write=84255 (99.5% writes), screen=2084x63
+2026-03-02T22:05:11.611Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T22:05:11.613Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T22:05:11.613Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:05:11.613Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T22:05:11.623Z [DEBUG] [useDeferredValue] Messages deferred by 1 (360→361)
+2026-03-02T22:05:11.842Z [DEBUG] High write ratio: blit=0, write=84363 (100.0% writes), screen=2082x63
+2026-03-02T22:05:11.860Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T22:05:11.860Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:05:11.860Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T22:05:11.863Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:05:11.863Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:05:11.863Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:05:11.864Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:05:11.864Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:05:11.869Z [DEBUG] [useDeferredValue] Messages deferred by 4 (360→364)
+2026-03-02T22:05:12.089Z [DEBUG] High write ratio: blit=441, write=84220 (99.5% writes), screen=2082x63
+2026-03-02T22:05:12.093Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 230ms
+2026-03-02T22:05:12.108Z [DEBUG] autocompact: tokens=164742 threshold=167000 effectiveWindow=180000
+2026-03-02T22:05:12.109Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:05:12.117Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:05:12.118Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:05:12.118Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:05:12.118Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:05:12.126Z [DEBUG] [useDeferredValue] Messages deferred by 5 (360→365)
+2026-03-02T22:05:12.367Z [DEBUG] High write ratio: blit=441, write=84277 (99.5% writes), screen=2085x63
+2026-03-02T22:05:14.091Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:05:14.303Z [DEBUG] High write ratio: blit=441, write=84277 (99.5% writes), screen=2085x63
+2026-03-02T22:05:25.504Z [DEBUG] [useDeferredValue] Messages deferred by 1 (365→366)
+2026-03-02T22:05:25.738Z [DEBUG] High write ratio: blit=0, write=84428 (100.0% writes), screen=2085x63
+2026-03-02T22:05:25.756Z [DEBUG] executePreToolHooks called for tool: Write
+2026-03-02T22:05:25.757Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2026-03-02T22:05:25.757Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:05:25.757Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2026-03-02T22:05:25.763Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:05:25.764Z [DEBUG] [useDeferredValue] Messages deferred by 1 (365→366)
+2026-03-02T22:05:25.972Z [DEBUG] High write ratio: blit=441, write=84285 (99.5% writes), screen=2085x63
+2026-03-02T22:05:25.975Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 212ms
+2026-03-02T22:05:25.976Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/tests/conftest.py.tmp.20973.1772489125976
+2026-03-02T22:05:25.976Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:05:25.977Z [DEBUG] Temp file written successfully, size: 2824 bytes
+2026-03-02T22:05:25.977Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:05:25.977Z [DEBUG] Renaming /teamspace/studios/this_studio/tests/conftest.py.tmp.20973.1772489125976 to /teamspace/studios/this_studio/tests/conftest.py
+2026-03-02T22:05:25.978Z [DEBUG] File /teamspace/studios/this_studio/tests/conftest.py written atomically
+2026-03-02T22:05:25.982Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2026-03-02T22:05:25.982Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:05:25.982Z [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+2026-03-02T22:05:25.984Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:05:25.984Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:05:25.984Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:05:25.984Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:05:25.984Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:05:25.996Z [DEBUG] [useDeferredValue] Messages deferred by 4 (365→369)
+2026-03-02T22:05:26.206Z [DEBUG] High write ratio: blit=441, write=84285 (99.5% writes), screen=2085x63
+2026-03-02T22:05:26.210Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 226ms
+2026-03-02T22:05:26.211Z [DEBUG] autocompact: tokens=166000 threshold=167000 effectiveWindow=180000
+2026-03-02T22:05:26.212Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:05:26.219Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:05:26.220Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:05:26.220Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:05:26.221Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:05:26.242Z [DEBUG] [useDeferredValue] Messages deferred by 4 (365→369)
+2026-03-02T22:05:26.539Z [DEBUG] High write ratio: blit=441, write=86676 (99.5% writes), screen=2152x63
+2026-03-02T22:05:27.320Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:05:28.053Z [DEBUG] [useDeferredValue] Messages deferred by 1 (369→370)
+2026-03-02T22:05:28.273Z [DEBUG] High write ratio: blit=441, write=86668 (99.5% writes), screen=2152x63
+2026-03-02T22:05:28.287Z [DEBUG] [useDeferredValue] Messages deferred by 1 (369→370)
+2026-03-02T22:05:28.554Z [DEBUG] High write ratio: blit=441, write=86744 (99.5% writes), screen=2155x63
+2026-03-02T22:05:37.666Z [DEBUG] [useDeferredValue] Messages deferred by 1 (370→371)
+2026-03-02T22:05:37.890Z [DEBUG] High write ratio: blit=0, write=86887 (100.0% writes), screen=2155x63
+2026-03-02T22:05:37.910Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:05:37.911Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:05:37.911Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:05:37.911Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:05:37.918Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:05:37.919Z [DEBUG] [useDeferredValue] Messages deferred by 1 (370→371)
+2026-03-02T22:05:38.141Z [DEBUG] High write ratio: blit=441, write=86744 (99.5% writes), screen=2155x63
+2026-03-02T22:05:38.145Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 227ms
+2026-03-02T22:05:38.147Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/tests/test_startup.py.tmp.20973.1772489138147
+2026-03-02T22:05:38.147Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:05:38.148Z [DEBUG] Temp file written successfully, size: 6980 bytes
+2026-03-02T22:05:38.148Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:05:38.148Z [DEBUG] Renaming /teamspace/studios/this_studio/tests/test_startup.py.tmp.20973.1772489138147 to /teamspace/studios/this_studio/tests/test_startup.py
+2026-03-02T22:05:38.148Z [DEBUG] File /teamspace/studios/this_studio/tests/test_startup.py written atomically
+2026-03-02T22:05:38.151Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:05:38.151Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:05:38.152Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:05:38.155Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:05:38.155Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:05:38.155Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:05:38.155Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:05:38.155Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:05:38.172Z [DEBUG] [useDeferredValue] Messages deferred by 4 (370→374)
+2026-03-02T22:05:38.390Z [DEBUG] High write ratio: blit=441, write=86744 (99.5% writes), screen=2155x63
+2026-03-02T22:05:38.394Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 239ms
+2026-03-02T22:05:38.395Z [DEBUG] autocompact: tokens=166845 threshold=167000 effectiveWindow=180000
+2026-03-02T22:05:38.396Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:05:38.403Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:05:38.404Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:05:38.404Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:05:38.405Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:05:38.425Z [DEBUG] [useDeferredValue] Messages deferred by 4 (370→374)
+2026-03-02T22:05:38.733Z [DEBUG] High write ratio: blit=441, write=88540 (99.5% writes), screen=2200x63
+2026-03-02T22:05:41.024Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:05:41.259Z [DEBUG] High write ratio: blit=441, write=88540 (99.5% writes), screen=2200x63
+2026-03-02T22:05:41.886Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-02T22:05:41.887Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-02T22:05:41.887Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:05:41.887Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:05:41.900Z [DEBUG] [useDeferredValue] Messages deferred by 1 (374→375)
+2026-03-02T22:05:42.120Z [DEBUG] High write ratio: blit=0, write=88683 (100.0% writes), screen=2200x63
+2026-03-02T22:05:42.134Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-02T22:05:42.140Z [DEBUG] [useDeferredValue] Messages deferred by 1 (374→375)
+2026-03-02T22:05:42.377Z [DEBUG] High write ratio: blit=441, write=88540 (99.5% writes), screen=2200x63
+2026-03-02T22:05:42.394Z [DEBUG] [useDeferredValue] Messages deferred by 1 (374→375)
+2026-03-02T22:05:42.676Z [DEBUG] High write ratio: blit=441, write=88640 (99.5% writes), screen=2204x63
+2026-03-02T22:05:44.952Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-02T22:05:44.952Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:05:44.952Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:05:44.953Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:05:44.953Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:05:44.953Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:05:44.953Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:05:44.953Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:05:44.955Z [DEBUG] [useDeferredValue] Messages deferred by 1 (375→376)
+2026-03-02T22:05:45.192Z [DEBUG] High write ratio: blit=441, write=88640 (99.5% writes), screen=2204x63
+2026-03-02T22:05:45.196Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 243ms
+2026-03-02T22:05:45.197Z [DEBUG] autocompact: tokens=167745 threshold=167000 effectiveWindow=180000
+2026-03-02T22:05:45.205Z [DEBUG] Getting matching hook commands for PreCompact with query: auto
+2026-03-02T22:05:45.205Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:05:45.205Z [DEBUG] Matched 0 unique hooks for query "auto" (0 before deduplication)
+2026-03-02T22:05:45.210Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:05:45.216Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:05:45.217Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:05:45.217Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:05:45.217Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:05:45.236Z [DEBUG] [useDeferredValue] Messages deferred by 1 (375→376)
+2026-03-02T22:05:45.488Z [DEBUG] High write ratio: blit=441, write=88796 (99.5% writes), screen=2207x63
+2026-03-02T22:05:46.444Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:07:27.275Z [DEBUG] Forked agent [compact] received message: type=assistant
+2026-03-02T22:07:27.430Z [DEBUG] Getting matching hook commands for SubagentStop with query:
+2026-03-02T22:07:27.430Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:07:27.430Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T22:07:27.430Z [DEBUG] Forked agent [compact] finished: 1 messages, types=[assistant], totalUsage: input=3 output=5449 cacheRead=166856 cacheCreate=2370
+2026-03-02T22:07:27.455Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:07:27.455Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:07:27.455Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:07:27.459Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:07:27.459Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:07:27.459Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:07:27.578Z [DEBUG] Getting matching hook commands for SessionStart with query: compact
+2026-03-02T22:07:27.578Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:07:27.578Z [DEBUG] Matched 0 unique hooks for query "compact" (0 before deduplication)
+2026-03-02T22:07:27.581Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:07:27.588Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:07:27.589Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:07:27.589Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:07:27.590Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:07:29.021Z [DEBUG] High write ratio: blit=0, write=88905 (100.0% writes), screen=2206x63
+2026-03-02T22:07:29.021Z [DEBUG] Full reset (scrollback changes): scrollbackRows=2180, firstChangeY=694
+  prev: "✻ Sautéed for 4m 53s                                           "
+  next: "✻ Cogitated for 4m 53s                                         "
+2026-03-02T22:07:29.836Z [DEBUG] High write ratio: blit=2170, write=88084 (97.6% writes), screen=2206x63
+2026-03-02T22:07:29.929Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:07:29.972Z [DEBUG] Full reset (shrink->below): prevHeight=2206, nextHeight=24, viewport=27
+2026-03-02T22:07:30.714Z [DEBUG] [useDeferredValue] Messages deferred by 1 (9→10)
+2026-03-02T22:07:32.767Z [DEBUG] [useDeferredValue] Messages deferred by 1 (10→11)
+2026-03-02T22:07:32.786Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:07:32.786Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:07:32.786Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:07:32.786Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:07:32.793Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:07:32.794Z [DEBUG] [useDeferredValue] Messages deferred by 1 (10→11)
+2026-03-02T22:07:32.805Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 12ms
+2026-03-02T22:07:32.807Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/tests/test_startup.py.tmp.20973.1772489252807
+2026-03-02T22:07:32.807Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:07:32.808Z [DEBUG] Temp file written successfully, size: 6983 bytes
+2026-03-02T22:07:32.808Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:07:32.808Z [DEBUG] Renaming /teamspace/studios/this_studio/tests/test_startup.py.tmp.20973.1772489252807 to /teamspace/studios/this_studio/tests/test_startup.py
+2026-03-02T22:07:32.808Z [DEBUG] File /teamspace/studios/this_studio/tests/test_startup.py written atomically
+2026-03-02T22:07:32.811Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:07:32.811Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:07:32.811Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:07:32.814Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:07:32.814Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:07:32.814Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:07:32.814Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:07:32.814Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:07:32.817Z [DEBUG] Sending 2 skills via attachment (initial, 2 total sent)
+2026-03-02T22:07:32.830Z [DEBUG] [useDeferredValue] Messages deferred by 4 (10→14)
+2026-03-02T22:07:32.848Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 34ms
+2026-03-02T22:07:32.850Z [DEBUG] autocompact: tokens=46902 threshold=167000 effectiveWindow=180000
+2026-03-02T22:07:32.851Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:07:32.855Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:07:32.856Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:07:32.856Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:07:32.856Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:07:32.871Z [DEBUG] [useDeferredValue] Messages deferred by 5 (10→15)
+2026-03-02T22:07:32.991Z [DEBUG] High write ratio: blit=0, write=1838 (100.0% writes), screen=51x63
+2026-03-02T22:07:34.623Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:07:35.443Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-02T22:07:35.444Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-02T22:07:35.444Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:07:35.444Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:07:35.453Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-02T22:07:35.454Z [DEBUG] [useDeferredValue] Messages deferred by 1 (15→16)
+2026-03-02T22:07:35.466Z [DEBUG] High write ratio: blit=0, write=1838 (100.0% writes), screen=51x63
+2026-03-02T22:07:37.306Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-02T22:07:37.306Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:07:37.306Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:07:37.307Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:07:37.308Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:07:37.308Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:07:37.308Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:07:37.308Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:07:37.309Z [DEBUG] [useDeferredValue] Messages deferred by 1 (16→17)
+2026-03-02T22:07:37.320Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 13ms
+2026-03-02T22:07:37.321Z [DEBUG] autocompact: tokens=47400 threshold=167000 effectiveWindow=180000
+2026-03-02T22:07:37.321Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:07:37.326Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:07:37.326Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:07:37.326Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:07:37.326Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:07:37.339Z [DEBUG] [useDeferredValue] Messages deferred by 1 (16→17)
+2026-03-02T22:07:38.402Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:07:39.145Z [DEBUG] [useDeferredValue] Messages deferred by 1 (17→18)
+2026-03-02T22:07:39.153Z [DEBUG] [useDeferredValue] Messages deferred by 1 (17→18)
+2026-03-02T22:07:39.600Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-02T22:07:39.600Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-02T22:07:39.600Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:07:39.600Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:07:39.609Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-02T22:07:39.610Z [DEBUG] [useDeferredValue] Messages deferred by 1 (18→19)
+2026-03-02T22:07:39.622Z [DEBUG] High write ratio: blit=0, write=2080 (100.0% writes), screen=60x63
+2026-03-02T22:07:42.201Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-02T22:07:42.201Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:07:42.201Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:07:42.203Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:07:42.203Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:07:42.203Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:07:42.203Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:07:42.203Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:07:42.205Z [DEBUG] [useDeferredValue] Messages deferred by 1 (19→20)
+2026-03-02T22:07:42.218Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 15ms
+2026-03-02T22:07:42.219Z [DEBUG] autocompact: tokens=47857 threshold=167000 effectiveWindow=180000
+2026-03-02T22:07:42.220Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:07:42.225Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:07:42.226Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:07:42.226Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:07:42.226Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:07:42.239Z [DEBUG] [useDeferredValue] Messages deferred by 1 (19→20)
+2026-03-02T22:07:43.189Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:07:45.015Z [DEBUG] [useDeferredValue] Messages deferred by 1 (20→21)
+2026-03-02T22:07:45.042Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-02T22:07:45.042Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:07:45.042Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T22:07:45.047Z [DEBUG] [useDeferredValue] Messages deferred by 2 (20→22)
+2026-03-02T22:08:38.706Z [DEBUG] detectFileEncoding failed for expected reason: ENOENT
+2026-03-02T22:08:45.077Z [DEBUG] Getting matching hook commands for Notification with query: idle_prompt
+2026-03-02T22:08:45.077Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:08:45.077Z [DEBUG] Matched 0 unique hooks for query "idle_prompt" (0 before deduplication)
+2026-03-02T22:12:34.506Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:12:34.506Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:12:34.506Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:12:34.506Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:12:34.507Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:12:34.528Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-02T22:12:34.529Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 23ms
+2026-03-02T22:12:34.532Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-02T22:12:34.532Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:12:34.532Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T22:12:34.532Z [DEBUG] FileHistory: Making snapshot for message e1280ea3-b1b6-458d-8d40-82794f024784
+2026-03-02T22:12:34.543Z [DEBUG] FileHistory: Added snapshot for e1280ea3-b1b6-458d-8d40-82794f024784, tracking 39 files
+2026-03-02T22:12:34.554Z [DEBUG] [useDeferredValue] Messages deferred by 2 (22→24)
+2026-03-02T22:12:34.567Z [DEBUG] High write ratio: blit=0, write=2622 (100.0% writes), screen=75x63
+2026-03-02T22:12:34.569Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2026-03-02T22:12:34.574Z [DEBUG] autocompact: tokens=48570 threshold=167000 effectiveWindow=180000
+2026-03-02T22:12:34.575Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:12:34.581Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:12:34.582Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:12:34.582Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:12:34.583Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:12:34.587Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 18ms
+2026-03-02T22:12:34.602Z [DEBUG] [useDeferredValue] Messages deferred by 2 (22→24)
+2026-03-02T22:12:34.660Z [DEBUG] Checking for native installer update to version 2.1.63
+2026-03-02T22:12:34.670Z [DEBUG] Found 2.1.63 at /teamspace/studios/this_studio/.local/bin/claude, skipping install
+2026-03-02T22:12:37.361Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:12:38.511Z [DEBUG] [useDeferredValue] Messages deferred by 1 (24→25)
+2026-03-02T22:12:38.980Z [DEBUG] [useDeferredValue] Messages deferred by 1 (25→26)
+2026-03-02T22:12:38.987Z [DEBUG] [useDeferredValue] Messages deferred by 1 (25→26)
+2026-03-02T22:12:39.883Z [DEBUG] executePreToolHooks called for tool: Grep
+2026-03-02T22:12:39.883Z [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+2026-03-02T22:12:39.883Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:12:39.883Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2026-03-02T22:12:39.890Z [DEBUG] [useDeferredValue] Messages deferred by 1 (26→27)
+2026-03-02T22:12:39.907Z [DEBUG] High write ratio: blit=0, write=2948 (100.0% writes), screen=85x63
+2026-03-02T22:12:39.933Z [DEBUG] High write ratio: blit=0, write=2989 (100.0% writes), screen=86x63
+2026-03-02T22:12:40.101Z [DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+2026-03-02T22:12:40.101Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:12:40.101Z [DEBUG] Matched 1 unique hooks for query "Grep" (1 before deduplication)
+2026-03-02T22:12:40.277Z [DEBUG] [useDeferredValue] Messages deferred by 3 (27→30)
+2026-03-02T22:12:40.288Z [DEBUG] [useDeferredValue] Messages deferred by 3 (27→30)
+2026-03-02T22:12:40.760Z [DEBUG] executePreToolHooks called for tool: Grep
+2026-03-02T22:12:40.760Z [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+2026-03-02T22:12:40.760Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:12:40.760Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2026-03-02T22:12:40.765Z [DEBUG] [useDeferredValue] Messages deferred by 1 (30→31)
+2026-03-02T22:12:40.980Z [DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+2026-03-02T22:12:40.980Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:12:40.980Z [DEBUG] Matched 1 unique hooks for query "Grep" (1 before deduplication)
+2026-03-02T22:12:41.172Z [DEBUG] [useDeferredValue] Messages deferred by 3 (31→34)
+2026-03-02T22:12:41.190Z [DEBUG] [useDeferredValue] Messages deferred by 3 (31→34)
+2026-03-02T22:12:41.497Z [DEBUG] executePreToolHooks called for tool: Grep
+2026-03-02T22:12:41.498Z [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+2026-03-02T22:12:41.498Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:12:41.498Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2026-03-02T22:12:41.502Z [DEBUG] [useDeferredValue] Messages deferred by 1 (34→35)
+2026-03-02T22:12:41.524Z [DEBUG] [useDeferredValue] Messages deferred by 1 (34→35)
+2026-03-02T22:12:41.713Z [DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+2026-03-02T22:12:41.713Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:12:41.713Z [DEBUG] Matched 1 unique hooks for query "Grep" (1 before deduplication)
+2026-03-02T22:12:41.715Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:12:41.715Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:12:41.715Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:12:41.715Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:12:41.715Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:12:41.717Z [DEBUG] [useDeferredValue] Messages deferred by 3 (35→38)
+2026-03-02T22:12:41.728Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 13ms
+2026-03-02T22:12:41.742Z [DEBUG] autocompact: tokens=49565 threshold=167000 effectiveWindow=180000
+2026-03-02T22:12:41.743Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:12:41.749Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:12:41.750Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:12:41.750Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:12:41.750Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:12:41.755Z [DEBUG] [useDeferredValue] Messages deferred by 4 (35→39)
+2026-03-02T22:12:42.962Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:12:48.859Z [DEBUG] [useDeferredValue] Messages deferred by 1 (39→40)
+2026-03-02T22:12:48.890Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-02T22:12:48.890Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:12:48.890Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T22:12:49.653Z [DEBUG] High write ratio: blit=168, write=3864 (95.8% writes), screen=95x88
+2026-03-02T22:12:50.774Z [DEBUG] High write ratio: blit=168, write=3703 (95.7% writes), screen=112x63

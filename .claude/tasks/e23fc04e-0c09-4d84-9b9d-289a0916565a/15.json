@@ -1,0 +1,9 @@
+{
+  "id": "15",
+  "subject": "Implement cold-start fix: config + vllm_manager + lifespan",
+  "description": "Add DEFAULT_MODEL/PREFETCH_ALL_MODELS to config.py, add prefetch_weights/_snapshot_download to VLLMModelManager, update lifespan in main.py, update .env.example",
+  "activeForm": "Implementing cold-start warm-up",
+  "status": "in_progress",
+  "blocks": [],
+  "blockedBy": []
+}
