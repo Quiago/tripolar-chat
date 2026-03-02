@@ -119,7 +119,7 @@ def test_chat_stream_raises_api_error_on_403():
 
     with patch("httpx.Client", return_value=_FakeSyncHTTPClient()):
         with pytest.raises(APIError) as exc_info:
-            list(api.chat_stream("llama-3.1-8b-awq", [{"role": "user", "content": "hi"}]))
+            list(api.chat_stream("Llama-2-7b-chat-hf", [{"role": "user", "content": "hi"}]))
         assert exc_info.value.status_code == 403
 
 
@@ -155,7 +155,7 @@ def test_chat_stream_yields_content_on_200():
             pass
 
     with patch("httpx.Client", return_value=_FakeSyncHTTPClient()):
-        result = list(api.chat_stream("llama-3.1-8b-awq", [{"role": "user", "content": "hi"}]))
+        result = list(api.chat_stream("Llama-2-7b-chat-hf", [{"role": "user", "content": "hi"}]))
 
     assert result == expected_chunks
 
@@ -183,7 +183,7 @@ async def test_async_chat_stream_raises_api_error_on_503():
     with patch("httpx.AsyncClient", return_value=mock_client):
         with pytest.raises(APIError) as exc_info:
             async for _ in api.async_chat_stream(
-                "llama-3.1-8b-awq",
+                "Llama-2-7b-chat-hf",
                 [{"role": "user", "content": "hi"}],
             ):
                 pass  # pragma: no cover
@@ -206,7 +206,7 @@ async def test_async_chat_stream_raises_api_error_on_403():
     with patch("httpx.AsyncClient", return_value=mock_client):
         with pytest.raises(APIError) as exc_info:
             async for _ in api.async_chat_stream(
-                "llama-3.1-8b-awq",
+                "Llama-2-7b-chat-hf",
                 [{"role": "user", "content": "hi"}],
             ):
                 pass  # pragma: no cover
@@ -230,7 +230,7 @@ async def test_async_chat_stream_yields_content_on_200():
         result = [
             chunk
             async for chunk in api.async_chat_stream(
-                "llama-3.1-8b-awq",
+                "Llama-2-7b-chat-hf",
                 [{"role": "user", "content": "hi"}],
             )
         ]

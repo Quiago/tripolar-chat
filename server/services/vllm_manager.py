@@ -71,16 +71,16 @@ class ModelConfig:
 
 
 MODEL_CATALOG: Dict[str, ModelConfig] = {
-    "llama-3.1-8b": ModelConfig(
-        repo="meta-llama/Llama-3.1-8B-Instruct",
+    "Llama-2-7B-Chat-GGUF": ModelConfig(
+        repo="TheBloke/Llama-2-7B-Chat-GGUF",
         quantization=None,
         tensor_parallel=1,
         gpu_memory_util=0.85,
         max_model_len=8192,
         description="Meta Llama 3.1 8B – general purpose",
     ),
-    "llama-3.1-8b-awq": ModelConfig(
-        repo="hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+    "Llama-2-7b-chat-hf": ModelConfig(
+        repo="meta-llama/Llama-2-7b-chat-hf",
         quantization="awq",
         tensor_parallel=1,
         gpu_memory_util=0.90,

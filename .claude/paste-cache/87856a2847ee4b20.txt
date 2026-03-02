@@ -113,7 +113,7 @@ chat$ fmind
 │ │          │   │   'loaded': False                                         │ │
 │ │          │   },                                                          │ │
 │ │          │   {                                                           │ │
-│ │          │   │   'id': 'llama-3.1-8b-awq',                               │ │
+│ │          │   │   'id': 'Llama-2-7b-chat-hf',                               │ │
 │ │          │   │   'object': 'model',                                      │ │
 │ │          │   │   'owned_by': 'factorymind',                              │ │
 │ │          │   │   'description': 'Llama 3.1 8B 4-bit AWQ –                │ │

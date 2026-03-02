@@ -65,7 +65,7 @@ def _pick_model(api: APIClient, requested: Optional[str]) -> str:
             return models[0]["id"]
     except APIError:
         pass
-    return "llama-3.1-8b-awq"
+    return "Llama-2-7b-chat-hf"
 
 
 def _print_models_table(api: APIClient) -> None:
@@ -145,7 +145,7 @@ def _stream_response(api: APIClient, model: str, messages: list) -> str:
 @app.command()
 def chat(
     model: Optional[str] = typer.Option(
-        None, "--model", "-M", help="Model to use (e.g. llama-3.1-8b-awq)."
+        None, "--model", "-M", help="Model to use (e.g. Llama-2-7b-chat-hf)."
     ),
     message: Optional[str] = typer.Option(
         None, "--message", "-m", help="One-shot prompt; exits after responding."

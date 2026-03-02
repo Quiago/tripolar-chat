@@ -86,7 +86,7 @@ fmind models --interactive
 # Shows:
 ╭─ Available Models ───────────────────────────────╮
 │  llama-3.1-8b       (Meta Llama 3.1 8B)      │[1]
-│  llama-3.1-8b-awq   (4-bit, faster) ✓ cached │[2]
+│  Llama-2-7b-chat-hf   (4-bit, faster) ✓ cached │[2]
 │  mistral-7b-awq     (Reasoning-focused)      │[3]
 │  qwen-2.5-7b        (Multilingual)           │[4]
 ╰──────────────────────────────────────────────────╯
