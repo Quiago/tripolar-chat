@@ -4,7 +4,9 @@
   "autoUpdates": false,
   "tipsHistory": {
     "new-user-warmup": 1,
-    "plan-mode-for-complex-tasks": 1
+    "plan-mode-for-complex-tasks": 1,
+    "memory-command": 1,
+    "theme-command": 1
   },
   "cachedGrowthBookFeatures": {
     "tengu_event_sampling_config": {},
@@ -52,7 +54,10 @@
     "tengu_pid_based_version_locking": true,
     "tengu_session_memory": false,
     "tengu_tool_input_aliasing": false,
-    "tengu_tst_kx7": false
+    "tengu_tst_kx7": false,
+    "tengu_permission_explainer": true,
+    "tengu_destructive_command_warning": false,
+    "tengu_auto_background_agents": false
   },
   "firstStartTime": "2026-03-02T16:35:51.110Z",
   "opusProMigrationComplete": true,
@@ -90,7 +95,8 @@
       "projectOnboardingSeenCount": 1,
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
-      "exampleFiles": []
+      "exampleFiles": [],
+      "hasCompletedProjectOnboarding": true
     }
   },
   "hasShownOpus46Notice": {
@@ -105,5 +111,6 @@
   },
   "cachedExtraUsageDisabledReason": null,
   "officialMarketplaceAutoInstallAttempted": true,
-  "officialMarketplaceAutoInstalled": true
+  "officialMarketplaceAutoInstalled": true,
+  "showSpinnerTree": false
 }

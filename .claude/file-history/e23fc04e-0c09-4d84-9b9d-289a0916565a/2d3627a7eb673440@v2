@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional
+from typing import Optional
 import uuid
 
 from sqlmodel import SQLModel, Field
@@ -53,39 +53,3 @@ class UserPublic(SQLModel):
     api_key: str
     created_at: datetime
     is_active: bool
-
-
-# ── Chat / completion schemas ─────────────────────────────────────────────────
-
-class ChatMessageSchema(SQLModel):
-    role: str
-    content: str
-
-
-class ChatCompletionRequest(SQLModel):
-    model: str
-    messages: List[ChatMessageSchema]
-    max_tokens: int = 512
-    temperature: float = 0.7
-    top_p: float = 0.9
-    stream: bool = False
-    chat_id: Optional[str] = None  # provide to continue an existing session
-
-
-class MessagePublic(SQLModel):
-    id: str
-    role: str
-    content: str
-    created_at: datetime
-
-
-class ChatPublic(SQLModel):
-    id: str
-    title: str
-    model_used: str
-    created_at: datetime
-    updated_at: datetime
-
-
-class ChatDetailPublic(ChatPublic):
-    messages: List[MessagePublic]

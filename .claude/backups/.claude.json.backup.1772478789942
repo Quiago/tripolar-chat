@@ -6,9 +6,7 @@
     "new-user-warmup": 1,
     "plan-mode-for-complex-tasks": 1,
     "memory-command": 1,
-    "theme-command": 1,
-    "status-line": 1,
-    "prompt-queue": 1
+    "theme-command": 1
   },
   "cachedGrowthBookFeatures": {
     "tengu_event_sampling_config": {},

@@ -2,16 +2,12 @@ from datetime import datetime
 
 from fastapi import APIRouter
 
-from server.services.vllm_manager import get_vllm_manager
-
 router = APIRouter(tags=["health"])
 
 
 @router.get("/health")
 async def health():
-    manager = get_vllm_manager()
     return {
         "status": "healthy",
-        "model_manager": manager.get_info(),
         "timestamp": datetime.utcnow().isoformat() + "Z",
     }
