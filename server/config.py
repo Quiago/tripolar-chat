@@ -18,6 +18,10 @@ class Settings(BaseSettings):
     # startup (no GPU use). This ensures instant model-swap without waiting
     # for a download the first time a user requests a different model.
     prefetch_all_models: bool = True
+    # When True, passes --enforce-eager to vLLM, disabling torch.compile and
+    # CUDA Graphs. Saves ~18-20 s per model swap at the cost of ~10-15%
+    # steady-state throughput. Recommended for single-GPU hot-swap setups.
+    fast_model_swap: bool = True
 
     @field_validator("secret_key")
     @classmethod

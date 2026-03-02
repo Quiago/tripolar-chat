@@ -10251,3 +10251,348 @@ data: {"jsonrpc":"2.0","id":0,"error":{"code":-32600,"message":"Anthropic Proxy:
 2026-03-02T22:19:58.537Z [DEBUG] Getting matching hook commands for Notification with query: idle_prompt
 2026-03-02T22:19:58.537Z [DEBUG] Found 0 hook matchers in settings
 2026-03-02T22:19:58.537Z [DEBUG] Matched 0 unique hooks for query "idle_prompt" (0 before deduplication)
+2026-03-02T22:34:01.005Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:01.006Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:34:01.006Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:34:01.006Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:34:01.006Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:34:01.009Z [DEBUG] Stored paste f40cd8fa83ca2a36 to /teamspace/studios/this_studio/.claude/paste-cache/f40cd8fa83ca2a36.txt
+2026-03-02T22:34:01.041Z [DEBUG] High write ratio: blit=4662, write=6013 (56.3% writes), screen=215x63
+2026-03-02T22:34:01.049Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 44ms
+2026-03-02T22:34:01.052Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-02T22:34:01.052Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:34:01.052Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T22:34:01.052Z [DEBUG] FileHistory: Making snapshot for message 562a5386-79c5-4057-a6dc-feb57ef3d23d
+2026-03-02T22:34:01.056Z [DEBUG] FileHistory: Added snapshot for 562a5386-79c5-4057-a6dc-feb57ef3d23d, tracking 40 files
+2026-03-02T22:34:01.071Z [DEBUG] [useDeferredValue] Messages deferred by 1 (51→52)
+2026-03-02T22:34:01.089Z [DEBUG] High write ratio: blit=0, write=4805 (100.0% writes), screen=150x63
+2026-03-02T22:34:01.089Z [DEBUG] Full reset (scrollback changes): scrollbackRows=189, firstChangeY=142
+  prev: "❯ Hemos implementado el `lifespan` y el prefetch de            "
+  next: "* Implementing cold-start warm-up…                             "
+2026-03-02T22:34:01.092Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2026-03-02T22:34:01.094Z [DEBUG] autocompact: tokens=52430 threshold=167000 effectiveWindow=180000
+2026-03-02T22:34:01.096Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:34:01.103Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:34:01.104Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:34:01.104Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:34:01.105Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:34:01.109Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 17ms
+2026-03-02T22:34:01.118Z [DEBUG] [useDeferredValue] Messages deferred by 1 (51→52)
+2026-03-02T22:34:01.158Z [DEBUG] High write ratio: blit=4662, write=6013 (56.3% writes), screen=215x63
+2026-03-02T22:34:02.163Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:34:04.177Z [DEBUG] [useDeferredValue] Messages deferred by 1 (52→53)
+2026-03-02T22:34:04.184Z [DEBUG] [useDeferredValue] Messages deferred by 1 (52→53)
+2026-03-02T22:34:04.212Z [DEBUG] High write ratio: blit=4662, write=6058 (56.5% writes), screen=217x63
+2026-03-02T22:34:04.243Z [DEBUG] High write ratio: blit=4662, write=6064 (56.5% writes), screen=217x63
+2026-03-02T22:34:04.609Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T22:34:04.610Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T22:34:04.610Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:34:04.610Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T22:34:04.615Z [DEBUG] [useDeferredValue] Messages deferred by 1 (53→54)
+2026-03-02T22:34:04.641Z [DEBUG] High write ratio: blit=0, write=8597 (100.0% writes), screen=215x63
+2026-03-02T22:34:04.656Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T22:34:04.656Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:34:04.656Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T22:34:04.658Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:04.658Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:34:04.658Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:34:04.658Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:34:04.658Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:34:04.660Z [DEBUG] [useDeferredValue] Messages deferred by 4 (53→57)
+2026-03-02T22:34:04.681Z [DEBUG] High write ratio: blit=4662, write=6029 (56.4% writes), screen=215x63
+2026-03-02T22:34:04.682Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 24ms
+2026-03-02T22:34:04.682Z [DEBUG] autocompact: tokens=53302 threshold=167000 effectiveWindow=180000
+2026-03-02T22:34:04.683Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:34:04.687Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:34:04.688Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:34:04.688Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:34:04.688Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:34:04.701Z [DEBUG] [useDeferredValue] Messages deferred by 4 (53→57)
+2026-03-02T22:34:04.739Z [DEBUG] High write ratio: blit=4662, write=6085 (56.6% writes), screen=218x63
+2026-03-02T22:34:06.164Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:34:06.186Z [DEBUG] High write ratio: blit=4662, write=6085 (56.6% writes), screen=218x63
+2026-03-02T22:34:08.667Z [DEBUG] [useDeferredValue] Messages deferred by 1 (57→58)
+2026-03-02T22:34:08.694Z [DEBUG] High write ratio: blit=0, write=8653 (100.0% writes), screen=218x63
+2026-03-02T22:34:08.702Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:34:08.703Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:34:08.703Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:34:08.703Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:34:08.708Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:08.709Z [DEBUG] [useDeferredValue] Messages deferred by 1 (57→58)
+2026-03-02T22:34:08.730Z [DEBUG] High write ratio: blit=4662, write=6085 (56.6% writes), screen=218x63
+2026-03-02T22:34:08.731Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 23ms
+2026-03-02T22:34:08.733Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/config.py.tmp.20973.1772490848733
+2026-03-02T22:34:08.733Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:34:08.734Z [DEBUG] Temp file written successfully, size: 1426 bytes
+2026-03-02T22:34:08.734Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:34:08.734Z [DEBUG] Renaming /teamspace/studios/this_studio/server/config.py.tmp.20973.1772490848733 to /teamspace/studios/this_studio/server/config.py
+2026-03-02T22:34:08.734Z [DEBUG] File /teamspace/studios/this_studio/server/config.py written atomically
+2026-03-02T22:34:08.736Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:34:08.736Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:34:08.736Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:34:08.738Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:08.738Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:34:08.738Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:34:08.738Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:34:08.738Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:34:08.749Z [DEBUG] [useDeferredValue] Messages deferred by 4 (57→61)
+2026-03-02T22:34:08.770Z [DEBUG] High write ratio: blit=4662, write=6085 (56.6% writes), screen=218x63
+2026-03-02T22:34:08.771Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 33ms
+2026-03-02T22:34:08.772Z [DEBUG] autocompact: tokens=53748 threshold=167000 effectiveWindow=180000
+2026-03-02T22:34:08.773Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:34:08.778Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:34:08.778Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:34:08.778Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:34:08.778Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:34:08.790Z [DEBUG] [useDeferredValue] Messages deferred by 4 (57→61)
+2026-03-02T22:34:08.847Z [DEBUG] High write ratio: blit=4662, write=6731 (59.1% writes), screen=235x63
+2026-03-02T22:34:09.670Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:34:10.571Z [DEBUG] [useDeferredValue] Messages deferred by 1 (61→62)
+2026-03-02T22:34:10.579Z [DEBUG] [useDeferredValue] Messages deferred by 1 (61→62)
+2026-03-02T22:34:10.610Z [DEBUG] High write ratio: blit=4662, write=6731 (59.1% writes), screen=235x63
+2026-03-02T22:34:10.639Z [DEBUG] High write ratio: blit=4662, write=6781 (59.3% writes), screen=237x63
+2026-03-02T22:34:11.113Z [ERROR] Error: Error: 1P event logging: 57 events failed to export (request-id=req_011CYf3rTBRcHASySaRyWJDE, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:34:11.113Z [ERROR] Error: Error: {"message":"Failed to export 57 events (request-id=req_011CYf3rTBRcHASySaRyWJDE, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 57 events (request-id=req_011CYf3rTBRcHASySaRyWJDE, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:34:11.113Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 57 events (request-id=req_011CYf3rTBRcHASySaRyWJDE, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 57 events (request-id=req_011CYf3rTBRcHASySaRyWJDE, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T22:34:13.799Z [DEBUG] [useDeferredValue] Messages deferred by 1 (62→63)
+2026-03-02T22:34:13.846Z [DEBUG] High write ratio: blit=0, write=9349 (100.0% writes), screen=237x63
+2026-03-02T22:34:13.857Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:34:13.857Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:34:13.857Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:34:13.857Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:34:13.862Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:13.864Z [DEBUG] [useDeferredValue] Messages deferred by 1 (62→63)
+2026-03-02T22:34:13.887Z [DEBUG] High write ratio: blit=4662, write=6781 (59.3% writes), screen=237x63
+2026-03-02T22:34:13.888Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 26ms
+2026-03-02T22:34:13.890Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772490853890
+2026-03-02T22:34:13.890Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:34:13.891Z [DEBUG] Temp file written successfully, size: 12168 bytes
+2026-03-02T22:34:13.891Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:34:13.891Z [DEBUG] Renaming /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772490853890 to /teamspace/studios/this_studio/server/services/vllm_manager.py
+2026-03-02T22:34:13.892Z [DEBUG] File /teamspace/studios/this_studio/server/services/vllm_manager.py written atomically
+2026-03-02T22:34:13.894Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:34:13.894Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:34:13.894Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:34:13.895Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:13.895Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:34:13.895Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:34:13.895Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:34:13.895Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:34:13.908Z [DEBUG] [useDeferredValue] Messages deferred by 4 (62→66)
+2026-03-02T22:34:13.930Z [DEBUG] High write ratio: blit=4662, write=6781 (59.3% writes), screen=237x63
+2026-03-02T22:34:13.931Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 36ms
+2026-03-02T22:34:13.932Z [DEBUG] autocompact: tokens=54120 threshold=167000 effectiveWindow=180000
+2026-03-02T22:34:13.932Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:34:13.936Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:34:13.936Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:34:13.936Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:34:13.936Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:34:13.948Z [DEBUG] [useDeferredValue] Messages deferred by 4 (62→66)
+2026-03-02T22:34:14.021Z [DEBUG] High write ratio: blit=4662, write=7477 (61.6% writes), screen=255x63
+2026-03-02T22:34:15.134Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:34:15.161Z [DEBUG] High write ratio: blit=4662, write=7477 (61.6% writes), screen=255x63
+2026-03-02T22:34:18.765Z [DEBUG] [useDeferredValue] Messages deferred by 1 (66→67)
+2026-03-02T22:34:18.821Z [DEBUG] High write ratio: blit=0, write=10045 (100.0% writes), screen=255x63
+2026-03-02T22:34:18.827Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:34:18.829Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:34:18.829Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:34:18.829Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:34:18.837Z [DEBUG] [useDeferredValue] Messages deferred by 1 (66→67)
+2026-03-02T22:34:18.866Z [DEBUG] High write ratio: blit=4662, write=7477 (61.6% writes), screen=255x63
+2026-03-02T22:34:18.874Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:18.882Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 8ms
+2026-03-02T22:34:18.884Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772490858884
+2026-03-02T22:34:18.884Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:34:18.885Z [DEBUG] Temp file written successfully, size: 12482 bytes
+2026-03-02T22:34:18.885Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:34:18.885Z [DEBUG] Renaming /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772490858884 to /teamspace/studios/this_studio/server/services/vllm_manager.py
+2026-03-02T22:34:18.885Z [DEBUG] File /teamspace/studios/this_studio/server/services/vllm_manager.py written atomically
+2026-03-02T22:34:18.888Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:34:18.888Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:34:18.888Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:34:18.890Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:18.891Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:34:18.891Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:34:18.891Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:34:18.891Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:34:18.893Z [DEBUG] [useDeferredValue] Messages deferred by 4 (66→70)
+2026-03-02T22:34:18.919Z [DEBUG] High write ratio: blit=4662, write=7477 (61.6% writes), screen=255x63
+2026-03-02T22:34:18.921Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 31ms
+2026-03-02T22:34:18.931Z [DEBUG] autocompact: tokens=54719 threshold=167000 effectiveWindow=180000
+2026-03-02T22:34:18.932Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:34:18.940Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:34:18.941Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:34:18.941Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:34:18.942Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:34:18.946Z [DEBUG] [useDeferredValue] Messages deferred by 5 (66→71)
+2026-03-02T22:34:19.028Z [DEBUG] High write ratio: blit=4662, write=8330 (64.1% writes), screen=277x63
+2026-03-02T22:34:19.935Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:34:20.808Z [DEBUG] [useDeferredValue] Messages deferred by 1 (71→72)
+2026-03-02T22:34:20.836Z [DEBUG] High write ratio: blit=4662, write=8330 (64.1% writes), screen=277x63
+2026-03-02T22:34:20.838Z [DEBUG] [useDeferredValue] Messages deferred by 1 (71→72)
+2026-03-02T22:34:20.883Z [DEBUG] High write ratio: blit=4662, write=8383 (64.3% writes), screen=279x63
+2026-03-02T22:34:23.959Z [ERROR] Error: Error: 1P event logging: 40 events failed to export (request-id=req_011CYf3sQ6uk2PLEdFknmDfp, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:34:23.960Z [ERROR] Error: Error: {"message":"Failed to export 40 events (request-id=req_011CYf3sQ6uk2PLEdFknmDfp, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 40 events (request-id=req_011CYf3sQ6uk2PLEdFknmDfp, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:34:23.960Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 40 events (request-id=req_011CYf3sQ6uk2PLEdFknmDfp, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 40 events (request-id=req_011CYf3sQ6uk2PLEdFknmDfp, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T22:34:27.944Z [DEBUG] [useDeferredValue] Messages deferred by 1 (72→73)
+2026-03-02T22:34:27.978Z [DEBUG] High write ratio: blit=0, write=10951 (100.0% writes), screen=279x63
+2026-03-02T22:34:27.981Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T22:34:27.988Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T22:34:27.988Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:34:27.988Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T22:34:27.993Z [DEBUG] [useDeferredValue] Messages deferred by 1 (72→73)
+2026-03-02T22:34:28.020Z [DEBUG] High write ratio: blit=4662, write=8383 (64.3% writes), screen=279x63
+2026-03-02T22:34:28.028Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:28.034Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 6ms
+2026-03-02T22:34:28.036Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772490868036
+2026-03-02T22:34:28.036Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T22:34:28.037Z [DEBUG] Temp file written successfully, size: 13145 bytes
+2026-03-02T22:34:28.037Z [DEBUG] Applied original permissions to temp file
+2026-03-02T22:34:28.037Z [DEBUG] Renaming /teamspace/studios/this_studio/server/services/vllm_manager.py.tmp.20973.1772490868036 to /teamspace/studios/this_studio/server/services/vllm_manager.py
+2026-03-02T22:34:28.037Z [DEBUG] File /teamspace/studios/this_studio/server/services/vllm_manager.py written atomically
+2026-03-02T22:34:28.039Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T22:34:28.039Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:34:28.039Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T22:34:28.041Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:28.041Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:34:28.041Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:34:28.041Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:34:28.041Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:34:28.042Z [DEBUG] [useDeferredValue] Messages deferred by 4 (72→76)
+2026-03-02T22:34:28.070Z [DEBUG] High write ratio: blit=4662, write=8383 (64.3% writes), screen=279x63
+2026-03-02T22:34:28.071Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 30ms
+2026-03-02T22:34:28.071Z [DEBUG] autocompact: tokens=55306 threshold=167000 effectiveWindow=180000
+2026-03-02T22:34:28.072Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:34:28.077Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:34:28.077Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:34:28.077Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:34:28.077Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:34:28.091Z [DEBUG] [useDeferredValue] Messages deferred by 4 (72→76)
+2026-03-02T22:34:28.181Z [DEBUG] High write ratio: blit=4662, write=10645 (69.5% writes), screen=329x63
+2026-03-02T22:34:29.272Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:34:29.947Z [DEBUG] [useDeferredValue] Messages deferred by 1 (76→77)
+2026-03-02T22:34:29.984Z [DEBUG] High write ratio: blit=4662, write=10645 (69.5% writes), screen=329x63
+2026-03-02T22:34:29.992Z [DEBUG] [useDeferredValue] Messages deferred by 1 (76→77)
+2026-03-02T22:34:30.038Z [DEBUG] High write ratio: blit=4662, write=10706 (69.7% writes), screen=331x63
+2026-03-02T22:34:30.575Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-02T22:34:30.575Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-02T22:34:30.575Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:34:30.575Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:34:30.584Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-02T22:34:30.585Z [DEBUG] [useDeferredValue] Messages deferred by 1 (77→78)
+2026-03-02T22:34:30.624Z [DEBUG] High write ratio: blit=0, write=13274 (100.0% writes), screen=331x63
+2026-03-02T22:34:30.643Z [DEBUG] [useDeferredValue] Messages deferred by 1 (77→78)
+2026-03-02T22:34:30.676Z [DEBUG] High write ratio: blit=4662, write=10706 (69.7% writes), screen=331x63
+2026-03-02T22:34:30.742Z [DEBUG] High write ratio: blit=4662, write=10768 (69.8% writes), screen=334x63
+2026-03-02T22:34:33.289Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-02T22:34:33.289Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:34:33.290Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T22:34:33.290Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:33.290Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:34:33.290Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:34:33.291Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:34:33.291Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:34:33.292Z [DEBUG] [useDeferredValue] Messages deferred by 1 (78→79)
+2026-03-02T22:34:33.327Z [DEBUG] High write ratio: blit=4662, write=10774 (69.8% writes), screen=334x63
+2026-03-02T22:34:33.328Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 38ms
+2026-03-02T22:34:33.329Z [DEBUG] autocompact: tokens=55766 threshold=167000 effectiveWindow=180000
+2026-03-02T22:34:33.330Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:34:33.334Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:34:33.334Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:34:33.334Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:34:33.335Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:34:33.347Z [DEBUG] [useDeferredValue] Messages deferred by 1 (78→79)
+2026-03-02T22:34:33.399Z [DEBUG] High write ratio: blit=4662, write=10955 (70.1% writes), screen=337x63
+2026-03-02T22:34:35.231Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:34:36.397Z [DEBUG] [useDeferredValue] Messages deferred by 1 (79→80)
+2026-03-02T22:34:36.407Z [DEBUG] [useDeferredValue] Messages deferred by 1 (79→80)
+2026-03-02T22:34:36.424Z [DEBUG] [useDeferredValue] Messages deferred by 1 (79→80)
+2026-03-02T22:34:36.453Z [DEBUG] High write ratio: blit=4662, write=10990 (70.2% writes), screen=339x63
+2026-03-02T22:34:36.510Z [DEBUG] High write ratio: blit=4662, write=11082 (70.4% writes), screen=342x63
+2026-03-02T22:34:37.501Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T22:34:37.502Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T22:34:37.502Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:34:37.502Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T22:34:37.506Z [DEBUG] [useDeferredValue] Messages deferred by 1 (80→81)
+2026-03-02T22:34:37.552Z [DEBUG] High write ratio: blit=0, write=13615 (100.0% writes), screen=340x63
+2026-03-02T22:34:37.571Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T22:34:37.571Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T22:34:37.571Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T22:34:37.573Z [DEBUG] [useDeferredValue] Messages deferred by 1 (80→81)
+2026-03-02T22:34:37.588Z [DEBUG] [useDeferredValue] Messages deferred by 4 (80→84)
+2026-03-02T22:34:37.637Z [DEBUG] High write ratio: blit=4662, write=11047 (70.3% writes), screen=340x63
+2026-03-02T22:34:37.649Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T22:34:37.649Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T22:34:37.649Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T22:34:37.649Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T22:34:37.649Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T22:34:37.652Z [DEBUG] [useDeferredValue] Messages deferred by 4 (80→84)
+2026-03-02T22:34:37.663Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 14ms
+2026-03-02T22:34:37.664Z [DEBUG] autocompact: tokens=56947 threshold=167000 effectiveWindow=180000
+2026-03-02T22:34:37.664Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T22:34:37.669Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.04b; cc_entrypoint=cli; cch=00000;
+2026-03-02T22:34:37.670Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T22:34:37.670Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T22:34:37.670Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T22:34:37.673Z [DEBUG] [useDeferredValue] Messages deferred by 4 (80→84)
+2026-03-02T22:34:37.725Z [DEBUG] High write ratio: blit=4662, write=11118 (70.5% writes), screen=343x63
+2026-03-02T22:34:38.096Z [ERROR] Error: Error: 1P event logging: 57 events failed to export (request-id=req_011CYf3tSX3UCe9GxojMKomV, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:34:38.096Z [ERROR] Error: Error: {"message":"Failed to export 57 events (request-id=req_011CYf3tSX3UCe9GxojMKomV, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 57 events (request-id=req_011CYf3tSX3UCe9GxojMKomV, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:34:38.096Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 57 events (request-id=req_011CYf3tSX3UCe9GxojMKomV, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 57 events (request-id=req_011CYf3tSX3UCe9GxojMKomV, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T22:34:39.928Z [DEBUG] Stream started - received first chunk
+2026-03-02T22:34:48.641Z [DEBUG] [useDeferredValue] Messages deferred by 1 (84→85)
+2026-03-02T22:34:48.693Z [DEBUG] High write ratio: blit=4662, write=12223 (72.4% writes), screen=380x63
+2026-03-02T22:34:48.755Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-02T22:34:48.755Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:34:48.755Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T22:34:48.758Z [DEBUG] [useDeferredValue] Messages deferred by 1 (85→86)
+2026-03-02T22:34:48.797Z [DEBUG] High write ratio: blit=4662, write=12216 (72.4% writes), screen=382x63
+2026-03-02T22:34:58.836Z [ERROR] Error: Error: 1P event logging: 2 events failed to export (request-id=req_011CYf3uyDn7kEkKGs7ZtGkY, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:34:58.836Z [ERROR] Error: Error: {"message":"Failed to export 2 events (request-id=req_011CYf3uyDn7kEkKGs7ZtGkY, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 2 events (request-id=req_011CYf3uyDn7kEkKGs7ZtGkY, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:34:58.836Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 2 events (request-id=req_011CYf3uyDn7kEkKGs7ZtGkY, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 2 events (request-id=req_011CYf3uyDn7kEkKGs7ZtGkY, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T22:35:48.803Z [DEBUG] Getting matching hook commands for Notification with query: idle_prompt
+2026-03-02T22:35:48.803Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T22:35:48.803Z [DEBUG] Matched 0 unique hooks for query "idle_prompt" (0 before deduplication)
+2026-03-02T22:35:58.885Z [ERROR] Error: Error: 1P event logging: 1 events failed to export (request-id=req_011CYf3zPwgFrR9MQw2yTgCv, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:35:58.885Z [ERROR] Error: Error: {"message":"Failed to export 1 events (request-id=req_011CYf3zPwgFrR9MQw2yTgCv, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (request-id=req_011CYf3zPwgFrR9MQw2yTgCv, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T22:35:58.885Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 1 events (request-id=req_011CYf3zPwgFrR9MQw2yTgCv, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (request-id=req_011CYf3zPwgFrR9MQw2yTgCv, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}

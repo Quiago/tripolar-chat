@@ -206,15 +206,28 @@ class VLLMModelManager:
     # ── lifecycle ─────────────────────────────────────────────────────────────
 
     def stop(self) -> None:
-        """Terminate the running vLLM process and free GPU memory."""
+        """Terminate the running vLLM process and free GPU memory.
+
+        Uses a tight polling loop (0.2 s ticks) so the next model starts
+        loading the instant the GPU is released instead of waiting a fixed
+        sleep.  A short 0.5 s grace period after process death lets the
+        CUDA driver fully release memory before the next vLLM process starts.
+        """
         if self.process and self.process.poll() is None:
             self.process.terminate()
-            try:
-                self.process.wait(timeout=20)
-            except subprocess.TimeoutExpired:
+            # Poll until the process exits (max 20 s) rather than blocking.
+            deadline = time.time() + 20
+            while time.time() < deadline:
+                if self.process.poll() is not None:
+                    break
+                time.sleep(0.2)
+            else:
+                # Graceful termination timed out – force kill.
                 self.process.kill()
                 self.process.wait()
-            time.sleep(3)  # allow GPU memory to be released
+            # Minimal grace period: GPU driver needs a moment to fully release
+            # memory before the next vLLM process tries to claim it.
+            time.sleep(0.5)
         self.current_model = None
         self.process = None
 
@@ -241,6 +254,11 @@ class VLLMModelManager:
         if config.quantization:
             cmd.extend(["--quantization", config.quantization])
 
+        # Disable torch.compile / CUDA Graphs → saves ~18-20 s per swap.
+        from server.config import settings
+        if settings.fast_model_swap:
+            cmd.append("--enforce-eager")
+
         # Read the HF token BEFORE overriding HF_HOME so we always find
         # the token saved by `hf auth login` (stored in the original HF_HOME).
         hf_token = _read_hf_token()
@@ -249,6 +267,11 @@ class VLLMModelManager:
         env["HF_HOME"] = str(self.cache_dir)
         env["TRANSFORMERS_CACHE"] = str(self.cache_dir)
         env["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
+        # Skip all HuggingFace network calls – weights are already on disk
+        # after prefetch. Saves ~17 s of metadata HTTP checks per swap.
+        env["HF_HUB_OFFLINE"] = "1"
+        # Spawn fresh worker processes so no GPU memory leaks between swaps.
+        env["VLLM_WORKER_MULTIPROC_METHOD"] = "spawn"
 
         # Pass the token explicitly so vLLM can authenticate even though
         # HF_HOME now points to our custom cache directory.
