@@ -29,7 +29,7 @@ MODEL_CATALOG: Dict[str, ModelConfig] = {
         max_model_len=8192,
         description="Meta Llama 3.1 8B – general purpose",
     ),
-    "Llama-2-7b-chat-hf": ModelConfig(
+    "llama-3.1-8b-awq": ModelConfig(
         repo="casperhansen/llama-3.1-8b-instruct-awq",
         quantization="awq",
         tensor_parallel=1,

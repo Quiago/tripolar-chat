@@ -27,7 +27,7 @@ def _make_mock_manager():
     """Return a MagicMock that satisfies VLLMModelManager's interface."""
     m = MagicMock()
     m.get_info.return_value = {
-        "current_model": "Llama-2-7b-chat-hf",
+        "current_model": "llama-3.1-8b-awq",
         "is_ready": True,
         "catalog": list(_vllm_mod.MODEL_CATALOG.keys()),
     }

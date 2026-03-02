@@ -95,7 +95,7 @@ def test_start_includes_hf_token_in_subprocess_env(monkeypatch, tmp_path):
     with patch("subprocess.Popen", side_effect=_fake_popen):
         # is_ready() must return True so start() returns immediately
         with patch.object(manager, "is_ready", return_value=True):
-            manager.start("Llama-2-7b-chat-hf")
+            manager.start("llama-3.1-8b-awq")
 
     assert "HF_TOKEN" in captured_env, (
         "HF_TOKEN was NOT passed to the vLLM subprocess env. "
@@ -119,7 +119,7 @@ def test_start_sets_custom_hf_home(tmp_path):
 
     with patch("subprocess.Popen", side_effect=_fake_popen):
         with patch.object(manager, "is_ready", return_value=True):
-            manager.start("Llama-2-7b-chat-hf")
+            manager.start("llama-3.1-8b-awq")
 
     assert captured_env.get("HF_HOME") == str(cache_dir)
 
@@ -150,7 +150,7 @@ def test_chat_503_detail_is_brief(client, auth_headers, mock_manager):
         "/v1/chat/completions",
         headers=auth_headers,
         json={
-            "model": "Llama-2-7b-chat-hf",
+            "model": "llama-3.1-8b-awq",
             "messages": [{"role": "user", "content": "hi"}],
         },
     )

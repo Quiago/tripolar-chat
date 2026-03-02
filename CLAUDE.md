@@ -146,7 +146,7 @@ MODEL_CATALOG: Dict[str, ModelConfig] = {
         max_model_len=8192,
         description="Meta Llama 3.1 8B - general purpose"
     ),
-    "Llama-2-7b-chat-hf": ModelConfig(
+    "llama-3.1-8b-awq": ModelConfig(
         repo="casperhansen/llama-3.1-8b-instruct-awq",
         quantization="awq",
         tensor_parallel=1,
@@ -186,14 +186,14 @@ class User(SQLModel, table=True):
 Key Endpoints1. Health (GET /health)Returns the status of the API and vLLM:{
   "status": "healthy",
   "model_manager": {
-    "current_model": "Llama-2-7b-chat-hf",
+    "current_model": "llama-3.1-8b-awq",
     "is_ready": true,
-    "catalog": ["llama-3.1-8b", "Llama-2-7b-chat-hf", "mistral-7b-awq", "qwen-2.5-7b"]
+    "catalog": ["llama-3.1-8b", "llama-3.1-8b-awq", "mistral-7b-awq", "qwen-2.5-7b"]
   },
   "timestamp": "2026-03-02T20:48:36Z"
 }
 2. List Models (GET /v1/models)Requires API key.Returns a subset of the catalog, including whether the model is cached and/or loaded.3. Chat Completions (POST /v1/chat/completions)Requires API key.Body (OpenAI‑style):{
-  "model": "Llama-2-7b-chat-hf",
+  "model": "llama-3.1-8b-awq",
   "messages": [
     {"role": "system", "content": "You are an assistant for factory operators."},
     {"role": "user", "content": "What is the normal temperature range for Motor A?"}
@@ -208,7 +208,7 @@ fmind login --server https://<lightning-url> --api-key <key>
 fmind models
 
 # Start a chat (interactive)
-fmind chat --model Llama-2-7b-chat-hf
+fmind chat --model llama-3.1-8b-awq
 
 # Or one-shot prompt
 fmind chat --model mistral-7b-awq -m "Explain this alarm code: E107"

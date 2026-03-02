@@ -14,7 +14,7 @@ def test_chat_requires_auth(client):
     resp = client.post(
         "/v1/chat/completions",
         json={
-            "model": "Llama-2-7b-chat-hf",
+            "model": "llama-3.1-8b-awq",
             "messages": [{"role": "user", "content": "hi"}],
         },
     )
@@ -24,7 +24,7 @@ def test_chat_requires_auth(client):
         "/v1/chat/completions",
         headers={"X-API-Key": "invalid-key"},
         json={
-            "model": "Llama-2-7b-chat-hf",
+            "model": "llama-3.1-8b-awq",
             "messages": [{"role": "user", "content": "hi"}],
         },
     )
@@ -57,13 +57,13 @@ def test_chat_ensure_loaded_failure_returns_503(client, auth_headers, mock_manag
         "/v1/chat/completions",
         headers=auth_headers,
         json={
-            "model": "Llama-2-7b-chat-hf",
+            "model": "llama-3.1-8b-awq",
             "messages": [{"role": "user", "content": "hi"}],
         },
     )
 
     assert resp.status_code == 503
-    assert "Llama-2-7b-chat-hf" in resp.json()["detail"]
+    assert "llama-3.1-8b-awq" in resp.json()["detail"]
 
     # Restore default behavior for subsequent tests
     mock_manager.ensure_loaded.side_effect = None
@@ -82,7 +82,7 @@ def test_chat_non_streaming_returns_200(client, auth_headers, mock_manager):
         "/v1/chat/completions",
         headers=auth_headers,
         json={
-            "model": "Llama-2-7b-chat-hf",
+            "model": "llama-3.1-8b-awq",
             "messages": [{"role": "user", "content": "Say hello"}],
             "stream": False,
         },
@@ -110,7 +110,7 @@ def test_chat_streaming_returns_event_stream(client, auth_headers, mock_manager)
         "/v1/chat/completions",
         headers=auth_headers,
         json={
-            "model": "Llama-2-7b-chat-hf",
+            "model": "llama-3.1-8b-awq",
             "messages": [{"role": "user", "content": "Stream test"}],
             "stream": True,
         },
@@ -144,7 +144,7 @@ def test_list_models_returns_catalog(client, auth_headers):
     body = resp.json()
     assert "data" in body
     model_ids = [m["id"] for m in body["data"]]
-    assert "Llama-2-7b-chat-hf" in model_ids
+    assert "llama-3.1-8b-awq" in model_ids
 
 
 # ── History endpoint ──────────────────────────────────────────────────────────

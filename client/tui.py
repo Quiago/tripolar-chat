@@ -337,7 +337,7 @@ class MainMenuScreen(Screen):
             from rich.console import Console
             Console().print("[yellow]Logged out.[/yellow]")
         elif action == "chat":
-            model = cfg.get_default_model() or "Llama-2-7b-chat-hf"
+            model = cfg.get_default_model() or "llama-3.1-8b-awq"
             self.app.push_screen(ChatScreen(self._api, model))
         elif action == "models":
             self.app.push_screen(ModelSelectScreen(self._api))
