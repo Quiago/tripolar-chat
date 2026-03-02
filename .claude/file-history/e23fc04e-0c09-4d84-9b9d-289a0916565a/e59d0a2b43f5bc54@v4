@@ -214,7 +214,7 @@ class ChatScreen(Screen):
                 )
                 self.query_one(Input).disabled = True
             else:
-                log.write(f"\n[red]Error {exc.status_code}:[/red] {exc.detail}\n")
+                log.write(f"\n[red]Error {exc.status_code}:[/red] {exc}\n")
             return
         except Exception as exc:
             log.write(f"\n[red]Unexpected error:[/red] {exc}\n")

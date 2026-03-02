@@ -124,7 +124,7 @@ def _stream_response(api: APIClient, model: str, messages: list) -> str:
                 status.stop()
             if exc.status_code == 403:
                 raise _SessionExpired()
-            console.print(f"\n[red]Error {exc.status_code}:[/red] {exc}")
+            console.print(f"\n[red]Error {exc.status_code}:[/red] {exc.detail}")
             return ""
         except KeyboardInterrupt:
             if first:

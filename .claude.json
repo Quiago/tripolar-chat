@@ -17,7 +17,8 @@
     "continue": 1,
     "shift-tab": 1,
     "image-paste": 1,
-    "web-app": 1
+    "web-app": 1,
+    "mobile-app": 1
   },
   "cachedGrowthBookFeatures": {
     "tengu_event_sampling_config": {},

@@ -1,6 +1,7 @@
 """POST /v1/chat/completions – OpenAI-compatible, supports streaming SSE."""
 
 import json
+import logging
 from typing import AsyncGenerator
 
 import httpx
@@ -8,6 +9,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from sqlmodel import Session
 from starlette.concurrency import run_in_threadpool
+
+log = logging.getLogger(__name__)
 
 from server.config import settings
 from server.database import engine, get_db
@@ -46,9 +49,11 @@ async def chat_completion(
     try:
         await run_in_threadpool(manager.ensure_loaded, request.model)
     except Exception as exc:
+        # Log the full error on the server; return a brief message to the client.
+        log.error("Failed to load model '%s': %s", request.model, exc, exc_info=True)
         raise HTTPException(
             status_code=503,
-            detail=f"Failed to load model '{request.model}': {exc}",
+            detail=f"Failed to load model '{request.model}'. Check server logs.",
         )
 
     messages = [m.model_dump() for m in request.messages]

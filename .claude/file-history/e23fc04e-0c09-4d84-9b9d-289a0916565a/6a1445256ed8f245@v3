@@ -44,11 +44,3 @@ python -m pytest tests/ -v
 ## Fixed bugs (session 5)
 - `client/tui.py` ModelSelectScreen + HistoryListScreen: `self.call_from_thread` → `self.app.call_from_thread` (Textual 8.x moved it to App)
 - `client/api.py` `async_chat_stream`: added `if response.is_error: await response.aread(); _raise_for(response)` before iterating SSE lines
-- `APIError` now stores `self.detail` separately so callers can display just the message
-
-## Fixed bugs (session 6)
-- `server/services/vllm_manager.py`: `start()` overrode `HF_HOME` without preserving the HF token → `_read_hf_token()` reads token BEFORE override, passes as `HF_TOKEN` and `HUGGING_FACE_HUB_TOKEN` env vars
-- vLLM stdout now flows to server terminal (`stdout=None`); only stderr is piped for error extraction
-- Crash message trimmed to last error line (not full traceback) so HTTP detail stays short
-- `server/routers/chat.py`: logs full exception with `exc_info=True`, returns brief `detail` to client
-- `client/commands/chat.py` + `client/tui.py`: show `exc.detail` instead of `str(exc)` for non-403 errors

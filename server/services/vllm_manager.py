@@ -1,5 +1,6 @@
 """vLLM process manager – loads exactly one model at a time into GPU memory."""
 
+import logging
 import os
 import subprocess
 import time
@@ -8,6 +9,30 @@ from pathlib import Path
 from typing import AsyncIterator, Dict, List, Optional
 
 import httpx
+
+log = logging.getLogger(__name__)
+
+
+def _read_hf_token() -> Optional[str]:
+    """Return the HuggingFace token from env vars or the token file.
+
+    Reads from the ORIGINAL HF_HOME (before we override it for the weight
+    cache) so that `hf auth login` tokens are always found.
+    """
+    for var in ("HF_TOKEN", "HUGGING_FACE_HUB_TOKEN"):
+        token = os.environ.get(var, "").strip()
+        if token:
+            return token
+
+    # Resolve token file from current HF_HOME (set before our override)
+    hf_home = os.environ.get("HF_HOME", str(Path.home() / ".cache" / "huggingface"))
+    token_file = Path(hf_home) / "token"
+    if token_file.exists():
+        token = token_file.read_text().strip()
+        if token:
+            return token
+
+    return None
 
 
 @dataclass
@@ -132,16 +157,26 @@ class VLLMModelManager:
         if config.quantization:
             cmd.extend(["--quantization", config.quantization])
 
+        # Read the HF token BEFORE overriding HF_HOME so we always find
+        # the token saved by `hf auth login` (stored in the original HF_HOME).
+        hf_token = _read_hf_token()
+
         env = os.environ.copy()
         env["HF_HOME"] = str(self.cache_dir)
         env["TRANSFORMERS_CACHE"] = str(self.cache_dir)
         env["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
 
+        # Pass the token explicitly so vLLM can authenticate even though
+        # HF_HOME now points to our custom cache directory.
+        if hf_token:
+            env["HF_TOKEN"] = hf_token
+            env["HUGGING_FACE_HUB_TOKEN"] = hf_token  # legacy env var
+
         self.process = subprocess.Popen(
             cmd,
             env=env,
             preexec_fn=os.setsid,
-            stdout=subprocess.PIPE,
+            stdout=None,           # flow directly to server terminal
             stderr=subprocess.PIPE,
         )
 
@@ -152,13 +187,17 @@ class VLLMModelManager:
                 return
             if self.process.poll() is not None:
                 _, stderr = self.process.communicate()
-                raise RuntimeError(
-                    f"vLLM exited unexpectedly:\n{stderr.decode()[-2000:]}"
-                )
+                # Extract the last meaningful error line (skip empty lines and
+                # "During handling of..." chained-exception boilerplate so the
+                # message stays short when forwarded to HTTP clients).
+                lines = [l.strip() for l in stderr.decode().splitlines() if l.strip()]
+                last_error = lines[-1] if lines else "unknown error"
+                log.error("vLLM exited. Full stderr:\n%s", stderr.decode())
+                raise RuntimeError(f"vLLM exited: {last_error}")
             time.sleep(2)
 
         self.stop()
-        raise TimeoutError("vLLM did not become ready within 300 seconds")
+        raise TimeoutError("vLLM did not become ready within 300 s")
 
     def ensure_loaded(self, model_name: str) -> None:
         """Load *model_name*; swap if a different model is running."""

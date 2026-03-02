@@ -15,7 +15,9 @@
     "install-slack-app": 1,
     "double-esc-code-restore": 1,
     "continue": 1,
-    "shift-tab": 1
+    "shift-tab": 1,
+    "image-paste": 1,
+    "web-app": 1
   },
   "cachedGrowthBookFeatures": {
     "tengu_event_sampling_config": {},
@@ -67,7 +69,10 @@
     "tengu_permission_explainer": true,
     "tengu_destructive_command_warning": false,
     "tengu_auto_background_agents": false,
-    "tengu_immediate_model_command": false
+    "tengu_immediate_model_command": false,
+    "tengu_sm_compact": false,
+    "tengu_compact_cache_prefix": true,
+    "tengu_compact_streaming_retry": false
   },
   "firstStartTime": "2026-03-02T16:35:51.110Z",
   "opusProMigrationComplete": true,
