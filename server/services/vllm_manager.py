@@ -71,21 +71,26 @@ class ModelConfig:
 
 
 MODEL_CATALOG: Dict[str, ModelConfig] = {
-    "Llama-2-7B-Chat-GGUF": ModelConfig(
-        repo="TheBloke/Llama-2-7B-Chat-GGUF",
+    "llama-3.1-8b-instruct": ModelConfig(
+        # REPO OFICIAL: Pesos originales de Meta (BF16).
+        # Requiere: ~16GB de VRAM y que pongas tu Token de Hugging Face.
+        repo="meta-llama/Meta-Llama-3.1-8B-Instruct", 
         quantization=None,
         tensor_parallel=1,
         gpu_memory_util=0.85,
         max_model_len=8192,
-        description="Meta Llama 3.1 8B – general purpose",
+        description="Meta Llama 3.1 8B Instruct (Original - Pesado)"
     ),
-    "Llama-2-7b-chat-hf": ModelConfig(
-        repo="meta-llama/Llama-2-7b-chat-hf",
+    
+    "llama-3.1-8b-awq": ModelConfig(
+        # REPO DE LA COMUNIDAD: Cuantización AWQ oficial de Hugging Face (hugging-quants).
+        # Requiere: Solo ~6.5GB de VRAM. ¡NO requiere Token de HF porque es público!
+        repo="hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4", 
         quantization="awq",
         tensor_parallel=1,
         gpu_memory_util=0.90,
         max_model_len=8192,
-        description="Llama 3.1 8B 4-bit AWQ – VRAM-efficient",
+        description="Llama 3.1 8B 4-bit AWQ (Eficiente en VRAM)"
     ),
     "mistral-7b-awq": ModelConfig(
         repo="TheBloke/Mistral-7B-Instruct-v0.2-AWQ",
