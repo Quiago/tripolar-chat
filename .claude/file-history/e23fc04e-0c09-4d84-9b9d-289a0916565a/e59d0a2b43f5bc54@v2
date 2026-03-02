@@ -199,22 +199,8 @@ class ChatScreen(Screen):
                 log.write(chunk, expand=False)
                 full_text += chunk
         except APIError as exc:
-            self._history.pop()  # remove the user message that failed
-            if exc.status_code == 403:
-                log.write(
-                    "\n[bold yellow]⚠ Session expired[/bold yellow] – "
-                    "the server rejected your API key.\n"
-                    "Exit the TUI and run [bold]fmind login[/bold] to authenticate again.\n"
-                )
-                self.app.notify(
-                    "Your API key was rejected (403). Exit and run 'fmind login'.",
-                    title="Session Expired",
-                    severity="error",
-                    timeout=0,
-                )
-                self.query_one(Input).disabled = True
-            else:
-                log.write(f"\n[red]Error {exc.status_code}:[/red] {exc}\n")
+            log.write(f"\n[red]Error:[/red] {exc}\n")
+            self._history.pop()  # remove user message that failed
             return
         except Exception as exc:
             log.write(f"\n[red]Unexpected error:[/red] {exc}\n")
@@ -429,21 +415,10 @@ def launch_tui() -> None:
         )
         return
 
-    from rich.console import Console as _Console
-    _con = _Console()
-
     try:
         user = api.whoami()
-    except APIError as exc:
-        if exc.status_code == 403:
-            _con.print(
-                "[bold yellow]⚠  Session expired[/bold yellow] – "
-                "the server rejected your stored API key.\n"
-                "Run [bold]fmind login[/bold] to authenticate again."
-            )
-        else:
-            _con.print(f"[red]Cannot reach server:[/red] {exc}")
-        return
+        username = user.get("username", "unknown")
+    except APIError:
+        username = "unknown"
 
-    username = user.get("username", "unknown")
     FactoryMindTUI(api, username).run()

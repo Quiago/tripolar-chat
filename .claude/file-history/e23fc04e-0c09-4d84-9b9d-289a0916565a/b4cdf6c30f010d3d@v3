@@ -1,0 +1,29 @@
+from contextlib import asynccontextmanager
+
+from fastapi import FastAPI
+
+from server.database import create_db_and_tables
+from server.routers import auth, chat, health, history, models
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    create_db_and_tables()
+    yield
+    # Graceful shutdown: stop vLLM if running
+    from server.services.vllm_manager import get_vllm_manager
+    get_vllm_manager().stop()
+
+
+app = FastAPI(
+    title="FactoryMind AI API",
+    description="Enterprise LLM inference platform for industrial environments.",
+    version="0.1.0",
+    lifespan=lifespan,
+)
+
+app.include_router(health.router)
+app.include_router(auth.router)
+app.include_router(chat.router)
+app.include_router(models.router)
+app.include_router(history.router)

@@ -11,46 +11,16 @@ from rich.panel import Panel
 from rich.rule import Rule
 from rich.text import Text
 
-import client.api as fmapi
 from client import config as cfg
 from client.api import APIClient, APIError, get_client
 
 console = Console()
 app = typer.Typer(help="Chat with an LLM.")
 
-_SLASH_COMMANDS = "[dim]Commands: /models · /switch <model> · /clear · /history · /exit[/dim]"
+_SLASH_COMMANDS = """[dim]Commands: /models · /switch <model> · /clear · /history · /exit[/dim]"""
 
 
-# ── Internal signal ────────────────────────────────────────────────────────────
-
-class _SessionExpired(Exception):
-    """Raised by _stream_response when the server returns 403."""
-
-
-# ── Helpers ───────────────────────────────────────────────────────────────────
-
-def _relogin(server_url: str) -> Optional[APIClient]:
-    """Interactive re-login prompt. Returns a new APIClient or None if user declines."""
-    console.print(
-        "\n[bold yellow]⚠  Session expired[/bold yellow] – "
-        "the server rejected your API key (403 Forbidden).\n"
-        "You need to log in again to continue.\n"
-    )
-    if not typer.confirm("Log in now?", default=True):
-        console.print("[dim]Run [bold]fmind login[/bold] when ready.[/dim]")
-        return None
-
-    username = typer.prompt("Username")
-    password = typer.prompt("Password", hide_input=True)
-    try:
-        user = fmapi.login(server_url, username, password)
-        cfg.save_credentials(server_url, user["api_key"])
-        console.print(f"[green]✓ Logged in as[/green] [bold]{user['username']}[/bold]\n")
-        return APIClient(server_url, user["api_key"])
-    except APIError as exc:
-        console.print(f"[red]Login failed:[/red] {exc}")
-        return None
-
+# ── helpers ───────────────────────────────────────────────────────────────────
 
 def _pick_model(api: APIClient, requested: Optional[str]) -> str:
     """Return the model to use: explicit arg > config default > first in catalog."""
@@ -74,10 +44,7 @@ def _print_models_table(api: APIClient) -> None:
     try:
         models = api.list_models()
     except APIError as exc:
-        if exc.status_code == 403:
-            console.print("[yellow]⚠ Session expired.[/yellow] Run [bold]fmind login[/bold].")
-        else:
-            console.print(f"[red]Could not fetch models:[/red] {exc}")
+        console.print(f"[red]Could not fetch models:[/red] {exc}")
         return
 
     table = Table(title="Available Models", show_lines=False)
@@ -97,10 +64,7 @@ def _print_models_table(api: APIClient) -> None:
 
 
 def _stream_response(api: APIClient, model: str, messages: list) -> str:
-    """Send messages, stream the response to terminal. Returns full text.
-
-    Raises _SessionExpired if the server returns 403.
-    """
+    """Send messages, stream the response to terminal. Returns full text."""
     console.print()
     label = Text(f"[{model}] ", style="bold green")
     console.print(label, end="")
@@ -122,9 +86,7 @@ def _stream_response(api: APIClient, model: str, messages: list) -> str:
         except APIError as exc:
             if first:
                 status.stop()
-            if exc.status_code == 403:
-                raise _SessionExpired()
-            console.print(f"\n[red]Error {exc.status_code}:[/red] {exc}")
+            console.print(f"\n[red]Error:[/red] {exc}")
             return ""
         except KeyboardInterrupt:
             if first:
@@ -132,11 +94,11 @@ def _stream_response(api: APIClient, model: str, messages: list) -> str:
             console.print("\n[yellow]Interrupted.[/yellow]")
             return full
 
-    console.print()
+    console.print()  # newline after streamed content
     return full
 
 
-# ── Commands ──────────────────────────────────────────────────────────────────
+# ── commands ──────────────────────────────────────────────────────────────────
 
 @app.command()
 def chat(
@@ -154,38 +116,19 @@ def chat(
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(1)
 
-    # ── Validate session before doing anything ────────────────────────────────
-    try:
-        api.whoami()
-    except APIError as exc:
-        if exc.status_code == 403:
-            new_api = _relogin(api.server_url)
-            if not new_api:
-                raise typer.Exit(1)
-            api = new_api
-        else:
-            console.print(f"[red]Cannot reach server:[/red] {exc}")
-            raise typer.Exit(1)
-
     current_model = _pick_model(api, model)
 
-    # ── One-shot mode ─────────────────────────────────────────────────────────
+    # ── one-shot mode ─────────────────────────────────────────────────────────
     if message:
         messages = [{"role": "user", "content": message}]
-        try:
-            response = _stream_response(api, current_model, messages)
-        except _SessionExpired:
-            console.print(
-                "\n[bold yellow]⚠ Session expired[/bold yellow] – "
-                "run [bold]fmind login[/bold] and try again."
-            )
-            raise typer.Exit(1)
+        response = _stream_response(api, current_model, messages)
         if response:
+            # Render final markdown after streaming
             console.print(Rule(style="dim"))
             console.print(Markdown(response))
         return
 
-    # ── Interactive mode ──────────────────────────────────────────────────────
+    # ── interactive mode ──────────────────────────────────────────────────────
     server_url = cfg.get_server_url()
     console.print(
         Panel(
@@ -198,6 +141,7 @@ def chat(
     )
 
     history: list[dict] = []
+    chat_id: Optional[str] = None
 
     while True:
         try:
@@ -211,7 +155,7 @@ def chat(
         if not user_input:
             continue
 
-        # ── Slash commands ────────────────────────────────────────────────────
+        # ── slash commands ────────────────────────────────────────────────────
         if user_input.startswith("/"):
             parts = user_input.split(maxsplit=1)
             cmd = parts[0].lower()
@@ -223,6 +167,7 @@ def chat(
             elif cmd == "/clear":
                 os.system("clear" if sys.platform != "win32" else "cls")
                 history.clear()
+                chat_id = None
                 console.print("[dim]Screen cleared. History reset.[/dim]")
 
             elif cmd == "/models":
@@ -234,6 +179,7 @@ def chat(
                 else:
                     current_model = parts[1].strip()
                     history.clear()
+                    chat_id = None
                     cfg.save_default_model(current_model)
                     console.print(
                         f"[green]Switched to[/green] [cyan]{current_model}[/cyan]. "
@@ -255,21 +201,8 @@ def chat(
                 )
             continue
 
-        # ── Normal message ────────────────────────────────────────────────────
+        # ── normal message ────────────────────────────────────────────────────
         history.append({"role": "user", "content": user_input})
-        try:
-            response = _stream_response(api, current_model, history)
-        except _SessionExpired:
-            history.pop()  # remove the unsent user message
-            new_api = _relogin(api.server_url)
-            if new_api:
-                api = new_api
-                console.print(
-                    "[dim]Session renewed – please re-send your last message.[/dim]"
-                )
-            else:
-                break
-            continue
-
+        response = _stream_response(api, current_model, history)
         if response:
             history.append({"role": "assistant", "content": response})
