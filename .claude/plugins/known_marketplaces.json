@@ -1,0 +1,10 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/teamspace/studios/this_studio/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-03-02T16:36:49.599Z"
+  }
+}

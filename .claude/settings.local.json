@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(SECRET_KEY=\"test-secret-key-32-chars-minimum!!\" python:*)"
+    ]
+  }
+}
