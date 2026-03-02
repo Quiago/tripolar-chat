@@ -133,26 +133,14 @@ class VLLMModelManager:
             return False
 
     def is_cached(self, model_name: str) -> bool:
-        """Return True only when a *complete* snapshot exists in the local HF cache.
-
-        A snapshot is considered complete when it contains a ``config.json``
-        (the file vLLM validates before loading).  A directory that exists but
-        holds only blobs or a snapshot without config.json (partial download)
-        is treated as not cached so we never set HF_HUB_OFFLINE=1 for broken
-        cache entries, which would cause vLLM to crash at startup.
-        """
+        """Return True if the model's weights exist in the local HF cache."""
         config = MODEL_CATALOG.get(model_name)
         if not config:
             return False
+        # HF Hub stores models under hub/models--<org>--<name>/
         slug = "models--" + config.repo.replace("/", "--")
-        snapshots_dir = self.cache_dir / "hub" / slug / "snapshots"
-        if not snapshots_dir.exists():
-            return False
-        return any(
-            (snap / "config.json").exists()
-            for snap in snapshots_dir.iterdir()
-            if snap.is_dir()
-        )
+        candidate = self.cache_dir / "hub" / slug
+        return candidate.exists() and any(candidate.iterdir())
 
     def get_info(self) -> dict:
         """Snapshot suitable for embedding in /health responses."""
@@ -279,14 +267,9 @@ class VLLMModelManager:
         env["HF_HOME"] = str(self.cache_dir)
         env["TRANSFORMERS_CACHE"] = str(self.cache_dir)
         env["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
-        # Only go fully offline if the weights are confirmed present on disk.
-        # Setting HF_HUB_OFFLINE=1 when the snapshot is missing causes vLLM
-        # to resolve to a non-existent local path and crash at startup.
-        if self.is_cached(model_name):
-            env["HF_HUB_OFFLINE"] = "1"
-            log.info("[start] '%s' is cached – HF_HUB_OFFLINE=1 (no network calls).", model_name)
-        else:
-            log.info("[start] '%s' not cached – allowing HF network access for download.", model_name)
+        # Skip all HuggingFace network calls – weights are already on disk
+        # after prefetch. Saves ~17 s of metadata HTTP checks per swap.
+        env["HF_HUB_OFFLINE"] = "1"
         # Spawn fresh worker processes so no GPU memory leaks between swaps.
         env["VLLM_WORKER_MULTIPROC_METHOD"] = "spawn"
 
