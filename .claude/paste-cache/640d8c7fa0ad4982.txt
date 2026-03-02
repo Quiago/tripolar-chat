@@ -1,0 +1,52 @@
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ fmind
+⚠  Session expired – the server rejected your stored API key.
+Run fmind login to authenticate again.
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ fmind login
+Username: carlos
+Password: 
+Login failed: [401] Invalid username or password.
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ fmind --register
+Usage: fmind [OPTIONS] COMMAND [ARGS]...
+Try 'fmind --help' for help.
+╭─ Error ──────────────────────────────────────────────────────────────────────╮
+│ No such option: --register                                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ fmind --help
+                                                                                
+ Usage: fmind [OPTIONS] COMMAND [ARGS]...                                       
+                                                                                
+ FactoryMind AI CLI – talk to your on-premise LLMs.                             
+                                                                                
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell.      │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation.              │
+│ --help                        Show this message and exit.                    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ login       Log in to a FactoryMind server.                                  │
+│ logout      Clear stored credentials.                                        │
+│ register    Register a new account on a FactoryMind server.                  │
+│ whoami      Show the currently authenticated user.                           │
+│ rotate-key  Generate a new API key and update local config.                  │
+│ tui         Launch the interactive Textual TUI.                              │
+│ chat        Chat with an LLM.                                                │
+│ models      Manage available LLM models.                                     │
+│ history     Browse chat history.                                             │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ fmind whoami
+Error: [403] Invalid API key.
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ fmind register
+Username: carlos
+Email: ^H^H^CAborted.            
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ fmind rotate-key
+Error: [403] Invalid API key.
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ fmind register
+Username: carlos
+Email: carlos@tripolar.industries
+Password: 
+Confirm password: 
+Repeat for confirmation: 
+Registration failed: [500] Internal Server Error
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ 

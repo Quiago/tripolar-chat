@@ -10,7 +10,9 @@
     "status-line": 1,
     "prompt-queue": 1,
     "enter-to-steer-in-relatime": 1,
-    "todo-list": 1
+    "todo-list": 1,
+    "install-github-app": 1,
+    "install-slack-app": 1
   },
   "cachedGrowthBookFeatures": {
     "tengu_event_sampling_config": {},
