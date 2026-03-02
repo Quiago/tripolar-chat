@@ -6,7 +6,15 @@
     "new-user-warmup": 1,
     "plan-mode-for-complex-tasks": 1,
     "memory-command": 1,
-    "theme-command": 1
+    "theme-command": 1,
+    "status-line": 1,
+    "prompt-queue": 1,
+    "enter-to-steer-in-relatime": 1,
+    "todo-list": 1,
+    "install-github-app": 1,
+    "install-slack-app": 1,
+    "double-esc-code-restore": 1,
+    "continue": 1
   },
   "cachedGrowthBookFeatures": {
     "tengu_event_sampling_config": {},

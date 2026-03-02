@@ -6,9 +6,17 @@
     "new-user-warmup": 1,
     "plan-mode-for-complex-tasks": 1,
     "memory-command": 1,
-    "theme-command": 1
+    "theme-command": 1,
+    "status-line": 1,
+    "prompt-queue": 1,
+    "enter-to-steer-in-relatime": 1,
+    "todo-list": 1,
+    "install-github-app": 1,
+    "install-slack-app": 1,
+    "double-esc-code-restore": 1,
+    "continue": 1,
+    "shift-tab": 1
   },
-  "showExpandedTodos": true,
   "cachedGrowthBookFeatures": {
     "tengu_event_sampling_config": {},
     "tengu_log_segment_events": false,
@@ -58,7 +66,8 @@
     "tengu_tst_kx7": false,
     "tengu_permission_explainer": true,
     "tengu_destructive_command_warning": false,
-    "tengu_auto_background_agents": false
+    "tengu_auto_background_agents": false,
+    "tengu_immediate_model_command": false
   },
   "firstStartTime": "2026-03-02T16:35:51.110Z",
   "opusProMigrationComplete": true,
@@ -67,19 +76,6 @@
   "cachedChromeExtensionInstalled": false,
   "changelogLastFetched": 1772469362808,
   "autoUpdatesProtectedForNative": true,
-  "oauthAccount": {
-    "accountUuid": "c33df1dc-877d-4e5e-82d3-b8f325b7ab23",
-    "emailAddress": "cquiala12@gmail.com",
-    "organizationUuid": "d6a2be4d-81d5-4ea2-b2ab-772305f92344",
-    "hasExtraUsageEnabled": true,
-    "billingType": "stripe_subscription",
-    "accountCreatedAt": "2024-07-23T23:19:37.668048Z",
-    "subscriptionCreatedAt": "2025-10-01T10:06:39.102615Z",
-    "displayName": "Carlos",
-    "organizationRole": "admin",
-    "workspaceRole": null,
-    "organizationName": "cquiala12@gmail.com's Organization"
-  },
   "claudeCodeFirstTokenDate": "2025-10-08T23:40:20.560698Z",
   "shiftEnterKeyBindingInstalled": true,
   "hasCompletedOnboarding": true,
@@ -113,5 +109,19 @@
   "cachedExtraUsageDisabledReason": null,
   "officialMarketplaceAutoInstallAttempted": true,
   "officialMarketplaceAutoInstalled": true,
-  "showSpinnerTree": false
+  "showSpinnerTree": false,
+  "oauthAccount": {
+    "accountUuid": "c33df1dc-877d-4e5e-82d3-b8f325b7ab23",
+    "emailAddress": "cquiala12@gmail.com",
+    "organizationUuid": "d6a2be4d-81d5-4ea2-b2ab-772305f92344",
+    "hasExtraUsageEnabled": true,
+    "billingType": "stripe_subscription",
+    "accountCreatedAt": "2024-07-23T23:19:37.668048Z",
+    "subscriptionCreatedAt": "2025-10-01T10:06:39.102615Z",
+    "displayName": "Carlos",
+    "organizationRole": "admin",
+    "workspaceRole": null,
+    "organizationName": "cquiala12@gmail.com's Organization"
+  },
+  "anonymousId": "claudecode.v1.a7e3f6e9-8329-40d1-9797-56d92a9ec155"
 }

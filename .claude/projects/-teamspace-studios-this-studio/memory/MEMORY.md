@@ -32,6 +32,15 @@ uvicorn server.main:app --reload --host 0.0.0.0 --port 8080
 
 ## Testing
 ```bash
-SECRET_KEY="test-secret-key-32-chars-minimum!!" python -c "from fastapi.testclient import TestClient; ..."
+python -m pytest tests/ -v
 ```
-Uses TestClient with `with` statement to trigger lifespan (creates DB tables).
+- `tests/conftest.py` – sets env vars (SECRET_KEY, DATABASE_URL) at top before imports, patches `server.services.vllm_manager._instance` with MagicMock so no real GPU needed
+- `tests/test_chat_endpoint.py` – integration: 400 unknown model, 503 on load failure, 200 non-streaming, auth (401 missing header / 403 bad key)
+- `tests/test_api_client.py` – unit: chat_stream + async_chat_stream error handling
+- `tests/test_tui_workers.py` – source inspection: verifies `self.app.call_from_thread` usage
+- pytest-asyncio STRICT mode; async tests need `@pytest.mark.asyncio`
+- `asyncio_mode` configured via `pyproject.toml` `[tool.pytest.ini_options]`
+
+## Fixed bugs (session 5)
+- `client/tui.py` ModelSelectScreen + HistoryListScreen: `self.call_from_thread` → `self.app.call_from_thread` (Textual 8.x moved it to App)
+- `client/api.py` `async_chat_stream`: added `if response.is_error: await response.aread(); _raise_for(response)` before iterating SSE lines

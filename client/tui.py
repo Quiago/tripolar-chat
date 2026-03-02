@@ -84,7 +84,7 @@ class ModelSelectScreen(Screen):
             models = self._api.list_models()
         except APIError:
             models = []
-        self.call_from_thread(self._populate_table, models)
+        self.app.call_from_thread(self._populate_table, models)
 
     def _populate_table(self, models: list[dict]) -> None:
         table = self.query_one(DataTable)
@@ -382,7 +382,7 @@ class HistoryListScreen(Screen):
             sessions = self._api.list_history(limit=30)
         except APIError:
             sessions = []
-        self.call_from_thread(self._populate, sessions)
+        self.app.call_from_thread(self._populate, sessions)
 
     def _populate(self, sessions: list[dict]) -> None:
         table = self.query_one(DataTable)

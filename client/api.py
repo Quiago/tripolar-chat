@@ -169,6 +169,9 @@ class APIClient:
             async with client.stream(
                 "POST", "/v1/chat/completions", json=body
             ) as response:
+                if response.is_error:
+                    await response.aread()
+                    _raise_for(response)
                 async for line in response.aiter_lines():
                     if not line or not line.startswith("data: "):
                         continue

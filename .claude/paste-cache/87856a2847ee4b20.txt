@@ -1,0 +1,146 @@
+chat$ fmind
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/quiala/Datos/TRIPOLAR/tripolar-chat/.venv/lib/python3.12/site-packages │
+│ /textual/worker.py:370 in _run                                               │
+│                                                                              │
+│   367 │   │   │   self.state = WorkerState.RUNNING                           │
+│   368 │   │   │   app.log.worker(self)                                       │
+│   369 │   │   │   try:                                                       │
+│ ❱ 370 │   │   │   │   self._result = await self.run()                        │
+│   371 │   │   │   except asyncio.CancelledError as error:                    │
+│   372 │   │   │   │   self.state = WorkerState.CANCELLED                     │
+│   373 │   │   │   │   self._error = error                                    │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │           app = FactoryMindTUI(                                          │ │
+│ │                 │   title='FactoryMind AI',                              │ │
+│ │                 │   classes={'-dark-mode'},                              │ │
+│ │                 │   pseudo_classes={'focus', 'dark'}                     │ │
+│ │                 )                                                        │ │
+│ │         error = AttributeError("'ModelSelectScreen' object has no        │ │
+│ │                 attribute 'call_from_thread'")                           │ │
+│ │          self = <Worker                                                  │ │
+│ │                 │   ERROR                                                │ │
+│ │                 │   name='_load_models'                                  │ │
+│ │                 │   description='_load_models()'                         │ │
+│ │                 >                                                        │ │
+│ │ worker_failed = WorkerFailed('Worker raised exception:                   │ │
+│ │                 AttributeError("\'ModelSelectScreen\' object has no      │ │
+│ │                 attribute \'call_from_thread\'")')                       │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/quiala/Datos/TRIPOLAR/tripolar-chat/.venv/lib/python3.12/site-packages │
+│ /textual/worker.py:354 in run                                                │
+│                                                                              │
+│   351 │   │   Returns:                                                       │
+│   352 │   │   │   Return value of the work.                                  │
+│   353 │   │   """                                                            │
+│ ❱ 354 │   │   return await (                                                 │
+│   355 │   │   │   self._run_threaded() if self._thread_worker else self._run │
+│   356 │   │   )                                                              │
+│   357                                                                        │
+│                                                                              │
+│ ╭──────────────────────────────── locals ────────────────────────────────╮   │
+│ │ self = <Worker ERROR name='_load_models' description='_load_models()'> │   │
+│ ╰────────────────────────────────────────────────────────────────────────╯   │
+│                                                                              │
+│ /home/quiala/Datos/TRIPOLAR/tripolar-chat/.venv/lib/python3.12/site-packages │
+│ /textual/worker.py:326 in _run_threaded                                      │
+│                                                                              │
+│   323 │   │                                                                  │
+│   324 │   │   loop = asyncio.get_running_loop()                              │
+│   325 │   │   assert loop is not None                                        │
+│ ❱ 326 │   │   return await loop.run_in_executor(None, runner, self._work)    │
+│   327 │                                                                      │
+│   328 │   async def _run_async(self) -> ResultType:                          │
+│   329 │   │   """Run an async worker.                                        │
+│                                                                              │
+│ ╭──────────────────────────────── locals ────────────────────────────────╮   │
+│ │ loop = <_UnixSelectorEventLoop running=True closed=False debug=False>  │   │
+│ │ self = <Worker ERROR name='_load_models' description='_load_models()'> │   │
+│ ╰────────────────────────────────────────────────────────────────────────╯   │
+│                                                                              │
+│ /home/quiala/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/pyt │
+│ hon3.12/concurrent/futures/thread.py:59 in run                               │
+│                                                                              │
+│    56 │   │   │   return                                                     │
+│    57 │   │                                                                  │
+│    58 │   │   try:                                                           │
+│ ❱  59 │   │   │   result = self.fn(*self.args, **self.kwargs)                │
+│    60 │   │   except BaseException as exc:                                   │
+│    61 │   │   │   self.future.set_exception(exc)                             │
+│    62 │   │   │   # Break a reference cycle with the exception 'exc'         │
+│                                                                              │
+│ ╭── locals ───╮                                                              │
+│ │ self = None │                                                              │
+│ ╰─────────────╯                                                              │
+│                                                                              │
+│ /home/quiala/Datos/TRIPOLAR/tripolar-chat/.venv/lib/python3.12/site-packages │
+│ /textual/worker.py:309 in run_callable                                       │
+│                                                                              │
+│   306 │   │   def run_callable(work: Callable[[], ResultType]) -> ResultType │
+│   307 │   │   │   """Set the active worker, and call the callable."""        │
+│   308 │   │   │   active_worker.set(self)                                    │
+│ ❱ 309 │   │   │   return work()                                              │
+│   310 │   │                                                                  │
+│   311 │   │   if (                                                           │
+│   312 │   │   │   inspect.iscoroutinefunction(self._work)                    │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ self = <Worker ERROR name='_load_models' description='_load_models()'>   │ │
+│ │ work = functools.partial(<function ModelSelectScreen._load_models at     │ │
+│ │        0x79b356e24fe0>, ModelSelectScreen())                             │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/quiala/Datos/TRIPOLAR/tripolar-chat/client/tui.py:87 in _load_models   │
+│                                                                              │
+│    84 │   │   │   models = self._api.list_models()                           │
+│    85 │   │   except APIError:                                               │
+│    86 │   │   │   models = []                                                │
+│ ❱  87 │   │   self.call_from_thread(self._populate_table, models)            │
+│    88 │                                                                      │
+│    89 │   def _populate_table(self, models: list[dict]) -> None:             │
+│    90 │   │   table = self.query_one(DataTable)                              │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ models = [                                                               │ │
+│ │          │   {                                                           │ │
+│ │          │   │   'id': 'llama-3.1-8b',                                   │ │
+│ │          │   │   'object': 'model',                                      │ │
+│ │          │   │   'owned_by': 'factorymind',                              │ │
+│ │          │   │   'description': 'Meta Llama 3.1 8B – general purpose',   │ │
+│ │          │   │   'cached': False,                                        │ │
+│ │          │   │   'loaded': False                                         │ │
+│ │          │   },                                                          │ │
+│ │          │   {                                                           │ │
+│ │          │   │   'id': 'llama-3.1-8b-awq',                               │ │
+│ │          │   │   'object': 'model',                                      │ │
+│ │          │   │   'owned_by': 'factorymind',                              │ │
+│ │          │   │   'description': 'Llama 3.1 8B 4-bit AWQ –                │ │
+│ │          VRAM-efficient',                                                │ │
+│ │          │   │   'cached': False,                                        │ │
+│ │          │   │   'loaded': False                                         │ │
+│ │          │   },                                                          │ │
+│ │          │   {                                                           │ │
+│ │          │   │   'id': 'mistral-7b-awq',                                 │ │
+│ │          │   │   'object': 'model',                                      │ │
+│ │          │   │   'owned_by': 'factorymind',                              │ │
+│ │          │   │   'description': 'Mistral 7B – good reasoning, compact',  │ │
+│ │          │   │   'cached': False,                                        │ │
+│ │          │   │   'loaded': False                                         │ │
+│ │          │   },                                                          │ │
+│ │          │   {                                                           │ │
+│ │          │   │   'id': 'qwen-2.5-7b',                                    │ │
+│ │          │   │   'object': 'model',                                      │ │
+│ │          │   │   'owned_by': 'factorymind',                              │ │
+│ │          │   │   'description': 'Qwen 2.5 7B – multilingual',            │ │
+│ │          │   │   'cached': False,                                        │ │
+│ │          │   │   'loaded': False                                         │ │
+│ │          │   }                                                           │ │
+│ │          ]                                                               │ │
+│ │   self = ModelSelectScreen()                                             │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+╰──────────────────────────────────────────────────────────────────────────────╯
+AttributeError: 'ModelSelectScreen' object has no attribute 'call_from_thread'
+(tripolar-chat) (base) quiala@quiala-IdeaPad-3-15ITL6:~/Datos/TRIPOLAR/tripolar-chat$ 
+
