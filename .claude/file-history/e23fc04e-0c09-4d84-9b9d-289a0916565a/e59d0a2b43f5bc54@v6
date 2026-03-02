@@ -128,12 +128,6 @@ class ChatScreen(Screen):
         overflow-y: auto;
         padding: 0 1;
     }
-    #streaming-response {
-        height: auto;
-        display: none;
-        padding: 0 1;
-        border-top: dashed $primary-darken-2;
-    }
     #thinking-bar {
         height: 1;
         display: none;
@@ -165,9 +159,6 @@ class ChatScreen(Screen):
     def compose(self) -> ComposeResult:
         yield Header(show_clock=True)
         yield RichLog(id="messages", highlight=True, markup=True, wrap=True)
-        # Live streaming area: updated in-place via Static.update() so that
-        # each chunk does NOT create a new row (unlike RichLog.write()).
-        yield Static("", id="streaming-response", markup=True)
         yield LoadingIndicator(id="thinking-bar")
         with Horizontal(id="input-row"):
             yield Label(f"[{self._model}]", id="model-label")
@@ -206,34 +197,28 @@ class ChatScreen(Screen):
         import time as _time
 
         log = self.query_one(RichLog)
-        streaming = self.query_one("#streaming-response", Static)
         indicator = self.query_one("#thinking-bar")
-
         indicator.display = True
         self.query_one(Input).disabled = True
 
         start = _time.monotonic()
-        accumulated = ""
-        header = f"[bold green][{self._model}][/bold green]"
-
+        full_text = ""
+        first_token = True
         try:
             async for chunk in self._api.async_chat_stream(
                 model=self._model,
                 messages=messages,
                 chat_id=self._chat_id,
             ):
-                if not accumulated:
-                    # First token: hide spinner, show streaming area
+                if first_token:
                     indicator.display = False
-                    streaming.display = True
-                accumulated += chunk
-                # Escape Rich markup in model output so angle-bracket text
-                # renders as literal characters, not broken markup.
-                escaped = accumulated.replace("[", "\\[")
-                streaming.update(f"{header} {escaped}")
-
+                    log.write(f"\n[bold green][{self._model}][/bold green] ")
+                    first_token = False
+                log.write(chunk, expand=False)
+                full_text += chunk
         except APIError as exc:
-            self._history.pop()
+            indicator.display = False
+            self._history.pop()  # remove the user message that failed
             if exc.status_code == 403:
                 log.write(
                     "\n[bold yellow]⚠ Session expired[/bold yellow] – "
@@ -250,22 +235,16 @@ class ChatScreen(Screen):
                 return
             else:
                 log.write(f"\n[red]Error {exc.status_code}:[/red] {exc.detail}\n")
-
         except Exception as exc:
+            indicator.display = False
             log.write(f"\n[red]Unexpected error:[/red] {exc}\n")
             self._history.pop()
-
         else:
-            # Flush completed response to RichLog in ONE write call (correct wrapping)
             elapsed = _time.monotonic() - start
-            escaped = accumulated.replace("[", "\\[")
-            log.write(f"\n{header} {escaped}\n[dim]({elapsed:.1f}s)[/dim]\n")
-            if accumulated:
-                self._history.append({"role": "assistant", "content": accumulated})
-
+            log.write(f"\n[dim]({elapsed:.1f}s)[/dim]\n")
+            if full_text:
+                self._history.append({"role": "assistant", "content": full_text})
         finally:
-            streaming.update("")
-            streaming.display = False
             indicator.display = False
             self.query_one(Input).disabled = False
             self.query_one(Input).focus()

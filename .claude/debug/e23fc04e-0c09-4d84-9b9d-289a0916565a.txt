@@ -8340,3 +8340,694 @@ data: {"jsonrpc":"2.0","id":0,"error":{"code":-32600,"message":"Anthropic Proxy:
 2026-03-02T20:36:05.982Z [DEBUG] Found 0 hook matchers in settings
 2026-03-02T20:36:05.983Z [DEBUG] Matched 0 unique hooks for query "idle_prompt" (0 before deduplication)
 2026-03-02T20:36:48.750Z [DEBUG] detectFileEncoding failed for expected reason: ENOENT
+2026-03-02T21:38:45.968Z [DEBUG] Getting matching hook commands for SessionStart with query: resume
+2026-03-02T21:38:45.968Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:38:45.968Z [DEBUG] Matched 0 unique hooks for query "resume" (0 before deduplication)
+2026-03-02T21:38:45.973Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487525973
+2026-03-02T21:38:45.973Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T21:38:45.974Z [DEBUG] Temp file written successfully, size: 5164 bytes
+2026-03-02T21:38:45.974Z [DEBUG] Applied original permissions to temp file
+2026-03-02T21:38:45.974Z [DEBUG] Renaming /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487525973 to /teamspace/studios/this_studio/.claude.json
+2026-03-02T21:38:45.974Z [DEBUG] File /teamspace/studios/this_studio/.claude.json written atomically
+2026-03-02T21:38:45.976Z [DEBUG] FileHistory: Copied backup 0f5b1daac1bdfca5@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:45.977Z [DEBUG] [useDeferredValue] Messages deferred by 211 (0→211)
+2026-03-02T21:38:46.908Z [DEBUG] High write ratio: blit=0, write=55628 (100.0% writes), screen=1379x63
+2026-03-02T21:38:47.434Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:47.438Z [DEBUG] [useDeferredValue] Messages deferred by 211 (0→211)
+2026-03-02T21:38:48.347Z [DEBUG] High write ratio: blit=0, write=55629 (100.0% writes), screen=1379x63
+2026-03-02T21:38:48.348Z [DEBUG] Full reset (scrollback changes): scrollbackRows=1353, firstChangeY=324
+  prev: "✻ Cogitated for 11m 13s                                        "
+  next: "✻ Crunched for 11m 13s                                         "
+2026-03-02T21:38:49.003Z [DEBUG] High write ratio: blit=2170, write=54808 (96.2% writes), screen=1379x63
+2026-03-02T21:38:49.005Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-03-02T21:38:49.005Z [DEBUG] [claudeai-mcp] Gate returned: true
+2026-03-02T21:38:49.005Z [DEBUG] [claudeai-mcp] Fetching from https://api.anthropic.com/v1/mcp_servers?limit=1000
+2026-03-02T21:38:49.007Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-02T21:38:49.048Z [DEBUG] FileHistory: Copied backup 03c77adadfd37eb1@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.054Z [DEBUG] FileHistory: Copied backup 8649425a4d9ae63f@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.064Z [DEBUG] [binaryCheck] Binary 'pyright-langserver' not found
+2026-03-02T21:38:49.064Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.065Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.066Z [DEBUG] [useDeferredValue] Messages deferred by 211 (0→211)
+2026-03-02T21:38:49.085Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.085Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.085Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.085Z [DEBUG] FileHistory: Copied backup 5425d40ac55a5278@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.087Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.087Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.087Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.087Z [DEBUG] FileHistory: Copied backup 21b5e0f09aec398b@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.087Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.087Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.087Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.087Z [DEBUG] [claudeai-mcp] Fetch failed
+2026-03-02T21:38:49.088Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.088Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.088Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.088Z [DEBUG] FileHistory: Copied backup c96b3f4496f94b28@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.088Z [DEBUG] [useDeferredValue] Messages deferred by 211 (0→211)
+2026-03-02T21:38:49.102Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.102Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.102Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.106Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.106Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.106Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.106Z [DEBUG] FileHistory: Copied backup 855722c7abf5019a@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.107Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.107Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.107Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.107Z [DEBUG] FileHistory: Copied backup b42a8aa7bb261a85@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.108Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.108Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.108Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.108Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.108Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.108Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.108Z [DEBUG] FileHistory: Copied backup 2d3627a7eb673440@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.111Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.111Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.111Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.111Z [DEBUG] FileHistory: Copied backup eb1e608aef7041ae@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.111Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.111Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.111Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.112Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.112Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.112Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.112Z [DEBUG] FileHistory: Copied backup a4d9a2463f9ae2d7@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.112Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.112Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.112Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.113Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.113Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.113Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.113Z [DEBUG] FileHistory: Copied backup e14bdba4b3be03f2@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.113Z [ERROR] Error: Error: 1P event logging: 40 events failed to export (request-id=req_011CYeydaD1k5jKP4yDER1z8, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:38:49.114Z [ERROR] Error: Error: {"message":"Failed to export 40 events (request-id=req_011CYeydaD1k5jKP4yDER1z8, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 40 events (request-id=req_011CYeydaD1k5jKP4yDER1z8, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:38:49.114Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 40 events (request-id=req_011CYeydaD1k5jKP4yDER1z8, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 40 events (request-id=req_011CYeydaD1k5jKP4yDER1z8, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T21:38:49.114Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.114Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.114Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.114Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.114Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.114Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.114Z [DEBUG] FileHistory: Copied backup ba18a02409755932@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.115Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.115Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.115Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.115Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.115Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.115Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.116Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.116Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.116Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .example
+2026-03-02T21:38:49.116Z [DEBUG] FileHistory: Copied backup 64383785c6217f3f@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.116Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .toml
+2026-03-02T21:38:49.116Z [DEBUG] FileHistory: Copied backup fc790d72695460ec@v4 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.123Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .md
+2026-03-02T21:38:49.123Z [DEBUG] FileHistory: Copied backup b4cdf6c30f010d3d@v4 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.123Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.123Z [DEBUG] FileHistory: Copied backup 919a6e8e0a0b2474@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.123Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.123Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.123Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.123Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.123Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.123Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.123Z [DEBUG] FileHistory: Copied backup 73f5b031df1ccde2@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.124Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.124Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.124Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.124Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.124Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.124Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.124Z [DEBUG] FileHistory: Copied backup 22249b9960d1c41c@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.124Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.125Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.125Z [DEBUG] FileHistory: Copied backup de9409406aa692d4@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.125Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.125Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.125Z [DEBUG] FileHistory: Copied backup 77c3638f04426543@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.125Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.125Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .md
+2026-03-02T21:38:49.126Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.126Z [DEBUG] FileHistory: Copied backup 68fd609e24c1d542@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.126Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.126Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.126Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.126Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.126Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.126Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.126Z [DEBUG] FileHistory: Copied backup 85df438f6812ef53@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.126Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.126Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.126Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.126Z [DEBUG] FileHistory: Copied backup 50a58408f929f45f@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.126Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.126Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.127Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-03-02T21:38:49.127Z [DEBUG] FileHistory: Copied backup 09e8fcef29bcc792@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.127Z [DEBUG] [binaryCheck] Cache hit for 'pyright-langserver': false
+2026-03-02T21:38:49.127Z [DEBUG] [lspRecommendation] Skipping pyright-lsp@claude-plugins-official (binary 'pyright-langserver' not found)
+2026-03-02T21:38:49.127Z [DEBUG] FileHistory: Copied backup c1ba6eeb9f03acea@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.127Z [DEBUG] FileHistory: Copied backup 0d991f17bcf1bec2@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.127Z [DEBUG] FileHistory: Copied backup 730a5a0129e58151@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.127Z [DEBUG] FileHistory: Copied backup 6bab253285d391ea@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.127Z [DEBUG] FileHistory: Copied backup 772eb982a72e6d7d@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.128Z [DEBUG] Checking for native installer update to version 2.1.63
+2026-03-02T21:38:49.129Z [DEBUG] FileHistory: Copied backup 06cff5c3b3f10d9a@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.129Z [DEBUG] FileHistory: Copied backup e59d0a2b43f5bc54@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.129Z [DEBUG] FileHistory: Copied backup 6a1445256ed8f245@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.130Z [DEBUG] Found 2.1.63 at /teamspace/studios/this_studio/.local/bin/claude, skipping install
+2026-03-02T21:38:49.149Z [DEBUG] FileHistory: Copied backup 73f5b031df1ccde2@v4 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.150Z [DEBUG] FileHistory: Copied backup e59d0a2b43f5bc54@v4 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.150Z [DEBUG] FileHistory: Copied backup 6a1445256ed8f245@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.151Z [DEBUG] FileHistory: Copied backup 8dfe61d7436051e7@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.151Z [DEBUG] FileHistory: Copied backup 8bd2b9799e1176c5@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.151Z [DEBUG] FileHistory: Copied backup 63ea8925da467d7d@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.151Z [DEBUG] FileHistory: Copied backup c3bf57df4cb5fb92@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.153Z [DEBUG] FileHistory: Copied backup 73f5b031df1ccde2@v5 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.154Z [DEBUG] FileHistory: Copied backup 50a58408f929f45f@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.154Z [DEBUG] FileHistory: Copied backup c1ba6eeb9f03acea@v3 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.154Z [DEBUG] FileHistory: Copied backup 6bab253285d391ea@v4 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.155Z [DEBUG] FileHistory: Copied backup e59d0a2b43f5bc54@v5 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.155Z [DEBUG] FileHistory: Copied backup 6a1445256ed8f245@v4 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:49.160Z [DEBUG] FileHistory: Copied backup d837cd8754ab592a@v2 from session e23fc04e-0c09-4d84-9b9d-289a0916565a to f968c421-cead-4cd6-8063-b6fce2cffd9e
+2026-03-02T21:38:59.211Z [ERROR] Error: Error: 1P event logging: 7 events failed to export (request-id=req_011CYeyeKJrLvVcxkxj2Tr3k, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:38:59.212Z [ERROR] Error: Error: {"message":"Failed to export 7 events (request-id=req_011CYeyeKJrLvVcxkxj2Tr3k, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 7 events (request-id=req_011CYeyeKJrLvVcxkxj2Tr3k, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:38:59.212Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 7 events (request-id=req_011CYeyeKJrLvVcxkxj2Tr3k, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 7 events (request-id=req_011CYeyeKJrLvVcxkxj2Tr3k, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T21:39:12.647Z [DEBUG] [FileIndex] getProjectFiles called, respectGitignore=true
+2026-03-02T21:39:12.647Z [DEBUG] [FileIndex] getFilesUsingGit called
+2026-03-02T21:39:12.656Z [DEBUG] [FileIndex] git ls-files (tracked) took 8ms
+2026-03-02T21:39:12.658Z [DEBUG] [FileIndex] git ls-files: 138 tracked files in 11ms
+2026-03-02T21:39:12.659Z [DEBUG] [FileIndex] using git ls-files result (138 files)
+2026-03-02T21:39:12.664Z [DEBUG] [FileIndex] cache refresh completed in 17ms (rust index)
+2026-03-02T21:39:12.672Z [DEBUG] [FileIndex] background untracked fetch: 51 files
+2026-03-02T21:39:12.673Z [DEBUG] [FileIndex] rebuilt Rust index with 138 tracked + 51 untracked files
+2026-03-02T21:39:13.594Z [DEBUG] [FileIndex] getProjectFiles called, respectGitignore=true
+2026-03-02T21:39:13.594Z [DEBUG] [FileIndex] getFilesUsingGit called
+2026-03-02T21:39:13.597Z [DEBUG] [FileIndex] generateFileSuggestions: 13 results in 3ms (cache hit)
+2026-03-02T21:39:13.608Z [DEBUG] [FileIndex] git ls-files (tracked) took 13ms
+2026-03-02T21:39:13.608Z [DEBUG] [FileIndex] git ls-files: 138 tracked files in 14ms
+2026-03-02T21:39:13.610Z [DEBUG] [FileIndex] using git ls-files result (138 files)
+2026-03-02T21:39:13.611Z [DEBUG] [FileIndex] cache refresh completed in 17ms (rust index)
+2026-03-02T21:39:13.632Z [DEBUG] [FileIndex] background untracked fetch: 51 files
+2026-03-02T21:39:13.632Z [DEBUG] [FileIndex] rebuilt Rust index with 138 tracked + 51 untracked files
+2026-03-02T21:39:13.976Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-02T21:39:14.023Z [DEBUG] Checking for native installer update to version 2.1.63
+2026-03-02T21:39:14.024Z [DEBUG] Found 2.1.63 at /teamspace/studios/this_studio/.local/bin/claude, skipping install
+2026-03-02T21:39:22.772Z [ERROR] Error: Error: 1P event logging: 11 events failed to export (request-id=req_011CYeyg3yAn9jJjncViYcJS, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:39:22.772Z [ERROR] Error: Error: {"message":"Failed to export 11 events (request-id=req_011CYeyg3yAn9jJjncViYcJS, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 11 events (request-id=req_011CYeyg3yAn9jJjncViYcJS, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:39:22.772Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 11 events (request-id=req_011CYeyg3yAn9jJjncViYcJS, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 11 events (request-id=req_011CYeyg3yAn9jJjncViYcJS, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T21:40:04.606Z [DEBUG] High write ratio: blit=441, write=55796 (99.2% writes), screen=1387x63
+2026-03-02T21:40:04.631Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T21:40:04.632Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T21:40:04.632Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T21:40:04.632Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T21:40:04.635Z [DEBUG] Sending 2 skills via attachment (initial, 2 total sent)
+2026-03-02T21:40:04.656Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-02T21:40:04.656Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:40:04.656Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T21:40:04.657Z [DEBUG] FileHistory: Making snapshot for message 1cfa88e6-7c3f-41fa-8764-068111202d97
+2026-03-02T21:40:04.672Z [DEBUG] FileHistory: Added snapshot for 1cfa88e6-7c3f-41fa-8764-068111202d97, tracking 38 files
+2026-03-02T21:40:04.674Z [DEBUG] [useDeferredValue] Messages deferred by 14 (211→225)
+2026-03-02T21:40:04.811Z [DEBUG] High write ratio: blit=0, write=55644 (100.0% writes), screen=1381x63
+2026-03-02T21:40:04.814Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2026-03-02T21:40:04.817Z [DEBUG] Total plugin output styles loaded: 0
+2026-03-02T21:40:04.830Z [DEBUG] autocompact: tokens=137392 threshold=167000 effectiveWindow=180000
+2026-03-02T21:40:04.831Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:40:04.831Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:40:04.831Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:40:04.838Z [DEBUG] [useDeferredValue] Messages deferred by 14 (211→225)
+2026-03-02T21:40:04.847Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 33ms
+2026-03-02T21:40:04.998Z [DEBUG] High write ratio: blit=441, write=55824 (99.2% writes), screen=1388x63
+2026-03-02T21:40:05.010Z [ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth token has been revoked. Please obtain a new token."},"request_id":"req_011CYeyjAGXHjAepm9nF4hkV"}
+    at generate (/$bunfs/root/claude:268:28546)
+    at makeRequest (/$bunfs/root/claude:307:5435)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:40:05.010Z [DEBUG] countTokensWithFallback: API returned null, trying haiku fallback (2 tools)
+2026-03-02T21:40:05.010Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:40:05.010Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:40:05.010Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:40:05.094Z [DEBUG] countTokensWithFallback: haiku fallback failed: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth token has been revoked. Please obtain a new token."},"request_id":"req_011CYeyjB2AeuiQ7puSoGsme"}
+2026-03-02T21:40:05.094Z [ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth token has been revoked. Please obtain a new token."},"request_id":"req_011CYeyjB2AeuiQ7puSoGsme"}
+    at generate (/$bunfs/root/claude:268:28546)
+    at makeRequest (/$bunfs/root/claude:307:5435)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:40:05.094Z [DEBUG] countToolDefinitionTokens returned null for 2 tools: mcp__ide__getDiagnostics, mcp__ide__executeCode
+2026-03-02T21:40:05.095Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T21:40:05.104Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T21:40:05.105Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:40:05.105Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:40:05.105Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:40:05.260Z [ERROR] API error (attempt 1/11): 403 403 {"type":"error","error":{"type":"permission_error","message":"OAuth token has been revoked. Please obtain a new token."},"request_id":"req_011CYeyjBgbm1FHia2xnDLaz"}
+2026-03-02T21:40:05.261Z [ERROR] Error in API request: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth token has been revoked. Please obtain a new token."},"request_id":"req_011CYeyjBgbm1FHia2xnDLaz"}
+2026-03-02T21:40:05.261Z [ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth token has been revoked. Please obtain a new token."},"request_id":"req_011CYeyjBgbm1FHia2xnDLaz"}
+    at generate (/$bunfs/root/claude:268:28546)
+    at makeRequest (/$bunfs/root/claude:307:5435)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:40:05.263Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-02T21:40:05.263Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:40:05.263Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T21:40:05.265Z [DEBUG] [useDeferredValue] Messages deferred by 1 (225→226)
+2026-03-02T21:40:05.404Z [DEBUG] High write ratio: blit=441, write=55853 (99.2% writes), screen=1387x63
+2026-03-02T21:40:14.554Z [ERROR] Error: Error: 1P event logging: 46 events failed to export (request-id=req_011CYeyjsUzqEzjkEpH5BtDW, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:40:14.554Z [ERROR] Error: Error: {"message":"Failed to export 46 events (request-id=req_011CYeyjsUzqEzjkEpH5BtDW, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 46 events (request-id=req_011CYeyjsUzqEzjkEpH5BtDW, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:40:14.554Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 46 events (request-id=req_011CYeyjsUzqEzjkEpH5BtDW, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 46 events (request-id=req_011CYeyjsUzqEzjkEpH5BtDW, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T21:41:05.412Z [DEBUG] Getting matching hook commands for Notification with query: idle_prompt
+2026-03-02T21:41:05.412Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:41:05.412Z [DEBUG] Matched 0 unique hooks for query "idle_prompt" (0 before deduplication)
+2026-03-02T21:41:15.491Z [ERROR] Error: Error: 1P event logging: 1 events failed to export (request-id=req_011CYeypN35sTYAHB96No5Ju, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:41:15.491Z [ERROR] Error: Error: {"message":"Failed to export 1 events (request-id=req_011CYeypN35sTYAHB96No5Ju, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (request-id=req_011CYeypN35sTYAHB96No5Ju, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:41:15.491Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 1 events (request-id=req_011CYeypN35sTYAHB96No5Ju, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (request-id=req_011CYeypN35sTYAHB96No5Ju, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T21:41:19.565Z [DEBUG] High write ratio: blit=441, write=56040 (99.2% writes), screen=1399x63
+2026-03-02T21:41:29.521Z [ERROR] Error: Error: 1P event logging: 1 events failed to export (request-id=req_011CYeyqPsk5RRLXx4ptMvJf, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)
+    at queueFailedEvents (/$bunfs/root/claude:6263:2403)
+    at async doExport (/$bunfs/root/claude:6263:1310)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:41:29.521Z [ERROR] Error: Error: {"message":"Failed to export 1 events (request-id=req_011CYeyqPsk5RRLXx4ptMvJf, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (request-id=req_011CYeyqPsk5RRLXx4ptMvJf, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+    at error (/$bunfs/root/claude:2401:25029)
+    at <anonymous> (/$bunfs/root/claude:119:92465)
+    at iE0 (/$bunfs/root/claude:119:93009)
+    at <anonymous> (/$bunfs/root/claude:120:17366)
+    at processTicksAndRejections (native:7:39)
+2026-03-02T21:41:29.521Z [ERROR] [3P telemetry] OTEL diag error: {"message":"Failed to export 1 events (request-id=req_011CYeyqPsk5RRLXx4ptMvJf, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)","originalLine":"6263","originalColumn":"1462","line":"6263","column":"1462","sourceURL":"/$bunfs/root/claude","stack":"Error: Failed to export 1 events (request-id=req_011CYeyqPsk5RRLXx4ptMvJf, status=403, code=ERR_BAD_REQUEST, Request failed with status code 403)\n    at doExport (/$bunfs/root/claude:6263:1462)\n    at processTicksAndRejections (native:7:39)","name":"Error"}
+2026-03-02T21:41:37.597Z [DEBUG] Telemetry flushed successfully
+2026-03-02T21:41:37.600Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487697600
+2026-03-02T21:41:37.600Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T21:41:37.601Z [DEBUG] Temp file written successfully, size: 5164 bytes
+2026-03-02T21:41:37.601Z [DEBUG] Applied original permissions to temp file
+2026-03-02T21:41:37.601Z [DEBUG] Renaming /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487697600 to /teamspace/studios/this_studio/.claude.json
+2026-03-02T21:41:37.601Z [DEBUG] File /teamspace/studios/this_studio/.claude.json written atomically
+2026-03-02T21:41:37.605Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487697605
+2026-03-02T21:41:37.605Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T21:41:37.605Z [DEBUG] Temp file written successfully, size: 4632 bytes
+2026-03-02T21:41:37.606Z [DEBUG] Applied original permissions to temp file
+2026-03-02T21:41:37.606Z [DEBUG] Renaming /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487697605 to /teamspace/studios/this_studio/.claude.json
+2026-03-02T21:41:37.606Z [DEBUG] File /teamspace/studios/this_studio/.claude.json written atomically
+2026-03-02T21:41:37.607Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487697607
+2026-03-02T21:41:37.607Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T21:41:37.608Z [DEBUG] Temp file written successfully, size: 5042 bytes
+2026-03-02T21:41:37.608Z [DEBUG] Applied original permissions to temp file
+2026-03-02T21:41:37.608Z [DEBUG] Renaming /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487697607 to /teamspace/studios/this_studio/.claude.json
+2026-03-02T21:41:37.608Z [DEBUG] File /teamspace/studios/this_studio/.claude.json written atomically
+2026-03-02T21:41:37.730Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487697730
+2026-03-02T21:41:37.730Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T21:41:37.732Z [DEBUG] Temp file written successfully, size: 5164 bytes
+2026-03-02T21:41:37.732Z [DEBUG] Applied original permissions to temp file
+2026-03-02T21:41:37.732Z [DEBUG] Renaming /teamspace/studios/this_studio/.claude.json.tmp.20973.1772487697730 to /teamspace/studios/this_studio/.claude.json
+2026-03-02T21:41:37.732Z [DEBUG] File /teamspace/studios/this_studio/.claude.json written atomically
+2026-03-02T21:41:37.734Z [DEBUG] Getting matching hook commands for Notification with query: auth_success
+2026-03-02T21:41:37.734Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:41:37.734Z [DEBUG] Matched 0 unique hooks for query "auth_success" (0 before deduplication)
+2026-03-02T21:41:37.960Z [DEBUG] Metrics opt-out API response: enabled=true, vcsLinking=false
+2026-03-02T21:41:42.057Z [DEBUG] FileHistory: Making snapshot for message 66093569-a5fd-4c5f-96a6-147e0225d87b
+2026-03-02T21:41:42.061Z [DEBUG] FileHistory: Added snapshot for 66093569-a5fd-4c5f-96a6-147e0225d87b, tracking 38 files
+2026-03-02T21:41:42.063Z [DEBUG] Programmatic settings change notification for policySettings
+2026-03-02T21:41:42.064Z [DEBUG] Plugin hooks: skipping reload, enabledPlugins unchanged
+2026-03-02T21:41:42.066Z [DEBUG] Settings changed from policySettings, updating app state
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 0 rule(s): []
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all deny rules for destination 'userSettings' with 0 rule(s): []
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all ask rules for destination 'userSettings' with 0 rule(s): []
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all allow rules for destination 'projectSettings' with 0 rule(s): []
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all deny rules for destination 'projectSettings' with 0 rule(s): []
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all ask rules for destination 'projectSettings' with 0 rule(s): []
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 0 rule(s): []
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all deny rules for destination 'localSettings' with 0 rule(s): []
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all ask rules for destination 'localSettings' with 0 rule(s): []
+2026-03-02T21:41:42.066Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 5 rule(s): ["Bash(python:*)","Bash(source:*)","Bash(pip install:*)","Bash(SECRET_KEY=\"test-secret-key-32-chars-minimum!!\" python:*)","WebSearch"]
+2026-03-02T21:41:42.068Z [DEBUG] [useDeferredValue] Messages deferred by 3 (226→229)
+2026-03-02T21:41:42.254Z [DEBUG] High write ratio: blit=0, write=56022 (100.0% writes), screen=1391x63
+2026-03-02T21:41:42.259Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-03-02T21:41:42.259Z [DEBUG] [claudeai-mcp] Gate returned: true
+2026-03-02T21:41:42.259Z [DEBUG] [claudeai-mcp] Fetching from https://api.anthropic.com/v1/mcp_servers?limit=1000
+2026-03-02T21:41:42.260Z [DEBUG] AutoUpdaterWrapper: Installation type: native
+2026-03-02T21:41:42.263Z [DEBUG] [useDeferredValue] Messages deferred by 3 (226→229)
+2026-03-02T21:41:42.410Z [DEBUG] High write ratio: blit=0, write=56026 (100.0% writes), screen=1390x63
+2026-03-02T21:41:42.420Z [DEBUG] [useDeferredValue] Messages deferred by 3 (226→229)
+2026-03-02T21:41:42.432Z [DEBUG] [useDeferredValue] Messages deferred by 3 (226→229)
+2026-03-02T21:41:42.436Z [DEBUG] [claudeai-mcp] Fetched 4 servers
+2026-03-02T21:41:42.469Z [DEBUG] MCP server "claude.ai Figma": Initializing claude.ai proxy transport for server mcpsrv_01QtmBMw1SPP8UVfkyxbxN8T
+2026-03-02T21:41:42.469Z [DEBUG] MCP server "claude.ai Figma": Using claude.ai proxy at https://mcp-proxy.anthropic.com/v1/mcp/mcpsrv_01QtmBMw1SPP8UVfkyxbxN8T
+2026-03-02T21:41:42.469Z [DEBUG] MCP server "claude.ai Figma": claude.ai proxy transport created successfully
+2026-03-02T21:41:42.472Z [DEBUG] MCP server "claude.ai Figma": Starting connection with timeout of 30000ms
+2026-03-02T21:41:42.472Z [DEBUG] MCP server "claude.ai Google Calendar": Initializing claude.ai proxy transport for server mcpsrv_01Bs32PTfNuhUUZaPEb5RPq3
+2026-03-02T21:41:42.472Z [DEBUG] MCP server "claude.ai Google Calendar": Using claude.ai proxy at https://mcp-proxy.anthropic.com/v1/mcp/mcpsrv_01Bs32PTfNuhUUZaPEb5RPq3
+2026-03-02T21:41:42.472Z [DEBUG] MCP server "claude.ai Google Calendar": claude.ai proxy transport created successfully
+2026-03-02T21:41:42.473Z [DEBUG] MCP server "claude.ai Google Calendar": Starting connection with timeout of 30000ms
+2026-03-02T21:41:42.473Z [DEBUG] MCP server "claude.ai Gmail": Initializing claude.ai proxy transport for server mcpsrv_01DfoKeKf3hV7N35kgcgrJso
+2026-03-02T21:41:42.473Z [DEBUG] MCP server "claude.ai Gmail": Using claude.ai proxy at https://mcp-proxy.anthropic.com/v1/mcp/mcpsrv_01DfoKeKf3hV7N35kgcgrJso
+2026-03-02T21:41:42.473Z [DEBUG] MCP server "claude.ai Gmail": claude.ai proxy transport created successfully
+2026-03-02T21:41:42.474Z [DEBUG] MCP server "claude.ai Gmail": Starting connection with timeout of 30000ms
+2026-03-02T21:41:42.474Z [DEBUG] MCP server "claude.ai Canva": Initializing claude.ai proxy transport for server mcpsrv_01G5PRiHKkak1kkYRCozqM2P
+2026-03-02T21:41:42.474Z [DEBUG] MCP server "claude.ai Canva": Using claude.ai proxy at https://mcp-proxy.anthropic.com/v1/mcp/mcpsrv_01G5PRiHKkak1kkYRCozqM2P
+2026-03-02T21:41:42.474Z [DEBUG] MCP server "claude.ai Canva": claude.ai proxy transport created successfully
+2026-03-02T21:41:42.475Z [DEBUG] MCP server "claude.ai Canva": Starting connection with timeout of 30000ms
+2026-03-02T21:41:42.477Z [DEBUG] [useDeferredValue] Messages deferred by 3 (226→229)
+2026-03-02T21:41:42.498Z [DEBUG] Checking for native installer update to version 2.1.63
+2026-03-02T21:41:42.511Z [DEBUG] Found 2.1.63 at /teamspace/studios/this_studio/.local/bin/claude, skipping install
+2026-03-02T21:41:42.722Z [DEBUG] MCP server "claude.ai Gmail": claude.ai proxy connection failed after 249ms: Streamable HTTP error: Error POSTing to endpoint: {"type":"error","error":{"type":"authentication_error","message":"MCP server requires authentication but no OAuth token is configured."},"request_id":"req_011CYeyrMryMMMs7pnJD3QuS"}
+2026-03-02T21:41:42.722Z [ERROR] MCP server "claude.ai Gmail" Error: Streamable HTTP error: Error POSTing to endpoint: {"type":"error","error":{"type":"authentication_error","message":"MCP server requires authentication but no OAuth token is configured."},"request_id":"req_011CYeyrMryMMMs7pnJD3QuS"}
+2026-03-02T21:41:42.723Z [DEBUG] MCP server "claude.ai Gmail": Authentication required for claude.ai proxy server
+2026-03-02T21:41:42.734Z [DEBUG] MCP server "claude.ai Canva": claude.ai proxy connection failed after 260ms: Streamable HTTP error: Error POSTing to endpoint: {"type":"error","error":{"type":"authentication_error","message":"MCP server requires authentication but no OAuth token is configured."},"request_id":"req_011CYeyrMxRt4JgsNKogzgKb"}
+2026-03-02T21:41:42.734Z [ERROR] MCP server "claude.ai Canva" Error: Streamable HTTP error: Error POSTing to endpoint: {"type":"error","error":{"type":"authentication_error","message":"MCP server requires authentication but no OAuth token is configured."},"request_id":"req_011CYeyrMxRt4JgsNKogzgKb"}
+2026-03-02T21:41:42.734Z [DEBUG] MCP server "claude.ai Canva": Authentication required for claude.ai proxy server
+2026-03-02T21:41:42.756Z [DEBUG] MCP server "claude.ai Figma": claude.ai proxy connection failed after 287ms: Streamable HTTP error: Error POSTing to endpoint: event: message
+data: {"jsonrpc":"2.0","id":0,"error":{"code":-32600,"message":"Anthropic Proxy: Invalid content from server","data":null}}
+2026-03-02T21:41:42.756Z [ERROR] MCP server "claude.ai Figma" Error: Streamable HTTP error: Error POSTing to endpoint: event: message
+data: {"jsonrpc":"2.0","id":0,"error":{"code":-32600,"message":"Anthropic Proxy: Invalid content from server","data":null}}
+2026-03-02T21:41:42.756Z [DEBUG] MCP server "claude.ai Figma": Connection failed after 287ms: Streamable HTTP error: Error POSTing to endpoint: event: message
+data: {"jsonrpc":"2.0","id":0,"error":{"code":-32600,"message":"Anthropic Proxy: Invalid content from server","data":null}}
+2026-03-02T21:41:42.756Z [ERROR] MCP server "claude.ai Figma" Connection failed: Streamable HTTP error: Error POSTing to endpoint: event: message
+data: {"jsonrpc":"2.0","id":0,"error":{"code":-32600,"message":"Anthropic Proxy: Invalid content from server","data":null}}
+2026-03-02T21:41:42.801Z [DEBUG] MCP server "claude.ai Google Calendar": claude.ai proxy connection failed after 329ms: Streamable HTTP error: Error POSTing to endpoint: {"type":"error","error":{"type":"authentication_error","message":"MCP server requires authentication but no OAuth token is configured."},"request_id":"req_011CYeyrMvCMvfqmqyXS7PCf"}
+2026-03-02T21:41:42.801Z [ERROR] MCP server "claude.ai Google Calendar" Error: Streamable HTTP error: Error POSTing to endpoint: {"type":"error","error":{"type":"authentication_error","message":"MCP server requires authentication but no OAuth token is configured."},"request_id":"req_011CYeyrMvCMvfqmqyXS7PCf"}
+2026-03-02T21:41:42.801Z [DEBUG] MCP server "claude.ai Google Calendar": Authentication required for claude.ai proxy server
+2026-03-02T21:41:55.124Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:41:55.124Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T21:41:55.124Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T21:41:55.125Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T21:41:55.125Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T21:41:55.278Z [DEBUG] High write ratio: blit=441, write=55934 (99.2% writes), screen=1394x63
+2026-03-02T21:41:55.283Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 159ms
+2026-03-02T21:41:55.285Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-02T21:41:55.285Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:41:55.285Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T21:41:55.285Z [DEBUG] FileHistory: Making snapshot for message 872b6981-9465-4e8f-b888-9aab7fcfca48
+2026-03-02T21:41:55.289Z [DEBUG] FileHistory: Added snapshot for 872b6981-9465-4e8f-b888-9aab7fcfca48, tracking 38 files
+2026-03-02T21:41:55.299Z [DEBUG] [useDeferredValue] Messages deferred by 1 (229→230)
+2026-03-02T21:41:55.424Z [DEBUG] High write ratio: blit=0, write=56041 (100.0% writes), screen=1392x63
+2026-03-02T21:41:55.427Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2026-03-02T21:41:55.429Z [DEBUG] autocompact: tokens=137519 threshold=167000 effectiveWindow=180000
+2026-03-02T21:41:55.430Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T21:41:55.439Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T21:41:55.440Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:41:55.440Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:41:55.441Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:41:55.446Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 19ms
+2026-03-02T21:41:55.464Z [DEBUG] [useDeferredValue] Messages deferred by 1 (229→230)
+2026-03-02T21:41:55.637Z [DEBUG] High write ratio: blit=441, write=55934 (99.2% writes), screen=1394x63
+2026-03-02T21:42:02.109Z [DEBUG] Stream started - received first chunk
+2026-03-02T21:43:09.892Z [DEBUG] [useDeferredValue] Messages deferred by 1 (230→231)
+2026-03-02T21:43:10.077Z [DEBUG] High write ratio: blit=441, write=55967 (99.2% writes), screen=1394x63
+2026-03-02T21:43:11.607Z [DEBUG] [useDeferredValue] Messages deferred by 1 (231→232)
+2026-03-02T21:43:11.784Z [DEBUG] High write ratio: blit=441, write=56275 (99.2% writes), screen=1401x63
+2026-03-02T21:43:11.943Z [DEBUG] High write ratio: blit=441, write=56310 (99.2% writes), screen=1403x63
+2026-03-02T21:43:13.122Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T21:43:13.123Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T21:43:13.123Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:43:13.123Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T21:43:13.129Z [DEBUG] [useDeferredValue] Messages deferred by 1 (232→233)
+2026-03-02T21:43:13.283Z [DEBUG] High write ratio: blit=0, write=56418 (100.0% writes), screen=1401x63
+2026-03-02T21:43:13.287Z [DEBUG] [useDeferredValue] Messages deferred by 1 (232→233)
+2026-03-02T21:43:13.304Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T21:43:13.304Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T21:43:13.304Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T21:43:13.306Z [DEBUG] [useDeferredValue] Messages deferred by 1 (232→233)
+2026-03-02T21:43:13.471Z [DEBUG] High write ratio: blit=441, write=56328 (99.2% writes), screen=1404x63
+2026-03-02T21:43:13.486Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:43:13.486Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T21:43:13.487Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T21:43:13.487Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T21:43:13.487Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T21:43:13.491Z [DEBUG] [useDeferredValue] Messages deferred by 3 (233→236)
+2026-03-02T21:43:13.629Z [DEBUG] High write ratio: blit=441, write=56328 (99.2% writes), screen=1404x63
+2026-03-02T21:43:13.631Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 145ms
+2026-03-02T21:43:13.632Z [DEBUG] autocompact: tokens=132514 threshold=167000 effectiveWindow=180000
+2026-03-02T21:43:13.634Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T21:43:13.642Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T21:43:13.642Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:43:13.642Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:43:13.643Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:43:13.659Z [DEBUG] [useDeferredValue] Messages deferred by 3 (233→236)
+2026-03-02T21:43:13.818Z [DEBUG] High write ratio: blit=441, write=56328 (99.2% writes), screen=1404x63
+2026-03-02T21:43:14.877Z [DEBUG] Stream started - received first chunk
+2026-03-02T21:43:15.030Z [DEBUG] High write ratio: blit=441, write=56328 (99.2% writes), screen=1404x63
+2026-03-02T21:43:15.908Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-02T21:43:15.909Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-02T21:43:15.909Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:43:15.909Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-02T21:43:15.912Z [DEBUG] [useDeferredValue] Messages deferred by 1 (236→237)
+2026-03-02T21:43:16.067Z [DEBUG] High write ratio: blit=441, write=56328 (99.2% writes), screen=1404x63
+2026-03-02T21:43:16.081Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-02T21:43:16.081Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T21:43:16.081Z [DEBUG] Matched 1 unique hooks for query "Read" (1 before deduplication)
+2026-03-02T21:43:16.083Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:43:16.083Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T21:43:16.083Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T21:43:16.083Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T21:43:16.083Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T21:43:16.085Z [DEBUG] [useDeferredValue] Messages deferred by 4 (236→240)
+2026-03-02T21:43:16.222Z [DEBUG] High write ratio: blit=441, write=56328 (99.2% writes), screen=1404x63
+2026-03-02T21:43:16.224Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 141ms
+2026-03-02T21:43:16.225Z [DEBUG] autocompact: tokens=133191 threshold=167000 effectiveWindow=180000
+2026-03-02T21:43:16.226Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T21:43:16.231Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T21:43:16.232Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:43:16.232Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:43:16.232Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:43:16.250Z [DEBUG] [useDeferredValue] Messages deferred by 4 (236→240)
+2026-03-02T21:43:16.399Z [DEBUG] High write ratio: blit=441, write=56328 (99.2% writes), screen=1404x63
+2026-03-02T21:43:17.358Z [DEBUG] Stream started - received first chunk
+2026-03-02T21:43:25.405Z [DEBUG] [useDeferredValue] Messages deferred by 1 (240→241)
+2026-03-02T21:43:25.595Z [DEBUG] High write ratio: blit=441, write=56328 (99.2% writes), screen=1404x63
+2026-03-02T21:43:26.302Z [DEBUG] [useDeferredValue] Messages deferred by 1 (241→242)
+2026-03-02T21:43:26.311Z [DEBUG] [useDeferredValue] Messages deferred by 1 (241→242)
+2026-03-02T21:43:26.451Z [DEBUG] High write ratio: blit=441, write=56328 (99.2% writes), screen=1404x63
+2026-03-02T21:43:26.628Z [DEBUG] High write ratio: blit=441, write=56595 (99.2% writes), screen=1409x63
+2026-03-02T21:43:31.513Z [DEBUG] [useDeferredValue] Messages deferred by 1 (242→243)
+2026-03-02T21:43:31.664Z [DEBUG] High write ratio: blit=0, write=56738 (100.0% writes), screen=1409x63
+2026-03-02T21:43:31.676Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T21:43:31.676Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T21:43:31.677Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:43:31.677Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T21:43:31.678Z [DEBUG] Permission suggestions for Edit: [
+  {
+    "type": "setMode",
+    "mode": "acceptEdits",
+    "destination": "session"
+  }
+]
+2026-03-02T21:43:31.679Z [DEBUG] executePermissionRequestHooks called for tool: Edit
+2026-03-02T21:43:31.679Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Edit
+2026-03-02T21:43:31.679Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:43:31.679Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T21:43:31.682Z [DEBUG] [useDeferredValue] Messages deferred by 1 (242→243)
+2026-03-02T21:43:31.828Z [DEBUG] High write ratio: blit=441, write=56656 (99.2% writes), screen=1414x63
+2026-03-02T21:43:31.836Z [DEBUG] MCP server "ide": Calling MCP tool: openDiff
+2026-03-02T21:43:31.837Z [DEBUG] [useDeferredValue] Messages deferred by 1 (242→243)
+2026-03-02T21:43:32.012Z [DEBUG] High write ratio: blit=441, write=56678 (99.2% writes), screen=1416x63
+2026-03-02T21:43:37.841Z [DEBUG] Getting matching hook commands for Notification with query: permission_prompt
+2026-03-02T21:43:37.841Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:43:37.841Z [DEBUG] Matched 0 unique hooks for query "permission_prompt" (0 before deduplication)
+2026-03-02T21:44:01.839Z [DEBUG] MCP server "ide": Tool 'openDiff' still running (30s elapsed)
+2026-03-02T21:44:31.843Z [DEBUG] MCP server "ide": Tool 'openDiff' still running (60s elapsed)
+2026-03-02T21:44:45.367Z [DEBUG] MCP server "ide": Calling MCP tool: close_tab
+2026-03-02T21:44:45.368Z [DEBUG] Applying permission update: Setting mode to 'acceptEdits'
+2026-03-02T21:44:45.372Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:44:45.531Z [DEBUG] High write ratio: blit=441, write=56650 (99.2% writes), screen=1412x63
+2026-03-02T21:44:45.545Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 173ms
+2026-03-02T21:44:45.548Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/client/tui.py.tmp.20973.1772487885548
+2026-03-02T21:44:45.548Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T21:44:45.549Z [DEBUG] Temp file written successfully, size: 14023 bytes
+2026-03-02T21:44:45.549Z [DEBUG] Applied original permissions to temp file
+2026-03-02T21:44:45.549Z [DEBUG] Renaming /teamspace/studios/this_studio/client/tui.py.tmp.20973.1772487885548 to /teamspace/studios/this_studio/client/tui.py
+2026-03-02T21:44:45.549Z [DEBUG] File /teamspace/studios/this_studio/client/tui.py written atomically
+2026-03-02T21:44:45.552Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T21:44:45.552Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T21:44:45.552Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T21:44:45.555Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:44:45.555Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T21:44:45.555Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T21:44:45.555Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T21:44:45.555Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T21:44:45.567Z [DEBUG] [useDeferredValue] Messages deferred by 3 (243→246)
+2026-03-02T21:44:45.726Z [DEBUG] High write ratio: blit=441, write=56650 (99.2% writes), screen=1412x63
+2026-03-02T21:44:45.731Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 176ms
+2026-03-02T21:44:45.732Z [DEBUG] autocompact: tokens=134196 threshold=167000 effectiveWindow=180000
+2026-03-02T21:44:45.734Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T21:44:45.744Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T21:44:45.745Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:44:45.745Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:44:45.746Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:44:45.768Z [DEBUG] [useDeferredValue] Messages deferred by 3 (243→246)
+2026-03-02T21:44:45.977Z [DEBUG] High write ratio: blit=441, write=57120 (99.2% writes), screen=1425x63
+2026-03-02T21:44:45.985Z [DEBUG] MCP server "ide": Tool 'close_tab' completed successfully in 618ms
+2026-03-02T21:44:45.985Z [DEBUG] MCP server "ide": Tool 'openDiff' completed successfully in 1m 14s
+2026-03-02T21:44:45.986Z [DEBUG] MCP server "ide": Calling MCP tool: close_tab
+2026-03-02T21:44:45.997Z [DEBUG] MCP server "ide": Tool 'close_tab' completed successfully in 11ms
+2026-03-02T21:44:49.235Z [DEBUG] Stream started - received first chunk
+2026-03-02T21:44:49.390Z [DEBUG] High write ratio: blit=441, write=57120 (99.2% writes), screen=1425x63
+2026-03-02T21:44:56.245Z [DEBUG] [useDeferredValue] Messages deferred by 1 (246→247)
+2026-03-02T21:44:56.393Z [DEBUG] High write ratio: blit=0, write=57263 (100.0% writes), screen=1425x63
+2026-03-02T21:44:56.408Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T21:44:56.409Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T21:44:56.409Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:44:56.409Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T21:44:56.415Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:44:56.416Z [DEBUG] [useDeferredValue] Messages deferred by 1 (246→247)
+2026-03-02T21:44:56.555Z [DEBUG] High write ratio: blit=441, write=57120 (99.2% writes), screen=1425x63
+2026-03-02T21:44:56.558Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 143ms
+2026-03-02T21:44:56.560Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/client/tui.py.tmp.20973.1772487896560
+2026-03-02T21:44:56.561Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T21:44:56.562Z [DEBUG] Temp file written successfully, size: 14235 bytes
+2026-03-02T21:44:56.562Z [DEBUG] Applied original permissions to temp file
+2026-03-02T21:44:56.562Z [DEBUG] Renaming /teamspace/studios/this_studio/client/tui.py.tmp.20973.1772487896560 to /teamspace/studios/this_studio/client/tui.py
+2026-03-02T21:44:56.562Z [DEBUG] File /teamspace/studios/this_studio/client/tui.py written atomically
+2026-03-02T21:44:56.564Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T21:44:56.564Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T21:44:56.565Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T21:44:56.567Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:44:56.567Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T21:44:56.567Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T21:44:56.567Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T21:44:56.567Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T21:44:56.579Z [DEBUG] [useDeferredValue] Messages deferred by 4 (246→250)
+2026-03-02T21:44:56.716Z [DEBUG] High write ratio: blit=441, write=57120 (99.2% writes), screen=1425x63
+2026-03-02T21:44:56.719Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 152ms
+2026-03-02T21:44:56.720Z [DEBUG] autocompact: tokens=134637 threshold=167000 effectiveWindow=180000
+2026-03-02T21:44:56.721Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T21:44:56.728Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T21:44:56.728Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:44:56.728Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:44:56.729Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:44:56.745Z [DEBUG] [useDeferredValue] Messages deferred by 4 (246→250)
+2026-03-02T21:44:56.930Z [DEBUG] High write ratio: blit=441, write=57822 (99.2% writes), screen=1443x63
+2026-03-02T21:44:57.699Z [DEBUG] Stream started - received first chunk
+2026-03-02T21:44:58.676Z [DEBUG] [useDeferredValue] Messages deferred by 1 (250→251)
+2026-03-02T21:44:58.820Z [DEBUG] High write ratio: blit=441, write=57822 (99.2% writes), screen=1443x63
+2026-03-02T21:44:58.992Z [DEBUG] High write ratio: blit=441, write=57926 (99.2% writes), screen=1446x63
+2026-03-02T21:45:15.891Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-03-02T21:45:15.892Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2026-03-02T21:45:15.892Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:45:15.892Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2026-03-02T21:45:15.896Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:45:15.899Z [DEBUG] [useDeferredValue] Messages deferred by 1 (251→252)
+2026-03-02T21:45:16.052Z [DEBUG] High write ratio: blit=0, write=58068 (100.0% writes), screen=1446x63
+2026-03-02T21:45:16.056Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 160ms
+2026-03-02T21:45:16.059Z [DEBUG] Writing to temp file: /teamspace/studios/this_studio/client/tui.py.tmp.20973.1772487916059
+2026-03-02T21:45:16.059Z [DEBUG] Preserving file permissions: 100644
+2026-03-02T21:45:16.061Z [DEBUG] Temp file written successfully, size: 14676 bytes
+2026-03-02T21:45:16.061Z [DEBUG] Applied original permissions to temp file
+2026-03-02T21:45:16.061Z [DEBUG] Renaming /teamspace/studios/this_studio/client/tui.py.tmp.20973.1772487916059 to /teamspace/studios/this_studio/client/tui.py
+2026-03-02T21:45:16.061Z [DEBUG] File /teamspace/studios/this_studio/client/tui.py written atomically
+2026-03-02T21:45:16.064Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2026-03-02T21:45:16.064Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T21:45:16.065Z [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+2026-03-02T21:45:16.068Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:45:16.068Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T21:45:16.068Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T21:45:16.068Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T21:45:16.068Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T21:45:16.085Z [DEBUG] [useDeferredValue] Messages deferred by 4 (251→255)
+2026-03-02T21:45:16.226Z [DEBUG] High write ratio: blit=441, write=57925 (99.2% writes), screen=1446x63
+2026-03-02T21:45:16.229Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 161ms
+2026-03-02T21:45:16.230Z [DEBUG] autocompact: tokens=136226 threshold=167000 effectiveWindow=180000
+2026-03-02T21:45:16.231Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T21:45:16.238Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T21:45:16.239Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:45:16.239Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:45:16.239Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:45:16.254Z [DEBUG] [useDeferredValue] Messages deferred by 5 (251→256)
+2026-03-02T21:45:16.520Z [DEBUG] High write ratio: blit=441, write=62049 (99.3% writes), screen=1542x63
+2026-03-02T21:45:18.350Z [DEBUG] Stream started - received first chunk
+2026-03-02T21:45:19.095Z [DEBUG] [useDeferredValue] Messages deferred by 1 (256→257)
+2026-03-02T21:45:19.264Z [DEBUG] High write ratio: blit=441, write=62096 (99.3% writes), screen=1544x63
+2026-03-02T21:45:19.425Z [DEBUG] High write ratio: blit=441, write=62096 (99.3% writes), screen=1544x63
+2026-03-02T21:45:20.051Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-02T21:45:20.051Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-02T21:45:20.051Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:45:20.051Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T21:45:20.061Z [DEBUG] [useDeferredValue] Messages deferred by 1 (257→258)
+2026-03-02T21:45:20.229Z [DEBUG] High write ratio: blit=0, write=62239 (100.0% writes), screen=1544x63
+2026-03-02T21:45:20.251Z [DEBUG] [useDeferredValue] Messages deferred by 1 (257→258)
+2026-03-02T21:45:20.432Z [DEBUG] High write ratio: blit=441, write=62096 (99.3% writes), screen=1544x63
+2026-03-02T21:45:20.447Z [DEBUG] tree-sitter: loaded from embedded
+2026-03-02T21:45:20.469Z [DEBUG] Creating shell snapshot for zsh (zsh)
+2026-03-02T21:45:20.469Z [DEBUG] Looking for shell config file: /teamspace/studios/this_studio/.zshrc
+2026-03-02T21:45:20.469Z [DEBUG] Snapshots directory: /teamspace/studios/this_studio/.claude/shell-snapshots
+2026-03-02T21:45:20.470Z [DEBUG] [useDeferredValue] Messages deferred by 1 (257→258)
+2026-03-02T21:45:20.486Z [DEBUG] Creating snapshot at: /teamspace/studios/this_studio/.claude/shell-snapshots/snapshot-zsh-1772487920469-fblqbc.sh
+2026-03-02T21:45:20.486Z [DEBUG] Execution timeout: 10000ms
+2026-03-02T21:45:20.670Z [DEBUG] High write ratio: blit=441, write=62196 (99.3% writes), screen=1548x63
+2026-03-02T21:45:20.909Z [DEBUG] Shell snapshot created successfully (174277 bytes)
+2026-03-02T21:45:20.910Z [DEBUG] No session environment scripts found
+2026-03-02T21:45:20.910Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-02T21:45:23.573Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-02T21:45:23.573Z [DEBUG] Found 5 hook matchers in settings
+2026-03-02T21:45:23.573Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-02T21:45:23.574Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2026-03-02T21:45:23.575Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-02T21:45:23.575Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-02T21:45:23.575Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-02T21:45:23.575Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-02T21:45:23.576Z [DEBUG] [useDeferredValue] Messages deferred by 1 (258→259)
+2026-03-02T21:45:23.748Z [DEBUG] High write ratio: blit=441, write=62196 (99.3% writes), screen=1548x63
+2026-03-02T21:45:23.751Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 177ms
+2026-03-02T21:45:23.751Z [DEBUG] autocompact: tokens=136850 threshold=167000 effectiveWindow=180000
+2026-03-02T21:45:23.752Z [DEBUG] Tool search disabled via experiment (tengu_tst_kx7): below threshold, deferred tools present [source: query]
+2026-03-02T21:45:23.758Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.464; cc_entrypoint=cli; cch=00000;
+2026-03-02T21:45:23.758Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-02T21:45:23.758Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-02T21:45:23.758Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-02T21:45:23.775Z [DEBUG] [useDeferredValue] Messages deferred by 1 (258→259)
+2026-03-02T21:45:23.954Z [DEBUG] High write ratio: blit=441, write=62351 (99.3% writes), screen=1551x63
+2026-03-02T21:45:24.785Z [DEBUG] Stream started - received first chunk
+2026-03-02T21:45:37.148Z [DEBUG] [useDeferredValue] Messages deferred by 1 (259→260)
+2026-03-02T21:45:37.181Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-02T21:45:37.181Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:45:37.181Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-02T21:45:37.184Z [DEBUG] [useDeferredValue] Messages deferred by 2 (259→261)
+2026-03-02T21:45:37.365Z [DEBUG] High write ratio: blit=441, write=63700 (99.3% writes), screen=1595x63
+2026-03-02T21:46:37.370Z [DEBUG] Getting matching hook commands for Notification with query: idle_prompt
+2026-03-02T21:46:37.370Z [DEBUG] Found 0 hook matchers in settings
+2026-03-02T21:46:37.371Z [DEBUG] Matched 0 unique hooks for query "idle_prompt" (0 before deduplication)

@@ -1,5 +1,5 @@
 {
-  "numStartups": 1,
+  "numStartups": 2,
   "installMethod": "native",
   "autoUpdates": false,
   "tipsHistory": {
@@ -17,7 +17,8 @@
     "continue": 1,
     "shift-tab": 1,
     "image-paste": 1,
-    "web-app": 1
+    "web-app": 1,
+    "mobile-app": 1
   },
   "cachedGrowthBookFeatures": {
     "tengu_event_sampling_config": {},
@@ -72,7 +73,13 @@
     "tengu_immediate_model_command": false,
     "tengu_sm_compact": false,
     "tengu_compact_cache_prefix": true,
-    "tengu_compact_streaming_retry": false
+    "tengu_compact_streaming_retry": false,
+    "tengu_plum_vx3": true,
+    "tengu_disable_streaming_to_non_streaming_fallback": false,
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    }
   },
   "firstStartTime": "2026-03-02T16:35:51.110Z",
   "opusProMigrationComplete": true,
@@ -98,7 +105,21 @@
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "exampleFiles": [],
-      "hasCompletedProjectOnboarding": true
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastAPIDurationWithoutRetries": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 22147,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {},
+      "lastSessionId": "f968c421-cead-4cd6-8063-b6fce2cffd9e"
     }
   },
   "hasShownOpus46Notice": {
@@ -128,5 +149,10 @@
     "workspaceRole": null,
     "organizationName": "cquiala12@gmail.com's Organization"
   },
-  "anonymousId": "claudecode.v1.a7e3f6e9-8329-40d1-9797-56d92a9ec155"
+  "anonymousId": "claudecode.v1.a7e3f6e9-8329-40d1-9797-56d92a9ec155",
+  "githubRepoPaths": {
+    "quiago/tripolar-chat": [
+      "/teamspace/studios/this_studio"
+    ]
+  }
 }
