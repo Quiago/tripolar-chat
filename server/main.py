@@ -10,7 +10,9 @@ from starlette.concurrency import run_in_threadpool
 
 from server.config import settings
 from server.database import create_db_and_tables
+import server.models_assets  # noqa: F401 — registers SQLModel tables before create_all()
 from server.routers import auth, chat, health, history, models
+from server.routers import assets
 
 log = logging.getLogger(__name__)
 
@@ -116,3 +118,4 @@ app.include_router(auth.router)
 app.include_router(chat.router)
 app.include_router(models.router)
 app.include_router(history.router)
+app.include_router(assets.router)

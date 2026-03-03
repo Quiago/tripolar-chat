@@ -20,3 +20,26 @@ class RegistrationDisabledError(FactoryMindError):
 
 class DuplicateUserError(FactoryMindError):
     """Username or email already exists."""
+
+
+# ── Asset domain exceptions ────────────────────────────────────────────────────
+
+
+class EnvironmentNotFoundError(FactoryMindError):
+    """Environment does not exist."""
+
+
+class AssetNotFoundError(FactoryMindError):
+    """Asset does not exist."""
+
+
+class ConnectorNotFoundError(FactoryMindError):
+    """Connector configuration does not exist."""
+
+
+class EventNotFoundError(FactoryMindError):
+    """Health event does not exist."""
+
+
+class AccessDeniedError(FactoryMindError):
+    """The requesting user does not own the requested resource."""

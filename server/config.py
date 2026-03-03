@@ -1,5 +1,11 @@
-from pydantic_settings import BaseSettings
+from pathlib import Path
+
 from pydantic import field_validator
+from pydantic_settings import BaseSettings
+
+# Always resolve .env relative to the project root (parent of server/)
+# so `uv run uvicorn main:app` works from any CWD.
+_ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
 
 
 class Settings(BaseSettings):
@@ -30,7 +36,7 @@ class Settings(BaseSettings):
             raise ValueError("SECRET_KEY must be at least 32 characters")
         return v
 
-    model_config = {"env_file": ".env", "extra": "ignore"}
+    model_config = {"env_file": str(_ENV_FILE), "extra": "ignore"}
 
 
 settings = Settings()
