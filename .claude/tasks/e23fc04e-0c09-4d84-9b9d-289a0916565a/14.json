@@ -1,9 +1,0 @@
-{
-  "id": "14",
-  "subject": "Write tests for cold-start warm-up and prefetch",
-  "description": "Test-first: tests/test_startup.py covering config vars, prefetch_weights skip/download/fail-gracefully, lifespan warm-up, shutdown cleanup",
-  "activeForm": "Writing startup tests",
-  "status": "completed",
-  "blocks": [],
-  "blockedBy": []
-}
