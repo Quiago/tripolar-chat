@@ -280,6 +280,28 @@ def asset_status(
     except Exception as exc:
         raise _map_domain_errors(exc)
 
+@router.get(
+    "/environments/{env_id}/assets/by-external/{external_id}",
+    response_model=AssetStatusPublic,
+)
+def asset_status_by_external_id(
+    env_id: str,
+    external_id: str,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """Return latest health status for an asset, looked up by external_id.
+
+    This is the UX-friendly endpoint; it avoids exposing internal UUIDs.
+    """
+    try:
+        return asset_service.get_asset_status_by_external_id(
+            db, environment_id=env_id, external_id=external_id, user_id=current_user.id
+        )
+    except Exception as exc:
+        raise _map_domain_errors(exc)
+
+
 
 @router.get("/{asset_id}/history", response_model=List[HealthEventPublic])
 def asset_history(

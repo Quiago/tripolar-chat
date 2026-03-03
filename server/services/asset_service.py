@@ -83,6 +83,46 @@ def _require_asset(db: Session, asset_id: str, user_id: str) -> Asset:
     _require_environment(db, asset.environment_id, user_id)
     return asset
 
+def _require_asset_by_external_id(
+    db: Session,
+    environment_id: str,
+    external_id: str,
+    user_id: str,
+) -> Asset:
+    """Return the asset by (environment, external_id) after verifying ownership.
+
+    Args:
+        db: Open database session.
+        environment_id: Environment primary key.
+        external_id: Asset external identifier (e.g. "P-101").
+        user_id: ID of the requesting user.
+
+    Returns:
+        The validated Asset instance.
+
+    Raises:
+        EnvironmentNotFoundError: Environment does not exist.
+        AccessDeniedError: Environment belongs to another user.
+        AssetNotFoundError: Asset with that external_id does not exist in env.
+    """
+    # Ensure the env exists and belongs to the user
+    _require_environment(db, environment_id, user_id)
+
+    asset = db.exec(
+        select(Asset).where(
+            Asset.environment_id == environment_id,
+            Asset.external_id == external_id,
+        )
+    ).first()
+
+    if asset is None:
+        raise AssetNotFoundError(
+            f"Asset with external_id '{external_id}' not found in environment '{environment_id}'."
+        )
+
+    return asset
+
+
 
 def _build_asset_status(
     asset: Asset, latest_event: Optional[HealthEvent]
@@ -570,6 +610,33 @@ def get_asset_status(
     asset = _require_asset(db, asset_id, user_id)
     latest_map = _latest_events_for_assets(db, [asset.id])
     return _build_asset_status(asset, latest_map.get(asset.id))
+
+def get_asset_status_by_external_id(
+    db: Session,
+    environment_id: str,
+    external_id: str,
+    user_id: str,
+) -> AssetStatusPublic:
+    """Return the latest status for a single asset by external_id within an env.
+
+    Args:
+        db: Open database session.
+        environment_id: Environment primary key.
+        external_id: Asset external ID (e.g. "P-101").
+        user_id: ID of the requesting user.
+
+    Returns:
+        AssetStatusPublic.
+
+    Raises:
+        EnvironmentNotFoundError: Environment does not exist.
+        AccessDeniedError: Environment belongs to another user.
+        AssetNotFoundError: Asset does not exist in that env.
+    """
+    asset = _require_asset_by_external_id(db, environment_id, external_id, user_id)
+    latest_map = _latest_events_for_assets(db, [asset.id])
+    return _build_asset_status(asset, latest_map.get(asset.id))
+
 
 
 def get_asset_history(
