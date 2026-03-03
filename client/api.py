@@ -197,6 +197,33 @@ class APIClient:
     def get_chat(self, chat_id: str) -> dict:
         return self._get(f"/v1/history/{chat_id}")
 
+    # ── connectors ───────────────────────────────────────────────────────────
+
+    def query_connector(
+        self,
+        connector_type: str,
+        config: dict,
+        environment_id: Optional[str] = None,
+        store_readings: bool = False,
+    ) -> dict:
+        """POST /connectors/query — fetch live readings from a connector.
+
+        Args:
+            connector_type: e.g. "opcua", "simulator", "http_push".
+            config: Connector-specific config dict (passed inline).
+            environment_id: Optional env to scope caching and storage.
+            store_readings: When True, readings are persisted to the DB.
+
+        Returns:
+            ConnectorQueryResponse dict.
+        """
+        body: dict = {"connector_type": connector_type, "config": config}
+        if environment_id:
+            body["environment_id"] = environment_id
+        if store_readings:
+            body["store_readings"] = True
+        return self._post("/connectors/query", body, timeout=60.0)
+
     # ── health ────────────────────────────────────────────────────────────────
 
     def health(self) -> dict:

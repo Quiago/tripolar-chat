@@ -8,11 +8,23 @@ from fastapi.responses import JSONResponse
 from sqlalchemy.exc import OperationalError, SQLAlchemyError
 from starlette.concurrency import run_in_threadpool
 
+from contextlib import contextmanager
+
 from server.config import settings
-from server.database import create_db_and_tables
+from server.database import create_db_and_tables, engine
 import server.models_assets  # noqa: F401 — registers SQLModel tables before create_all()
 from server.routers import auth, chat, health, history, models
 from server.routers import assets
+from server.routers import connectors
+from server.services import connector_manager as cm
+
+
+@contextmanager
+def _db_factory():
+    """Yield a fresh Session; used by connector polling loops."""
+    from sqlmodel import Session
+    with Session(engine) as session:
+        yield session
 
 log = logging.getLogger(__name__)
 
@@ -56,7 +68,14 @@ async def lifespan(app: FastAPI):
             f"\n[FATAL] Cannot start vLLM for model '{settings.default_model}': {exc}\n"
         ) from exc
 
-    # ── 3. Background prefetch (disk only – no GPU) ───────────────────────────
+    # ── 3. Connector polling loops ────────────────────────────────────────────
+    try:
+        cm.load_and_start_all(_db_factory)
+        log.info("Connector polling loops started.")
+    except Exception as exc:
+        log.warning("Connector startup non-fatal error: %s", exc)
+
+    # ── 4. Background prefetch (disk only – no GPU) ───────────────────────────
     prefetch_task: Optional[asyncio.Task] = None
     if settings.prefetch_all_models:
         log.info(
@@ -75,6 +94,9 @@ async def lifespan(app: FastAPI):
             await prefetch_task
         except asyncio.CancelledError:
             pass
+
+    log.info("Shutting down – stopping connector polling loops…")
+    cm.stop_all()
 
     log.info("Shutting down – stopping vLLM process…")
     manager.stop()
@@ -119,3 +141,4 @@ app.include_router(chat.router)
 app.include_router(models.router)
 app.include_router(history.router)
 app.include_router(assets.router)
+app.include_router(connectors.router)

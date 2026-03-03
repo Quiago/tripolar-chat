@@ -24,7 +24,12 @@ dependencies = [
     "textual>=0.50",
     "vllm>=0.16.0",
     "hf-transfer>=0.1.9",
+    "asyncua>=1.0.6",
 ]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
 
 [project.scripts]
 fmind = "client.main:main"

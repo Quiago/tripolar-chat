@@ -9,7 +9,7 @@ from rich.rule import Rule
 
 from client import config as cfg
 from client.api import APIError
-from client.commands import auth, chat, history, models
+from client.commands import auth, chat, connectors, history, models
 
 console = Console()
 
@@ -28,6 +28,7 @@ for _cmd in auth.app.registered_commands:
 app.add_typer(chat.app, name="chat", invoke_without_command=True)
 app.add_typer(models.app, name="models", invoke_without_command=True)
 app.add_typer(history.app, name="history", invoke_without_command=True)
+app.add_typer(connectors.app, name="connectors", invoke_without_command=True)
 
 # Hidden alias groups for explicit namespace access
 app.add_typer(auth.app, name="auth", hidden=True)

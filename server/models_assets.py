@@ -260,3 +260,62 @@ class IngestResponse(SQLModel):
     ingested: int
     failed: int
     event_ids: List[str]
+
+
+# ── Connector query schemas ────────────────────────────────────────────────────
+
+
+class ConnectorQueryRequest(SQLModel):
+    """Request body for POST /connectors/query.
+
+    Attributes:
+        connector_type: Connector type string (e.g. "opcua", "simulator").
+        config: Connector-specific configuration dict (passed inline — no DB
+            record required).
+        environment_id: Optional environment to scope the query.  Required
+            when store_readings is True.
+        store_readings: When True, each reading is also written to the asset
+            registry via ingest_event.  Requires environment_id.
+        timeout_seconds: Max seconds to wait for the connector to respond.
+            Defaults to 60 s.  OPC-UA discovery over large node trees may
+            need 30–90 s; increase if you hit timeouts on first browse.
+    """
+
+    connector_type: str
+    config: Dict
+    environment_id: Optional[str] = None
+    store_readings: bool = False
+    timeout_seconds: int = 60
+
+
+class ConnectorReadingPublic(SQLModel):
+    """One cleaned asset reading returned by /connectors/query."""
+
+    external_id: str
+    name: str
+    asset_type: str
+    source: str
+    health_score: float
+    severity: str
+    failure_mode: Optional[str] = None
+    raw_value: Optional[float] = None
+    raw_unit: Optional[str] = None
+    message: Optional[str] = None
+
+
+class ConnectorQueryResponse(SQLModel):
+    """Response from POST /connectors/query.
+
+    Attributes:
+        connector_type: The connector type used.
+        asset_count: Number of assets in the response.
+        readings: Cleaned, normalised readings — one per discovered asset.
+        stored: Number of readings written to the DB (0 if store_readings=False).
+        queried_at: Server UTC timestamp of the query.
+    """
+
+    connector_type: str
+    asset_count: int
+    readings: List[ConnectorReadingPublic]
+    stored: int
+    queried_at: datetime

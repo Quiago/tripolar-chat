@@ -38,6 +38,7 @@ from server.models_assets import (
 )
 from server.routers.auth import get_current_user
 from server.services import asset_service
+from server.services import connector_manager as cm
 
 router = APIRouter(prefix="/assets", tags=["assets"])
 
@@ -161,6 +162,36 @@ def update_connector(
         return asset_service.update_connector(db, env_id, conn_id, current_user.id, patch)
     except Exception as exc:
         raise _map_domain_errors(exc)
+
+
+# ── Discovery ─────────────────────────────────────────────────────────────────
+
+
+@router.post("/environments/{env_id}/discover")
+async def discover(
+    env_id: str,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """Trigger auto-discovery for all enabled connectors in an environment.
+
+    Calls ConnectorManager.run_discovery(), which browses every connector
+    and upserts discovered assets into the registry.  Returns a report with
+    the number of assets discovered and any connector errors.
+
+    Use this during customer onboarding to populate the asset registry
+    without manual data entry.
+    """
+    try:
+        asset_service.get_environment(db, env_id, current_user.id)
+    except Exception as exc:
+        raise _map_domain_errors(exc)
+
+    manager = cm.get_manager(env_id)
+    with db:
+        manager.load_from_db(db)
+        report = await manager.run_discovery(db)
+    return report
 
 
 # ── Assets ────────────────────────────────────────────────────────────────────
