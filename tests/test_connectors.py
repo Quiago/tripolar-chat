@@ -360,9 +360,9 @@ class TestOpcUaConnector:
         from server.services.connectors.opcua_connector import OpcUaConnector
         conn = OpcUaConnector(opcua_config)
         await conn.connect()
-        mock_asyncua.Client.assert_called_once_with(
-            url="opc.tcp://localhost:4840", session_timeout=120_000
-        )
+        # Client is now constructed with url only; session_timeout is set as a property
+        mock_asyncua.Client.assert_called_once_with(url="opc.tcp://localhost:4840")
+        assert mock_client.session_timeout == 120_000
         mock_client.connect.assert_awaited_once()
 
     @pytest.mark.asyncio

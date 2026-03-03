@@ -337,7 +337,7 @@ class VLLMModelManager:
         """Non-streaming chat request forwarded to the vLLM process."""
         if not self.is_ready():
             raise RuntimeError("vLLM is not ready")
-        payload = {
+        payload: dict = {
             "model": MODEL_CATALOG[model_name].repo,
             "messages": messages,
             "max_tokens": kwargs.get("max_tokens", 512),
@@ -345,6 +345,9 @@ class VLLMModelManager:
             "top_p": kwargs.get("top_p", 0.9),
             "stream": False,
         }
+        if kwargs.get("tools"):
+            payload["tools"] = kwargs["tools"]
+            payload["tool_choice"] = kwargs.get("tool_choice", "auto")
         async with httpx.AsyncClient() as client:
             r = await client.post(
                 f"http://localhost:{self.port}/v1/chat/completions",

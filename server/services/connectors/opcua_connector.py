@@ -26,6 +26,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 import asyncua
+import asyncio
 
 from .base import BaseConnector, HealthReading
 
@@ -232,14 +233,14 @@ class OpcUaConnector(BaseConnector):
         Raises:
             asyncua.ua.UaError: If the connection cannot be established.
         """
-        self._client = asyncua.Client(
-            url=self._config.endpoint_url,
-            session_timeout=self._config.session_timeout_ms,
-        )
+        self._client = asyncua.Client(url=self._config.endpoint_url)
+        self._client.timeout = 30.0
+        self._client.session_timeout = self._config.session_timeout_ms or 120000
+        self._client.secure_channel_timeout = 3600000
         if self._config.username and self._config.password:
             self._client.set_user(self._config.username)
             self._client.set_password(self._config.password)
-        await self._client.connect()
+        await asyncio.wait_for(self._client.connect(), timeout=30.0)
         log.info("OPC-UA connected: %s", self._config.endpoint_url)
 
     async def disconnect(self) -> None:
@@ -266,8 +267,13 @@ class OpcUaConnector(BaseConnector):
 
         self._discovered_nodes = []
         readings: list[HealthReading] = []
-        objects_node = self._client.get_objects_node()
-        await self._browse_recursive(objects_node, depth=0, max_depth=3, readings=readings)
+        try:
+            async with asyncio.timeout(45):  
+                objects_node = self._client.get_objects_node()
+                await self._browse_recursive(objects_node, depth=0, max_depth=2, readings=readings)  # max_depth=2
+        except asyncio.TimeoutError:
+            log.warning("OPC-UA discovery timeout, using partial results")
+    
         return readings
 
     async def poll(self) -> list[HealthReading]:
@@ -335,7 +341,7 @@ class OpcUaConnector(BaseConnector):
             return
 
         try:
-            children = await node.get_children()
+            children = await node.get_children(max_references=50)
         except Exception as exc:
             log.debug("Cannot browse node at depth %d: %s", depth, exc)
             return
